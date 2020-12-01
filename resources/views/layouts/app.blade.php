@@ -119,6 +119,7 @@
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
+
     <!-- Footer -->
     <div class="footer">
         <div class="container">

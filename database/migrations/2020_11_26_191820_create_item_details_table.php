@@ -15,7 +15,14 @@ class CreateItemDetailsTable extends Migration
     {
         Schema::create('item_details', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('item_id')->nullable();
+            $table->string('name')->unique();
+            $table->string('description')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+            //foreing key 
+            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
         });
     }
 

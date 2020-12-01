@@ -15,6 +15,8 @@ class CreateSectionsTable extends Migration
     {
         Schema::create('sections', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->unsignedTinyInteger('active')->default(1);
             $table->timestamps();
         });
     }
@@ -26,6 +28,8 @@ class CreateSectionsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('sections');
+        Schema::enableForeignKeyConstraints();
     }
 }

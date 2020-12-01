@@ -15,7 +15,17 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('section_id')->nullable();
+            $table->string('title')->nullable();
+            $table->string('element')->default('div');
+            $table->string('description')->nullable();
+            $table->string('footer')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
+            $table->softDeletes(); 
+            
+            //foreing key 
+            $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade');    
         });
     }
 
@@ -26,6 +36,8 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('items');
+        Schema::enableForeignKeyConstraints();
     }
 }

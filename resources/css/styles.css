@@ -2182,3 +2182,38 @@ a:hover.back-to-top {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+.head-dp{
+	background-color:#3a5386;
+	color: rgba(219, 219, 219, 0.616);
+
+}
+
+.slide-content-dp {
+	position: relative;
+	text-align: center;
+	color: white;
+	height: 100vh;
+  }
+
+  .slide-title-centered-dp {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  .slide-content-centered-dp{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  .slide-content-dp .slide-info-dp{
+	position: absolute;
+	bottom: 0;
+	background: rgb(54, 77, 125); /* Fallback color */
+	background: rgba(54, 77, 125, 0.5); /* Black background with 0.5 opacity */
+	color: #f1f1f1;
+	width: 100%;
+	height: 100%;
+  }
+  

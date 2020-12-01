@@ -76,18 +76,19 @@
 </template>
 
 <script>
-    import main from './main'
+    import main from '../main'
     export default {
          data () {
             return {
             dataUser:[],
+            url:'/site',
             }
         },  
         
         methods : {
         ListUsers(){
             let me = this;
-                main.ListItems().then(r => {
+                main.ListItems(me.url).then(r => {
                     me.dataUser =r.data;
                 ;})
         
