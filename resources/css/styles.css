@@ -2192,21 +2192,9 @@ a:hover.back-to-top {
 	position: relative;
 	text-align: center;
 	color: white;
-	height: 100vh;
+	height: 50vh;
   }
 
-  .slide-title-centered-dp {
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  }
-  .slide-content-centered-dp{
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-  }
   .slide-content-dp .slide-info-dp{
 	position: absolute;
 	bottom: 0;
@@ -2216,4 +2204,16 @@ a:hover.back-to-top {
 	width: 100%;
 	height: 100%;
   }
+
+  .slide-title-centered-dp{
+	  padding-top: 20vh;
+  }
+
+  @media screen and (max-width: 480px) {
+	.slide-title-centered-dp {
+		padding-top:0;
+	}
+  }
+
+
   

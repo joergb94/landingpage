@@ -35,14 +35,24 @@ class SectionSeeder extends Seeder
             $x = 2;
           }
            
-           for ($y=0; $y <$x ; $y++) { 
+            for ($y=0; $y <$x ; $y++) { 
                 DB::table('items')->insert([
                     'section_id'=>$i,
                     'title'=>'example'.$i.$y,
                     'footer'=>'end'.$y,
                     'description'=>'example end example end example end example endexample end example end example end example end example end example end']);
            }
+
         }
+
+        for ($j=1; $j <13 ; $j++) { 
+            for ($h=1; $h <5 ; $h++) { 
+              DB::table('item_details')->insert([
+                  'item_id'=>$j,
+                  'name'=>'detail'.$j.$h,
+                  'description'=>'example end example end example end example endexample end example end example end example end example end example end']);
+        }
+     }
 }
     
 }
