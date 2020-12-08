@@ -5,7 +5,7 @@
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid" src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg" alt="Chania">
+                                <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
                             </div>
                             <div class="col-sm-6">
                                 <h3 v-text="dato.item.description"></h3>                          
@@ -22,7 +22,7 @@
                         <div class="col-sm-12"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
                                 <div class="col-sm">
-                                    <img class="img-fluid" src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg" alt="Chania">
+                                    <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
                                 </div>
                                 <div class="col-sm">
                                     <h3 class="text-center" v-text="detail.description"></h3>
@@ -42,7 +42,7 @@
                                 <div class="col-sm-12">
                                     <div class="row">
                                         <div class="col-sm-12 text-center">
-                                            <img class="img-fluid" src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg" alt="Chania">
+                                            <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
                                             <h2> {{detail.name}}</h2>
                                         </div>
                                         <div class="col-sm-12">

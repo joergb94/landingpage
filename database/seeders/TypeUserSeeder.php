@@ -24,7 +24,8 @@ class TypeUserSeeder extends Seeder
             }
             $tu_prof = [
                 //Admin
-                  ['type_user_id'=> 1,'data_menu_id'=> 1,'active'=> 1,],
+                  ['type_user_id'=> 1,'data_menu_id'=> 1,'active'=> 1,
+                    'type_user_id'=> 1,'data_menu_id'=> 2,'active'=> 1,],
                   
                 
 

@@ -21,6 +21,21 @@ class SectionSeeder extends Seeder
                         ['name'=> 'Career'],        
                     ];
 
+        $elements =[
+                      ['section_id'=>1,'name'=>'div'],
+                      ['section_id'=>1,'name'=>'slide'],
+                      ['section_id'=>2,'name'=>'div'],
+                      ['section_id'=>2,'name'=>'div-group-img'],
+                      ['section_id'=>2,'name'=>'div-group'],
+                      ['section_id'=>3,'name'=>'div'],
+                      ['section_id'=>3,'name'=>'div-left'],
+                      ['section_id'=>3,'name'=>'div-group-img'],
+                      ['section_id'=>3,'name'=>'div-group'],
+                      ['section_id'=>4,'name'=>'div'],
+                      ['section_id'=>4,'name'=>'div-group-img'],
+                      ['section_id'=>4,'name'=>'div-group'],
+                  ];
+
         foreach($sections as $section){
             DB::table('sections')->insert($section);
         }
@@ -52,6 +67,11 @@ class SectionSeeder extends Seeder
                   'name'=>'detail'.$j.$h,
                   'description'=>'example end example end example end example endexample end example end example end example end example end example end']);
         }
+        
+        foreach ($elements as $element) {
+          DB::table('elements')->insert($element);
+        }
+
      }
 }
     

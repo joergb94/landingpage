@@ -23,7 +23,8 @@ var main ={
         return request
         .then(result => { 
             console.log(result); 
-            $('#spinner2').hide()
+            $('#spinner2').hide();
+            $('#navbarsExampleDefault').slideUp()
             return result})
         .catch(error => { console.error(error); return Promise.reject(error); });
     },

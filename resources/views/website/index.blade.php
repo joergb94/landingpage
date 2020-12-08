@@ -25,12 +25,16 @@
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+    <link rel="icon" href="{{ asset('img/logo.png') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Preloader -->
 	<div class="spinner-wrapper">
+            <div class="col-sm-12 text-center" style="padding-top:20vh;">
+                <img class="text-center"style="width:120px; height:120px;" src="{{ asset('img/logo.png') }}" alt="alternative">
+                <h3>Dedicated People</h3>
+            </div>
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>

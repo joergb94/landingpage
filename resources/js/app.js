@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./bootstrap-notify');
 
 window.Vue = require('vue');
 
@@ -23,7 +24,8 @@ Vue.component('main-page-component', require('./components/website/MainPageCompo
 Vue.component('about-us-component', require('./components/website/AboutUsComponent.vue').default);
 Vue.component('service-component', require('./components/website/ServiceComponent.vue').default);
 Vue.component('career-component', require('./components/website/CareerComponent.vue').default);
-
+Vue.component('admin-main-component', require('./components/adminsite/adminMainComponent.vue').default);
+Vue.component('user-component', require('./components/user/UsersComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

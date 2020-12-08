@@ -5,7 +5,7 @@
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid" src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg" alt="Chania">
+                                <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
                             </div>
                             <div class="col-sm-6">
                                 <h3 v-text="dato.item.description"></h3>
@@ -62,7 +62,7 @@
             let me = this;
                 main.ListItems(me.url).then(r => {
                     me.dataUser =r.data;
-                ;})
+                })
         
         },
         },
