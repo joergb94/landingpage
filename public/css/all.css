@@ -5928,7 +5928,7 @@ a:hover.back-to-top {
 
 	.navbar-custom .nav-item .nav-link {
 		padding: 0.25rem 0.75rem 0.25rem 0.75rem;
-		color: #3a5386;
+		color: #00518c;
 		opacity: 0.8;
 	}
 	
@@ -5945,7 +5945,7 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
-		color: #3a5386;
+		color: #00518c;
 		opacity: 1;
 	}
 	
@@ -6358,7 +6358,7 @@ a:hover.back-to-top {
 }
 /* end of min-width width 1200px */
 .head-dp{
-	background-color:#3a5386;
+	background-color:#00518c;
 	color: rgba(219, 219, 219, 0.616);
 
 }
@@ -6390,7 +6390,7 @@ a:hover.back-to-top {
 	}
   }
   .text-dp{
-	  color:#3a5386;
+	  color:#00518c;
   }
 
 
