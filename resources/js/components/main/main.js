@@ -4,8 +4,9 @@ export default {
         return {
         dataItems:[],
         dataSections:[],
+        dataElements:[],
         id:'',
-        Section:'',
+        Section:[],
         Title:'',
         Description:'',
         Footer:'',
@@ -32,10 +33,10 @@ export default {
         }
     },
     computed:{
-        isActived: function(){
+        isActivedM: function(){
           return this.pagination.current_page;
         },
-        pagesNumber: function(){
+        pagesNumberM: function(){
             if(!this.pagination.to) {
                 return [];
             }
@@ -60,21 +61,22 @@ export default {
         },
     },
     methods : {
-        ListUsers(page){
+        ListMain(page){
             let me = this;
-            var url = '/items?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
+            var url = '/items/1?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
             axios.get(url)
             .then(function (response) {
                 var respuesta= response.data;
                 me.dataItems = respuesta.Items.data;
                 me.dataSections = respuesta.Section;
                 me.pagination= respuesta.pagination;
+                me.dataElements = respuesta.Elements;
             })
             .catch(function (error) {
                 console.log(error);
             });
         },
-        pageChange(page){
+        pageChangeM(page){
             let me = this;
             console.log(me.pagination.current_page)
             console.log(page)
@@ -82,24 +84,25 @@ export default {
             //Actualiza la página actual
             me.pagination.current_page = page;
             //Envia la petición para visualizar la data de esa página
-            me.ListUsers(page)
+            me.ListMain(page)
         },
-        updateOrCreate(action){
+        updateOrCreateM(action){
             
              let me = this;
              var myurl = '/items/add'
-             var data = document.getElementById('formItem')
+             var data = document.getElementById('formItemM')
              var form = new FormData(data)
-                 form.append('id', me.id)
-
+                 form.append('section_id',this.Section)
+               
             if (action == 2){
+                form.append('id', me.id)
                 myurl = '/items/update'    
             }
 
             axios.post(myurl,form).then(function (response) {
 
-                me.closeModal();
-                me.ListUsers('');
+                me.closeModalM();
+                me.ListMain('');
 
                  $.notify({
                             // options
@@ -127,7 +130,7 @@ export default {
                     });
             })              
         },
-        DeleteOrRestore(item){
+        DeleteOrRestoreM(item){
             let me = this;
             var data = {
                 'id': item.id,
@@ -154,7 +157,7 @@ export default {
                 }).then((result) => {
                     if (result.value) {
                          axios.post('/items/deleteOrResotore',data).then(function (response) {
-                                me.ListUsers();
+                                me.ListMain();
                                 $.notify({
                                             // options
                                             title: "Success!",
@@ -168,51 +171,53 @@ export default {
                     }
                 }) 
         },
-        openModal(model, action, data = []){
+        openModalM(model, action, data = []){
            console.table(data)
-          
+            let me = this;
             switch(model){
                 case 'modal':
                 {
                     switch(action){
                         case 'add':
                         {
-                            this.titleModal = 'New Item';
+                            this.titleModal = 'New '+me.dataSections.name+' Item';
                             this.Title= '';
                             this.Description= '';
                             this.Footer = '';
-                            this.Section = '';
+                            this.Element = '';
+                            this.Section = me.dataSections.id;
                             this.action = 1;
                             break;
                         }
                         case 'update':
                         {
                             
-                            this.titleModal = 'Edit Item';
+                            this.titleModal = 'Edit '+me.dataSections.name+' Item';
                             this.id = data.id;
                             this.Title = data.title;
+                            this.Element = data.element;
                             this.Description = data.description;
                             this.Footer = data.footer;
-                            this.Section = data.section_id;
+                            this.Section = me.dataSections.id;
                             this.action = 2;
                             break;
                         }
                     }
-                    $("#myModal").modal('show');
+                    $("#myModalM").modal('show');
                 }
             }
         },
-        closeModal(){
+        closeModalM(){
                 this.titleModal = '';
                 this.number_win= '';
                 this.number_win2= '';
                 this.game_id = '';
                 this.date = '';
                  $.notifyClose();
-                $("#myModal").modal('hide');
+                $("#myModalM").modal('hide');
         },
     },
     mounted () {
-       this.ListUsers(1);
+       this.ListMain(1);
     }
 }

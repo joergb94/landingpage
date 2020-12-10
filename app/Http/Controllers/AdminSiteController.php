@@ -20,18 +20,25 @@ class AdminSiteController extends Controller
         $this->ItemRepository = $ItemRepository;
     }
 
-
     public function index(Request $request){
 
+        if (!$request->ajax()) return view('admin.index');
+        return view('admin.index');
+    }
+    
+    public function indexData(Request $request,$section){
+       
         if (!$request->ajax()) return view('admin.index');
         
         $search = trim($request->search);
         $criterion = trim($request->criterion);
         $status = ($request->status)? $request->status : 1;
   
-        return $this->ItemRepository->getSearchPaginated($criterion, $search, $status);
+        return $this->ItemRepository->getSearchPaginated($section,$criterion, $search, $status);
     }
+
     public function store(Request $request){
+        
         if($request['image']){
             $image = $request->file('image');
             $nameImg = time().$image->getClientOriginalName();
@@ -45,7 +52,7 @@ class AdminSiteController extends Controller
                                         'section_id'=>$request->section_id,
                                         'title'=>$request->title,
                                         'description' =>$request->description,
-                                        'element'=>'div',
+                                        'element'=>$request->element,
                                         'image'=>'/images/items/'.$nameImg,
                                         'footer' => $request->footer,
                                     ]);
@@ -72,7 +79,7 @@ class AdminSiteController extends Controller
                                             'section_id'=>$request->section_id,
                                             'title'=>$request->title,
                                             'description' =>$request->description,
-                                            'element'=>'div',
+                                            'element'=>$request->element,
                                             'image'=>'/images/items/'.$nameImg,
                                             'footer' => $request->footer,
                                         ]);

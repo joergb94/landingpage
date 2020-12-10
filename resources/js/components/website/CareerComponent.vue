@@ -70,7 +70,7 @@
          data () {
             return {
             dataUser:[],
-            url:'/site',
+            url:'/site?page=4',
             }
         },  
         
@@ -84,7 +84,7 @@
         },
         },
         mounted() {
-            console.log('Component mounted.')
+         
              this.ListUsers();
         }    
     }

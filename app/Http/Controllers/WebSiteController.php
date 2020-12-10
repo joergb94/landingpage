@@ -8,9 +8,10 @@ use App\Models\ItemDetail;
 
 class WebSiteController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
+       $section = $request->page;
        $dataContent = [];
-       $dataItems = Item::where('section_id',1)->get();
+       $dataItems = Item::where('section_id',$section)->get();
        foreach ($dataItems as $item) {
 
         array_push($dataContent,[

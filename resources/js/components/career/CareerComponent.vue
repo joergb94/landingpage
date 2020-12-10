@@ -1,5 +1,5 @@
 <template>
-       <div class="col-sm-12">
+       <div class="col-sm-6">
         <div class="row justify-content-center">
             <div class="col-sm-12">
                 <div class="card">
@@ -7,14 +7,14 @@
                         <div class="row">
                             <div class="col-sm-5">
                                  <h4 class="card-title mb-0">
-                                     Calendario de Juegos
+                                     Career Items 
                                     <div class="btn-group">
                                         
                                     </div> 
                                 </h4>
                             </div>
                             <div class="col-sm-7 text-right">
-                                 <button class="btn btn-success" @click="openModal('modal', 'add')">New Item +</button>
+                                 <button class="btn btn-success" @click="openModalC('modal', 'add')">New Item +</button>
                             </div>
                                    
          
@@ -25,8 +25,8 @@
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <div class="input-group">
-                                    <input type="date" v-model="search" @keyup.enter="ListUsers(1)" class="form-control">
-                                    <button type="submit" @click="ListUsers(1)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
+                                    <input type="date" v-model="search" @keyup.enter="ListCareer(1)" class="form-control">
+                                    <button type="submit" @click="ListCareer(1)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
                                 </div>
                             </div>
                         </div>
@@ -53,10 +53,10 @@
                                     <td v-text="item.description"></td>
                                     <td v-text="item.element"></td>
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm" v-if="item.deleted_at == null"  @click="openModal('modal', 'update', item)" >
+                                        <button type="button" class="btn btn-warning btn-sm" v-if="item.deleted_at == null"  @click="openModalC('modal', 'update', item)" >
                                           <i class="ti-pencil"></i>
                                         </button>
-                                        <button type="button" class="btn btn-primary btn-sm" @click="DeleteOrRestore(item)">
+                                        <button type="button" class="btn btn-primary btn-sm" @click="DeleteOrRestoreC(item)">
                                           <i class="ti-trash"></i>
                                         </button>
                                     </td>
@@ -66,13 +66,13 @@
                             <nav>
                             <ul class="pagination">
                                 <li class="page-item" v-if="pagination.current_page > 1">
-                                    <a class="page-link" href="#" @click.prevent="pageChange(pagination.current_page - 1)">Ant</a>
+                                    <a class="page-link" href="#" @click.prevent="pageChangeC(pagination.current_page - 1)">Ant</a>
                                 </li>
-                                <li class="page-item" v-for="page in pagesNumber" :key="page" :class="[page == isActived ? 'active' : '']">
-                                    <a class="page-link" href="#" @click.prevent="pageChange(page)" v-text="page"></a>
+                                <li class="page-item" v-for="page in pagesNumberC" :key="page" :class="[page == isActivedC ? 'active' : '']">
+                                    <a class="page-link" href="#" @click.prevent="pageChangeC(page)" v-text="page"></a>
                                 </li>
                                 <li class="page-item" v-if="pagination.current_page < pagination.last_page">
-                                    <a class="page-link" href="#" @click.prevent="pageChange(pagination.current_page + 1)">Sig</a>
+                                    <a class="page-link" href="#" @click.prevent="pageChangeC(pagination.current_page + 1)">Sig</a>
                                 </li>
                             </ul>
                             </nav>
@@ -82,32 +82,32 @@
                 </div>
             </div>
             <!-- The Modal -->
-                <div class="modal" id="myModal">
+                <div class="modal" id="myModalC">
                 <div class="modal-dialog">
                     <div class="modal-content">
 
                     <!-- Modal Header -->
                     <div class="modal-header">
                         <h4 class="modal-title"  v-text="titleModal"></h4>
-                        <button type="button"  class="close" @click="closeModal()" >&times;</button>
+                        <button type="button"  class="close" @click="closeModalC()" >&times;</button>
                     </div>
 
                     <!-- Modal body -->
-                    <form id='formItem' enctype="multipart/form-data" >
+                    <form id='formItemC' enctype="multipart/form-data" >
                     <div class="modal-body">
-                       
-                            <div class="form-group">
-                                <label for="email">Section:</label>
-                                 <select class="form-control" v-model="Section" id="section" name="section_id">
-                                        <option value="" >Seleciona un Juego</option>
-                                        <option v-for="item in dataSections" :key="item.id" v-bind:value="item.id">
-                                            {{ item.name }}
-                                        </option>
-                                    </select>
-                            </div>
                              <div class="form-group">
                                 <label for="pwd">Title:</label>
                                   <textarea v-model="Title" placeholder="Enter title item" class="form-control rounded-0" name="title" id="title" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Element:</label>
+                                 <select class="form-control" v-model="Element" id="element" name="element">
+                                    <option value="" >Select Element Type</option>
+                                    <option v-for="item in dataElements" :key="item.id" v-bind:value="item.name">
+                                        {{ item.name }}
+                                    </option>
+                                </select>
+                                 
                             </div>
                              <div class="form-group">
                                 <label for="pwd">Description:</label>
@@ -127,9 +127,9 @@
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" v-if="action==1" @click="updateOrCreate(1)">Save</button>
-                        <button type="button" class="btn btn-primary" v-if="action==2" @click="updateOrCreate(2)">Update</button>
-                        <button type="button" class="btn btn-danger" @click="closeModal()" >Close</button>
+                        <button type="button" class="btn btn-primary" v-if="action==1" @click="updateOrCreateC(1)">Save</button>
+                        <button type="button" class="btn btn-primary" v-if="action==2" @click="updateOrCreateC(2)">Update</button>
+                        <button type="button" class="btn btn-danger" @click="closeModalC()" >Close</button>
                     </div>
                      </form>
 
@@ -139,5 +139,4 @@
         
     </div>
 </template>
-
-<script src="./admin.js"></script>
+<script src="./career.js"></script>

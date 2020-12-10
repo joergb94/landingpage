@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Exceptions\GeneralException;
 use App\Models\Section;
+use App\Models\Element;
 use App\Models\Item;
 use App\Models\ItemDetail;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -27,12 +28,12 @@ class ItemRepository
     }
 
 
-function getSearchPaginated($criterion, $search, $status)
+    function getSearchPaginated($section,$criterion, $search, $status)
     {
             
         $rg = (strlen($criterion) > 0 &&  strlen($search) > 0) 
-                     ? $this->model->where($criterion, 'like', '%'. $search . '%')
-                     : $this->model->where('id','>',0);
+                     ? $this->model->where($criterion, 'like', '%'. $search . '%')->where('section_id',$section)
+                     : $this->model->where('section_id',$section);
                 
                
                 
@@ -48,10 +49,12 @@ function getSearchPaginated($criterion, $search, $status)
                     'to'           => $Items->lastItem(),
                 ],
                 'Items' => $Items,
-                'Section'=>Section::all(),
+                'Section'=>Section::find($section),
+                'Elements'=>Element::where('section_id',$section)->get(),
             ];
     }
 
+  
   
     /**
      * @param array $data
@@ -67,7 +70,7 @@ function getSearchPaginated($criterion, $search, $status)
             $Item = $this->model::create([
                 'section_id' => $data['section_id'],
                 'title' => $data['title'],
-                'element' => 'div',
+                'element' =>$data['element'],
                 'image'=>$data['image'],
                 'description' => $data['description'],
                 'footer' =>$data['footer'],
@@ -99,7 +102,7 @@ function getSearchPaginated($criterion, $search, $status)
             if ($Item->update([
                 'section_id' => $data['section_id'],
                 'title' => $data['title'],
-                'element' => 'div',
+                'element' =>$data['element'],
                 'image'=>$data['image'],
                 'description' => $data['description'],
                 'footer' =>$data['footer']

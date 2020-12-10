@@ -68,11 +68,12 @@ class SectionSeeder extends Seeder
                   'description'=>'example end example end example end example endexample end example end example end example end example end example end']);
         }
         
-        foreach ($elements as $element) {
-          DB::table('elements')->insert($element);
-        }
 
      }
+
+     foreach ($elements as $element) {
+      DB::table('elements')->insert($element);
+    }
 }
     
 }

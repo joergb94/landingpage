@@ -24,7 +24,10 @@ Vue.component('main-page-component', require('./components/website/MainPageCompo
 Vue.component('about-us-component', require('./components/website/AboutUsComponent.vue').default);
 Vue.component('service-component', require('./components/website/ServiceComponent.vue').default);
 Vue.component('career-component', require('./components/website/CareerComponent.vue').default);
-Vue.component('admin-main-component', require('./components/adminsite/adminMainComponent.vue').default);
+Vue.component('main-page', require('./components/main/MainComponent.vue').default);
+Vue.component('about-us', require('./components/aboutUs/AboutUsComponent.vue').default);
+Vue.component('service', require('./components/service/ServiceComponent.vue').default);
+Vue.component('career', require('./components/career/CareerComponent.vue').default);
 Vue.component('user-component', require('./components/user/UsersComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to

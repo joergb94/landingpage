@@ -41,6 +41,7 @@ Route::group(['middleware'=>['auth']], function(){
 
     //items
     Route::get('/items', [AdminSiteController::class, 'index']);
+    Route::get('/items/{section}', [AdminSiteController::class, 'indexData']);
     Route::post('/items/add', [AdminSiteController::class, 'store']);
     Route::post('/items/update', [AdminSiteController::class, 'update']);
     Route::post('/items/deleteOrResotore',[AdminSiteController::class, 'deleteOrResotore']);
