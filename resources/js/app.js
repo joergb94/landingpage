@@ -41,8 +41,6 @@ const app = new Vue({
     data:{
         menu: 0
     }, mounted() {
-        $('#navbarsExampleDefault').slideUp()
-        $('#chevron-up').hide();
-        $('#chevron-down').show();
+        
     }   
 });

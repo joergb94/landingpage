@@ -208,13 +208,16 @@ export default {
             }
         },
         closeModalS(){
-                this.titleModal = '';
-                this.number_win= '';
-                this.number_win2= '';
-                this.game_id = '';
-                this.date = '';
-                 $.notifyClose();
-                $("#myModalS").modal('hide');
+            let me = this;
+            this.titleModal = '';
+            this.Title= '';
+            this.Description= '';
+            this.Footer = '';
+            this.Element = '';
+            this.Section = me.dataSections.id;
+             $.notifyClose();
+            $("#myModalS").modal('hide');
+            $('#formItemS').trigger("reset");
         },
     },
     mounted () {

@@ -6,16 +6,14 @@
 
 $('[data-toggle="tooltip"]').tooltip();
 
-function upMenubar(){
-    $('#navbarsExampleDefault').slideUp();
-    $('#chevron-up').hide();
-    $('#chevron-down').show();
-}
+$('.up-menubar').on('click',function(){
+        downMenubar()
+  });
+
 
 function downMenubar(){
-    $('#navbarsExampleDefault').slideDown();
-    $('#chevron-down').hide();
-    $('#chevron-up').show();
+    $('#navbarsExampleDefault').slideToggle();
+
 }
 
 (function($) {

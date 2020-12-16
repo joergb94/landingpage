@@ -2239,7 +2239,7 @@ a:hover.back-to-top {
 	flex-direction: column;
   }
 
-  #chevron-up{
+  .hide-icon-m{
 	  display: none;
   }
 

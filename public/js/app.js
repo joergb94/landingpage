@@ -2571,13 +2571,16 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     closeModalA: function closeModalA() {
+      var me = this;
       this.titleModal = '';
-      this.number_win = '';
-      this.number_win2 = '';
-      this.game_id = '';
-      this.date = '';
+      this.Title = '';
+      this.Description = '';
+      this.Footer = '';
+      this.Element = '';
+      this.Section = me.dataSections.id;
       $.notifyClose();
       $("#myModalA").modal('hide');
+      $('#formItemA').trigger("reset");
     }
   },
   mounted: function mounted() {
@@ -2802,13 +2805,16 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     closeModalC: function closeModalC() {
+      var me = this;
       this.titleModal = '';
-      this.number_win = '';
-      this.number_win2 = '';
-      this.game_id = '';
-      this.date = '';
+      this.Title = '';
+      this.Description = '';
+      this.Footer = '';
+      this.Element = '';
+      this.Section = me.dataSections.id;
       $.notifyClose();
       $("#myModalC").modal('hide');
+      $('#formItemC').trigger("reset");
     }
   },
   mounted: function mounted() {
@@ -3262,13 +3268,16 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     closeModalM: function closeModalM() {
+      var me = this;
       this.titleModal = '';
-      this.number_win = '';
-      this.number_win2 = '';
-      this.game_id = '';
-      this.date = '';
+      this.Title = '';
+      this.Description = '';
+      this.Footer = '';
+      this.Element = '';
+      this.Section = me.dataSections.id;
       $.notifyClose();
       $("#myModalM").modal('hide');
+      $('#formItemM').trigger("reset");
     }
   },
   mounted: function mounted() {
@@ -3493,13 +3502,16 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     closeModalS: function closeModalS() {
+      var me = this;
       this.titleModal = '';
-      this.number_win = '';
-      this.number_win2 = '';
-      this.game_id = '';
-      this.date = '';
+      this.Title = '';
+      this.Description = '';
+      this.Footer = '';
+      this.Element = '';
+      this.Section = me.dataSections.id;
       $.notifyClose();
       $("#myModalS").modal('hide');
+      $('#formItemS').trigger("reset");
     }
   },
   mounted: function mounted() {
@@ -56600,11 +56612,7 @@ var app = new Vue({
   data: {
     menu: 0
   },
-  mounted: function mounted() {
-    $('#navbarsExampleDefault').slideUp();
-    $('#chevron-up').hide();
-    $('#chevron-down').show();
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -57353,8 +57361,6 @@ var main = {
                 console.log(result);
                 $('#spinner2').hide();
                 $('#navbarsExampleDefault').slideUp();
-                $('#chevron-up').hide();
-                $('#chevron-down').show();
                 $(".title-head").slideDown(2000);
                 return result;
               })["catch"](function (error) {

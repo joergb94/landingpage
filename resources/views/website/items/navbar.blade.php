@@ -9,11 +9,8 @@
             </button>
         
             <!-- Mobile Menu Toggle Button -->
-            <button id="chevron-down" class="navbar-toggler col-sm-12 text-center" type="button" onclick="downMenubar()">
-                <i class="lni lni-menu"></i>
-            </button>
-            <button  id="chevron-up" class="navbar-toggler col-sm-12 text-center" type="button" onclick="upMenubar()">
-                <i class="lni lni-close"></i>
+            <button id="chevron-down" class="navbar-toggler col-sm-12 text-center up-menubar" type="button">
+                <i  id="down-m" class="lni lni-menu"></i>
             </button>
             <!-- end of mobile menu toggle button -->
  
@@ -21,19 +18,19 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">  
                     <li class="nav-item">
-                        <button class="btn btn-link nav-link page-scroll" @click="menu=1" >{{ __('About us') }}</button>
+                        <button class="btn btn-link nav-link page-scroll up-menubar" @click="menu=1" >{{ __('About us') }}</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-link nav-link page-scroll" @click="menu=2" >{{ __('Our service') }}</button>
+                        <button class="btn btn-link nav-link page-scroll up-menubar" @click="menu=2" >{{ __('Our service') }}</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-link nav-link page-scroll" @click="menu=3" >{{ __('Careers') }}</button>
+                        <button class="btn btn-link nav-link page-scroll up-menubar" @click="menu=3" >{{ __('Careers') }}</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-link nav-link page-scroll" @click="menu=0" >{{ __('Testimonies') }}</button>
+                        <button class="btn btn-link nav-link page-scroll up-menubar" @click="menu=0" >{{ __('Testimonies') }}</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-link nav-link page-scroll"  @click="menu=4" onclick="upMenubar()" >{{ __('Contact us') }}</button>
+                        <button class="btn btn-link nav-link page-scroll up-menubar"  @click="menu=4" >{{ __('Contact us') }}</button>
                     </li>
                     <li class="nav-item">
                         @include('website/items/btn-social')
