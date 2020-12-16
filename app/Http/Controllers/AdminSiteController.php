@@ -45,8 +45,7 @@ class AdminSiteController extends Controller
             $file_path ='/images/items/';
             $image->move(public_path().'/images/items/',$nameImg);
         }else{
-            $nameImg ='product.png';
-            $file_path ='/images/icon/';
+            $nameImg = NULL;
         }
         $this->ItemRepository->create([
                                         'section_id'=>$request->section_id,

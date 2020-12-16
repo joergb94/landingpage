@@ -63,21 +63,22 @@ class AdminSiteDetailController extends Controller
         $imageToDelete = ItemDetail::find($request->id);
 
         if($request->image){
-                $file_path = public_path().'/images/ItemDetails/'.$imageToDelete->image;
+                $file_path = public_path().$imageToDelete->image;
                 File::delete($file_path);
                 $image = $request->file('image');
-                $nameImg = time().$image->getClientOriginalName();
-                $image->move(public_path().'/images/ItemDetails/',$nameImg);
+                $name = time().$image->getClientOriginalName();
+                $image->move(public_path().'/images/ItemDetails/',$name);
+                $nameImg = '/images/ItemDetails/'.$name;
         }
         else{
-            $nameImg = '/images/ItemDetails/'.$imageToDelete->image;
+            $nameImg = $imageToDelete->image;
         }
 
 
         $this->ItemDetailRepository->update($request['id'],[
                                             'name'=>$request->name,
                                             'description' =>$request->description,
-                                            'image'=>'/images/ItemDetails/'.$nameImg,
+                                            'image'=> $nameImg,
                                         ]);
 
         return response()->json('ready');
