@@ -28,6 +28,7 @@ Vue.component('main-page', require('./components/main/MainComponent.vue').defaul
 Vue.component('about-us', require('./components/aboutUs/AboutUsComponent.vue').default);
 Vue.component('service', require('./components/service/ServiceComponent.vue').default);
 Vue.component('career', require('./components/career/CareerComponent.vue').default);
+Vue.component('detail', require('./components/detail/DetailComponent.vue').default);
 Vue.component('user-component', require('./components/user/UsersComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -39,5 +40,9 @@ const app = new Vue({
     el: '#app',
     data:{
         menu: 0
-    }
+    }, mounted() {
+        $('#navbarsExampleDefault').slideUp()
+        $('#chevron-up').hide();
+        $('#chevron-down').show();
+    }   
 });

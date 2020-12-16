@@ -2218,5 +2218,30 @@ a:hover.back-to-top {
 	  color:#00518c;
   }
 
+  .pre-formatted {
+	
+	white-space: pre-wrap;
+
+  }
+
+  .max-h{
+	max-height: 80vh; 
+  }
+
+  .max-icon{
+	max-height: 25vh; 
+  }
+
+  .card-dp-gray{
+	background-color: #d2d9e0!important;
+	border-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+  }
+
+  #chevron-up{
+	  display: none;
+  }
+
 
   

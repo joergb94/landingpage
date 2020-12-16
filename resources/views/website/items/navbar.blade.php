@@ -9,8 +9,11 @@
             </button>
         
             <!-- Mobile Menu Toggle Button -->
-            <button class="navbar-toggler col-sm-12 text-center" type="button" onclick="$('#navbarsExampleDefault').slideToggle()">
-                
+            <button id="chevron-down" class="navbar-toggler col-sm-12 text-center" type="button" onclick="downMenubar()">
+                <i class="lni lni-menu"></i>
+            </button>
+            <button  id="chevron-up" class="navbar-toggler col-sm-12 text-center" type="button" onclick="upMenubar()">
+                <i class="lni lni-close"></i>
             </button>
             <!-- end of mobile menu toggle button -->
  
@@ -30,23 +33,11 @@
                         <button class="btn btn-link nav-link page-scroll" @click="menu=0" >{{ __('Testimonies') }}</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-link nav-link page-scroll" onclick="$('#navbarsExampleDefault').slideUp()" @click="menu=4" >{{ __('Contact us') }}</button>
+                        <button class="btn btn-link nav-link page-scroll"  @click="menu=4" onclick="upMenubar()" >{{ __('Contact us') }}</button>
+                    </li>
+                    <li class="nav-item">
+                        @include('website/items/btn-social')
                     </li>
             </ul>
-
-            <span class="nav-item social-icons">
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x facebook"></i>
-                        <i class="fab fa-facebook-f fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x twitter"></i>
-                        <i class="fab fa-twitter fa-stack-1x"></i>
-                    </a>
-                </span>
-            </span>
         </div>
     </nav> 

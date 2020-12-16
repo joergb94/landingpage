@@ -1,11 +1,11 @@
 <template>
             <div class="carousel">
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'div'" class="card-header head-dp" v-text="dato.item.title"></div>
+                    <div v-if="dato.item.element == 'div'" class="card-header head-dp text-center" v-text="dato.item.title"></div>
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
+                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="Chania">
                             </div>
                             <div class="col-sm-6">
                                 <h3 v-text="dato.item.description"></h3>
@@ -21,10 +21,10 @@
                             <h6 class="text-center" v-text="dato.item.description"></h6>
                         </div>
                         <br>
-                        <div class="col-sm-12"  v-for="detail in dato.detail" :key="detail.id">
+                        <div class="container"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
-                                <div class="col-sm">
-                                    <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
+                                <div class="col-sm" v-if="detail.image !== null">
+                                    <img class="img-fluid max-h" v-bind:src="detail.image" alt="Chania">
                                 </div>
                                 <div class="col-sm">
                                     <h3 class="text-center" v-text="detail.description"></h3>
@@ -39,20 +39,27 @@
                             <h2 class="text-center" v-text='dato.item.title'></h2>
                             <h6 class="text-center" v-text="dato.item.description"></h6>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4" v-for="detail in dato.detail" :key="detail.id">
-                                <div class="card">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <h3 class="text-center" v-text="detail.description"></h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4" v-for="detail in dato.detail" :key="detail.id">
+                                    <div class="card-dp-gray">
+                                        <div class="row">
+                                            <div class="col-sm-12 text-center" v-if="detail.image !== null">
+                                                <img class="img-fluid max-icon" v-bind:src="detail.image" alt="Chania">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="container">
+                                                    <h3 class="text-center" v-text="detail.description"></h3>
+                                                </div>
+                                                <br>
+                                            </div>
                                         </div>
                                     </div>
+                                    <br>
                                 </div>
                             </div>
                         </div>
+                       
 
 
                     </div>
@@ -76,6 +83,7 @@
                 main.ListItems(me.url).then(r => {
                     me.dataUser =r.data;
                 ;})
+                 $(".content-site").fadeIn(3000);
         
         },
         },

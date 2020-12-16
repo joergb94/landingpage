@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
             $table->unsignedBigInteger('section_id')->nullable();
             $table->string('title')->nullable();
             $table->string('element')->default('div');
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('footer')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();

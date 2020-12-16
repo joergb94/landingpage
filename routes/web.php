@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\WebSiteController;
 use App\Http\Controllers\AdminSiteController;
+use App\Http\Controllers\AdminSiteDetailController;
 use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +46,12 @@ Route::group(['middleware'=>['auth']], function(){
     Route::post('/items/add', [AdminSiteController::class, 'store']);
     Route::post('/items/update', [AdminSiteController::class, 'update']);
     Route::post('/items/deleteOrResotore',[AdminSiteController::class, 'deleteOrResotore']);
+
+     //itemDeatils
+     Route::get('/itemDetails', [AdminSiteDetailController::class, 'index']);
+     Route::get('/itemDetails/{section}', [AdminSiteDetailController::class, 'indexData']);
+     Route::post('/itemDetails/add', [AdminSiteDetailController::class, 'store']);
+     Route::post('/itemDetails/update', [AdminSiteDetailController::class, 'update']);
+     Route::post('/itemDetails/deleteOrResotore',[AdminSiteDetailController::class, 'deleteOrResotore']);
 
 });

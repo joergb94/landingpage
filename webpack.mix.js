@@ -15,7 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
 mix.styles([
-        'resources/css/fontawesome-all.css',
         'resources/css/swiper.css',
         'resources/css/magnific-popup.css',
         'resources/css/styles.css',

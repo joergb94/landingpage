@@ -53,6 +53,7 @@
                                     <td v-text="item.description"></td>
                                     <td v-text="item.element"></td>
                                     <td>
+                                         <a v-if="item.element =='div-group-img' || item.element =='div-group'||item.element =='slide'" class="btn btn-info btn-sm" v-bind:href="'/itemDetails/'+item.id"  > </a>
                                         <button type="button" class="btn btn-warning btn-sm" v-if="item.deleted_at == null"  @click="openModalS('modal', 'update', item)" >
                                           <i class="ti-pencil"></i>
                                         </button>

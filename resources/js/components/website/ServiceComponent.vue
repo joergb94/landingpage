@@ -1,11 +1,11 @@
 <template>
             <div class="carousel">
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'div'" class="card-header head-dp" v-text="dato.item.title"></div>
+                    <div v-if="dato.item.element == 'div'" class="card-header head-dp text-center" > <h2 class="text-white" v-text="dato.item.title"></h2></div>
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid" v-bind:src="dato.item.image"  alt="Chania">
+                                <img class="img-fluid rounded max-h" v-bind:src="dato.item.image"  alt="Chania">
                             </div>
                             <div class="col-sm-6">
                                 <h3 v-text="dato.item.description"></h3>
@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                    <div v-if="dato.item.element == 'div-left'" class="card-header head-dp" v-text="dato.item.title"></div>
+                    <div v-if="dato.item.element == 'div-left'" class="card-header head-dp text-center" > <h2 class="text-white" v-text="dato.item.title"></h2></div>
                     <div v-if="dato.item.element == 'div-left'" class="card-body">
                         <div  class="row">
                              <div class="col-sm-6">
@@ -27,7 +27,7 @@
                                                                 
                             </div>
                             <div class="col-sm-6">
-                                <img class="img-fluid" src="https://www.solidbackgrounds.com/images/2560x1440/2560x1440-gray-solid-color-background.jpg" alt="Chania">
+                                <img class="img-fluid rounded max-h" v-bind:src="dato.item.image" alt="Chania">
                             </div>
                         </div>
                      </div>
@@ -41,7 +41,7 @@
                         <div class="col-sm-12"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
                                 <div class="col-sm">
-                                    <img class="img-fluid" v-bind:src="dato.item.image" alt="Chania">
+                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="Chania">
                                 </div>
                                 <div class="col-sm">
                                     <h3 class="text-center" v-text="detail.description"></h3>
@@ -61,10 +61,27 @@
                                 <div class="col-sm-12">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <h2><img class="img-fluid" style="width:64px;" v-bind:src="detail.image" alt="Chania"> {{detail.name}}</h2>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <h3 class="text-center" v-text="detail.description"></h3>
+                                            <div v-if="detail.image !== null" class="row">
+                                                <div class="col-sm-4">
+                                                    <img class="img-fluid max-icon" v-bind:src="detail.image" alt="Chania">
+                                                </div>
+                                                <div class="col-sm-8 text-center">
+                                                    <br>
+                                                    <h2>{{detail.name}}</h2>
+                                                    <br>
+                                                    <div class="col-sm-12">
+                                                        <h3 class="text-center" v-text="detail.description"></h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div  class="col-sm-12 text-center" v-else>
+                                                    <br>
+                                                    <h2>{{detail.name}}</h2>
+                                                    <br>
+                                                    <div class="col-sm-12">
+                                                        <h3 class="text-center" v-text="detail.description"></h3>
+                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -98,6 +115,7 @@
                 main.ListItems(me.url).then(r => {
                     me.dataUser =r.data;
                 ;})
+                $(".content-site").fadeIn(3000);
         
         },
         },

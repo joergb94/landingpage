@@ -4,6 +4,19 @@
    Description: Custom JS file
 */
 
+$('[data-toggle="tooltip"]').tooltip();
+
+function upMenubar(){
+    $('#navbarsExampleDefault').slideUp();
+    $('#chevron-up').hide();
+    $('#chevron-down').show();
+}
+
+function downMenubar(){
+    $('#navbarsExampleDefault').slideDown();
+    $('#chevron-down').hide();
+    $('#chevron-up').show();
+}
 
 (function($) {
     "use strict"; 
