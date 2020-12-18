@@ -1990,6 +1990,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2005,7 +2021,7 @@ __webpack_require__.r(__webpack_exports__);
         me.dataUser = r.data;
         ;
       });
-      $(".content-site").fadeIn(3000);
+      $(".content-site").fadeIn('slow');
     }
   },
   mounted: function mounted() {
@@ -2094,6 +2110,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2109,7 +2138,7 @@ __webpack_require__.r(__webpack_exports__);
         me.dataUser = r.data;
         ;
       });
-      $(".content-site").fadeIn(3000);
+      $(".content-site").fadeIn('slow');
     }
   },
   mounted: function mounted() {
@@ -2208,7 +2237,7 @@ __webpack_require__.r(__webpack_exports__);
       _main__WEBPACK_IMPORTED_MODULE_0__["default"].ListItems(me.url).then(function (r) {
         me.dataUser = r.data;
       });
-      $(".content-site").fadeIn(3000);
+      $(".content-site").fadeIn('slow');
     }
   },
   mounted: function mounted() {
@@ -2345,7 +2374,7 @@ __webpack_require__.r(__webpack_exports__);
         me.dataUser = r.data;
         ;
       });
-      $(".content-site").fadeIn(3000);
+      $(".content-site").fadeIn('slow');
     }
   },
   mounted: function mounted() {
@@ -43629,14 +43658,42 @@ var render = function() {
     _vm._l(_vm.dataUser, function(dato, index) {
       return _c("div", { key: index }, [
         dato.item.element == "div"
-          ? _c("div", {
-              staticClass: "card-header head-dp text-center",
-              domProps: { textContent: _vm._s(dato.item.title) }
-            })
+          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
+              _c("h2", {
+                staticClass: "text-white",
+                domProps: { textContent: _vm._s(dato.item.title) }
+              })
+            ])
           : _vm._e(),
         _vm._v(" "),
         dato.item.element == "div"
           ? _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("img", {
+                    staticClass: "img-fluid max-h",
+                    attrs: { src: dato.item.image, alt: "Chania" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("h3", {
+                    domProps: { textContent: _vm._s(dato.item.description) }
+                  })
+                ])
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        dato.item.element == "div-not-head"
+          ? _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "col-sm-12 text-center" }, [
+                _c("h2", {
+                  staticClass: "text-dp",
+                  domProps: { textContent: _vm._s(dato.item.title) }
+                })
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-sm-6" }, [
                   _c("img", {
@@ -43809,6 +43866,32 @@ var render = function() {
         _vm._v(" "),
         dato.item.element == "div"
           ? _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("img", {
+                    staticClass: "img-fluid max-h",
+                    attrs: { src: dato.item.image, alt: "Chania" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("h3", {
+                    domProps: { textContent: _vm._s(dato.item.description) }
+                  })
+                ])
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        dato.item.element == "div-not-head"
+          ? _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "col-sm-12 text-center" }, [
+                _c("h2", {
+                  staticClass: "text-dp",
+                  domProps: { textContent: _vm._s(dato.item.title) }
+                })
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "row" }, [
                 _c("div", { staticClass: "col-sm-6" }, [
                   _c("img", {

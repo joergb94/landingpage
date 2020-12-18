@@ -79,8 +79,7 @@
                 main.ListItems(me.url).then(r => {
                     me.dataUser =r.data;
                 })
-                $(".content-site").fadeIn(3000);
-        
+                $(".content-site").fadeIn('slow');
         },
         },
         mounted() {

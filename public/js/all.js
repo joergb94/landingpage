@@ -100,11 +100,13 @@ $('[data-toggle="tooltip"]').tooltip();
 $('.up-menubar').on('click',function(){
         downMenubar()
   });
-
+$('.gotocover').on('click',function(){
+    $(".title-head").slideDown(2000);
+    $('body,html').animate({ scrollTop:'0px' },1000);
+})
 
 function downMenubar(){
     $('#navbarsExampleDefault').slideToggle();
-
 }
 
 (function($) {

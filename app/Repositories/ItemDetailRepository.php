@@ -36,7 +36,7 @@ class ItemDetailRepository
                 
                
                 
-                $ItemDetails = $rg->orderBy('id', 'desc')->paginate(10);
+                $ItemDetails = $rg->orderBy('id', 'asc')->paginate(10);
 
         return [
                 'pagination' => [
