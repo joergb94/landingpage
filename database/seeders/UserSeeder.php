@@ -15,12 +15,12 @@ class UserSeeder extends Seeder
     public function run()
     {
         $adminUser = [
-            ['type_user_id' => 1,
+            ['type_user_id' =>1,
             'name'=> 'adminDP',
             'email'=>'adminDP@dedicated.com',
             'password'=> bcrypt('adminDP2020'),],
 
-            ['type_user_id' => 2,
+            ['type_user_id' =>2,
             'name'=> 'managerDP',
             'email'=>'managerDP@dedicated.com',
             'password'=> bcrypt('managerDP2020'),],
