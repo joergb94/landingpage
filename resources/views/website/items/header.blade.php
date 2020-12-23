@@ -17,8 +17,6 @@
                 <template v-if="menu==4">
                         <h1 style="display:none" class="text-center text-white title-head">Contact Us</h1>
                 </template> 
-                <br>  
         </div>       <!-- end of container -->
         </div> <!-- end of header-content -->
     </header>
-    <br>

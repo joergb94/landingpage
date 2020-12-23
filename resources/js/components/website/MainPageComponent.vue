@@ -5,7 +5,7 @@
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="Chania">
+                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
                                 <br>
@@ -26,10 +26,23 @@
                                                                 
                             </div>
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="Chania">
+                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                         </div>
                      </div>
+                     <div v-if="dato.item.element == 'div-not-head'" class="card-body">
+                        <div class="col-sm-12 text-center">
+                            <h2 class="text-dp" v-text="dato.item.title"></h2>
+                        </div>
+                        <div  class="row">
+                            <div class="col-sm-6">
+                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 v-text="dato.item.description"></h3>
+                            </div>
+                        </div>
+                    </div>
                     <div v-else-if="dato.item.element == 'slide'" id="demo" class="carousel slide" data-ride="carousel">
 
                         <!-- Indicators -->

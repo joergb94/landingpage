@@ -2223,6 +2223,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -44065,7 +44078,7 @@ var render = function() {
                 _c("div", { staticClass: "col-sm-6" }, [
                   _c("img", {
                     staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "Chania" }
+                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                   })
                 ]),
                 _vm._v(" "),
@@ -44112,7 +44125,33 @@ var render = function() {
                 _c("div", { staticClass: "col-sm-6" }, [
                   _c("img", {
                     staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "Chania" }
+                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                  })
+                ])
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        dato.item.element == "div-not-head"
+          ? _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "col-sm-12 text-center" }, [
+                _c("h2", {
+                  staticClass: "text-dp",
+                  domProps: { textContent: _vm._s(dato.item.title) }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("img", {
+                    staticClass: "img-fluid max-h",
+                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("h3", {
+                    domProps: { textContent: _vm._s(dato.item.description) }
                   })
                 ])
               ])

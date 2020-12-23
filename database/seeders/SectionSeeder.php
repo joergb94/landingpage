@@ -23,6 +23,8 @@ class SectionSeeder extends Seeder
 
         $elements =[
                       ['section_id'=>1,'name'=>'div'],
+                      ['section_id'=>1,'name'=>'div-left'],
+                      ['section_id'=>1,'name'=>'div-not-head'],
                       ['section_id'=>1,'name'=>'slide'],
                       ['section_id'=>2,'name'=>'div'],
                       ['section_id'=>2,'name'=>'div-group-img'],
