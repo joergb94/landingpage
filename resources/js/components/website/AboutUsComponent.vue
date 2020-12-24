@@ -7,7 +7,7 @@
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="Chania">
+                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
                                 <h3 v-text="dato.item.description"></h3>
@@ -23,36 +23,40 @@
                         </div>
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="Chania">
+                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
                                 <h3 v-text="dato.item.description"></h3>
                             </div>
                         </div>
                     </div>
-                    <div v-else-if="dato.item.element == 'div-group-img'" class="card-body este">
+                    <div v-else-if="dato.item.element == 'div-group-img'" class="card-body bg-dp-white">
 
                         <div class="col-sm-12">
-                            <h2 class="text-center" v-text='dato.item.title'></h2>
+                            <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
                             <h6 class="text-center" v-text="dato.item.description"></h6>
                         </div>
                         <br>
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
                                 <div class="col-sm" v-if="detail.image !== null">
-                                    <img class="img-fluid max-h" v-bind:src="detail.image" alt="Chania">
+                                    <img class="img-fluid max-h" v-bind:src="detail.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm">
-                                    <h3 class="text-center" v-text="detail.description"></h3>
+                                    
+                                    <span class="badge badge-dark col-sm-12">
+                                        <h4 class="text-center text-warning"  v-text="detail.name"></h4>
+                                    </span>
+                                    <h4 class="text-center" v-text="detail.description"></h4>
                                 </div>
                             </div>
                         </div>
                         
                     </div>
-                   <div v-else-if="dato.item.element == 'div-group'" class="card-body este">
+                   <div v-else-if="dato.item.element == 'div-group'" class="card-body bg-dp-white">
 
                         <div class="col-sm-12">
-                            <h2 class="text-center" v-text='dato.item.title'></h2>
+                            <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
                             <h6 class="text-center" v-text="dato.item.description"></h6>
                         </div>
                         <div class="container">
@@ -61,11 +65,11 @@
                                     <div class="card-dp-gray">
                                         <div class="row">
                                             <div class="col-sm-12 text-center" v-if="detail.image !== null">
-                                                <img class="img-fluid max-icon" v-bind:src="detail.image" alt="Chania">
+                                                <img class="img-fluid max-icon" v-bind:src="detail.image" alt="DedicatedPeople">
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="container">
-                                                    <h3 class="text-center" v-text="detail.description"></h3>
+                                                    <h6 class="text-center" v-text="detail.description"></h6>
                                                 </div>
                                                 <br>
                                             </div>
@@ -78,6 +82,15 @@
                        
 
 
+                    </div>  
+                    <div  v-if="dato.item.element == 'div-yellow'" class="container-yellow col-sm-12">
+                        <img class="img-yellow" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                        <div class="centered">
+                            <br>
+                            <h1 class="text-dp" v-text="dato.item.title"></h1>
+                            <p v-text="dato.item.description"></p>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>

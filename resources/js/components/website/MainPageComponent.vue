@@ -2,7 +2,7 @@
             <div class="carousel">
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" class="card-header head-dp text-center"><h2 class="text-white" v-text="dato.item.title"></h2></div>
-                    <div v-if="dato.item.element == 'div'" class="card-body">
+                    <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
                         <div  class="row">
                             <div class="col-sm-6">
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
@@ -16,21 +16,17 @@
 
                     </div>
                     <div v-if="dato.item.element == 'div-left'" class="card-header head-dp text-center"><h2 class="text-white" v-text="dato.item.title"></h2></div>
-                    <div v-if="dato.item.element == 'div-left'" class="card-body">
+                    <div v-if="dato.item.element == 'div-left'" class="card-body bg-dp-white">
                         <div  class="row">
                              <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>
-                                <ul>
-                                    <li v-for="detail in dato.detail" :key="detail.id">{{detail.description}}</li>
-                                </ul>  
-                                                                
+                                <h3 v-text="dato.item.description"></h3>                        
                             </div>
                             <div class="col-sm-6">
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                         </div>
                      </div>
-                     <div v-if="dato.item.element == 'div-not-head'" class="card-body">
+                     <div v-if="dato.item.element == 'div-not-head'" class="card-body bg-dp-white">
                         <div class="col-sm-12 text-center">
                             <h2 class="text-dp" v-text="dato.item.title"></h2>
                         </div>

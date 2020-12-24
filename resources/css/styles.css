@@ -2218,6 +2218,10 @@ a:hover.back-to-top {
 	  color:#00518c;
   }
 
+  .text-dp-yellow{
+	color:#e6b800;
+  }
+
   .pre-formatted {
 	
 	white-space: pre-wrap;
@@ -2237,6 +2241,7 @@ a:hover.back-to-top {
 	border-radius: 2rem;
 	display: flex;
 	flex-direction: column;
+	height:45vh;
   }
 
   .hide-icon-m{
@@ -2245,6 +2250,35 @@ a:hover.back-to-top {
 
   .bg-dp-gray{
 	background-color: #d2d9e0!important;
+  }
+
+  .bg-dp-white {
+	background-color: #ffffff!important;
+  }
+
+  
+  .container-yellow {
+	position: relative;
+	text-align: center;
+	color: white;
+	height:30vh;
+	
+  }
+  
+  .centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgb(255, 179, 26); /* Fallback color */
+	background:rgb(255, 179, 26, 0.5); /* Black background with 0.5 opacity */
+	width: 100%;
+	height:100%;
+  }
+
+  .img-yellow {
+	width: 100%;
+	height:100%
   }
 
 

@@ -27,17 +27,21 @@ class SectionSeeder extends Seeder
                       ['section_id'=>1,'name'=>'div-not-head'],
                       ['section_id'=>1,'name'=>'slide'],
                       ['section_id'=>2,'name'=>'div'],
+                      ['section_id'=>2,'name'=>'div-yellow'],
                       ['section_id'=>2,'name'=>'div-group-img'],
                       ['section_id'=>2,'name'=>'div-group'],
                       ['section_id'=>2,'name'=>'div-not-head'],
                       ['section_id'=>3,'name'=>'div'],
                       ['section_id'=>3,'name'=>'div-left'],
+                      ['section_id'=>3,'name'=>'div-not-head'],
+                      ['section_id'=>3,'name'=>'div-not-head-left'],
+                      ['section_id'=>3,'name'=>'div-yellow'],
                       ['section_id'=>3,'name'=>'div-group-img'],
                       ['section_id'=>3,'name'=>'div-group'],
                       ['section_id'=>4,'name'=>'div'],
                       ['section_id'=>4,'name'=>'div-not-head'],
                       ['section_id'=>4,'name'=>'div-group-img'],
-                      ['section_id'=>4,'name'=>'div-group'],
+                      ['section_id'=>4,'name'=>'div-group-head'],
                   ];
 
         foreach($sections as $section){

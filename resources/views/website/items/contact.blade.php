@@ -1,8 +1,8 @@
+<div class="col-sm-12 card-header head-dp text-center"><h2 class="text-white">Contact Information</h2></div>
 <div id="contact" class="form-2 content-site">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Contact Information</h2>
                     <ul class="list-unstyled li-space-lg">
                         <li class="address">Don't hesitate to give us a call or send us a contact form message</li>
                         <li><i class="fas fa-map-marker-alt"></i>2851 Johnston street #543 Lafayette, Luisiana, Estados Unidos 70503</li>
