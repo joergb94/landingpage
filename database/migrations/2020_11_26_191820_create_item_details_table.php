@@ -17,7 +17,7 @@ class CreateItemDetailsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('item_id')->nullable();
             $table->string('name')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
