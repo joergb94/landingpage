@@ -3257,4 +3257,33 @@ a:hover.back-to-top {
   }
 
 
+  .container-head-dp {
+	position: relative;
+	text-align: center;
+	color: white;
+	height:50vh;
+	
+  }
+  
+  .centered-head-dp {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height:100%;
+  }
+
+  .img-head-dp {
+	width: 100%;
+	height:100%
+  }
+  .text-head{
+	padding-top: 45vh;
+  }
+ 
+  
+
+
+
   

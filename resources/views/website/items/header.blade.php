@@ -1,7 +1,13 @@
+
 <header id="header" class="">
-        <div class="header-content">
-        <img style="width:100%; height:90vh;" src="{{ asset('img/Cover.png') }}" alt="Chania">
-       
+        <div  class="container-yellow" style="width:100%; height:90vh;" >
+                        <img class="img-head-dp" src="{{ asset('img/Cover.png') }}" alt="DedicatedPeople">
+                        <div class="centered-head-dp">
+                            <h1 class="text-dp text-head">STAFFING 24/7 TO MEET YOUR NEEDS</h1>
+                            <br>
+                        </div>
+                    </div> 
+        <div class="header-content">    
                         <div v-if="menu==1" class="card-header head-dp col-sm-12 text-center" style="height:10vh;">
                                 <h1 style="display:none" class="text-center text-white title-head"> About Us</h1>
                         </div>  
