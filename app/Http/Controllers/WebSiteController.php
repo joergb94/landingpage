@@ -9,6 +9,8 @@ use App\Models\ItemDetail;
 class WebSiteController extends Controller
 {
     public function index(Request $request){
+      
+      if (!$request->ajax()) return view('website.index');
        $section = $request->page;
        $dataContent = [];
        $dataItems = Item::where('section_id',$section)->get();

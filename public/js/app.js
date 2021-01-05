@@ -2240,6 +2240,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2255,6 +2283,9 @@ __webpack_require__.r(__webpack_exports__);
         me.dataUser = r.data;
       });
       $(".content-site").fadeIn('slow');
+    },
+    menuData: function menuData() {
+      this.$emit("menu", 2);
     }
   },
   mounted: function mounted() {
@@ -41975,14 +42006,10 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          item.element == "div-group-img" ||
-                          item.element == "div-group" ||
-                          item.element == "slide"
-                            ? _c("a", {
-                                staticClass: "btn btn-info btn-sm",
-                                attrs: { href: "/itemDetails/" + item.id }
-                              })
-                            : _vm._e(),
+                          _c("a", {
+                            staticClass: "btn btn-info btn-sm",
+                            attrs: { href: "/itemDetails/" + item.id }
+                          }),
                           _vm._v(" "),
                           item.deleted_at == null
                             ? _c(
@@ -44174,21 +44201,62 @@ var render = function() {
         _vm._v(" "),
         dato.item.element == "div"
           ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("img", {
-                    staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("br"),
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("img", {
+                      staticClass: "img-fluid max-h",
+                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("h3", {
-                    staticClass: "pre-formatted text-center",
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
+                  _c(
+                    "div",
+                    { staticClass: "col-sm-6" },
+                    [
+                      _c("h4", {
+                        staticClass: "pre-formatted text-center",
+                        domProps: { textContent: _vm._s(dato.item.description) }
+                      }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm._l(dato.detail, function(detail) {
+                        return _c(
+                          "h4",
+                          {
+                            key: detail.id,
+                            staticClass: "pre-formatted text-center"
+                          },
+                          [
+                            _c("span", {
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
+                          ]
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c("br")
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-12 text-right" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-link",
+                        on: {
+                          click: function($event) {
+                            return _vm.menuData()
+                          }
+                        }
+                      },
+                      [_vm._m(0, true)]
+                    )
+                  ])
                 ])
               ])
             ])
@@ -44205,18 +44273,67 @@ var render = function() {
         _vm._v(" "),
         dato.item.element == "div-left"
           ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("h3", {
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("img", {
-                    staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                  })
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "col-sm-6 text-center" },
+                    [
+                      _c("h4", {
+                        staticClass: "pre-formatted text-center",
+                        domProps: { textContent: _vm._s(dato.item.description) }
+                      }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm._l(dato.detail, function(detail) {
+                        return _c(
+                          "h4",
+                          {
+                            key: detail.id,
+                            staticClass: "pre-formatted text-center"
+                          },
+                          [
+                            _c("span", {
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
+                          ]
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c("br")
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("img", {
+                      staticClass: "img-fluid max-h",
+                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-6 text-right" }, [
+                    _c("button", { staticClass: "btn btn-link" }, [
+                      _c(
+                        "h5",
+                        {
+                          staticClass: "text-dp",
+                          on: {
+                            click: function($event) {
+                              return _vm.menuData()
+                            }
+                          }
+                        },
+                        [
+                          _vm._v("More about our service "),
+                          _c("strong", [_vm._v(">>")])
+                        ]
+                      )
+                    ])
+                  ])
                 ])
               ])
             ])
@@ -44231,18 +44348,48 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("img", {
-                    staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("h3", {
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("img", {
+                      staticClass: "img-fluid max-h",
+                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-sm-6 text-center" },
+                    [
+                      _c("h4", {
+                        domProps: { textContent: _vm._s(dato.item.description) }
+                      }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _vm._l(dato.detail, function(detail) {
+                        return _c(
+                          "h4",
+                          {
+                            key: detail.id,
+                            staticClass: "pre-formatted text-center"
+                          },
+                          [
+                            _c("span", {
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
+                          ]
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c("br")
+                    ],
+                    2
+                  ),
+                  _vm._v(" "),
+                  _vm._m(1, true)
                 ])
               ])
             ])
@@ -44254,7 +44401,7 @@ var render = function() {
                 attrs: { id: "demo", "data-ride": "carousel" }
               },
               [
-                _vm._m(0, true),
+                _vm._m(2, true),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -44282,7 +44429,7 @@ var render = function() {
                             domProps: { textContent: _vm._s(detail.name) }
                           }),
                           _vm._v(" "),
-                          _c("h3", {
+                          _c("h4", {
                             staticClass: "slide-content-centered-dp text-light",
                             domProps: {
                               textContent: _vm._s(detail.description)
@@ -44295,9 +44442,9 @@ var render = function() {
                   0
                 ),
                 _vm._v(" "),
-                _vm._m(1, true),
+                _vm._m(3, true),
                 _vm._v(" "),
-                _vm._m(2, true)
+                _vm._m(4, true)
               ]
             )
           : _vm._e()
@@ -44307,6 +44454,28 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-dp" }, [
+      _vm._v("More About us "),
+      _c("strong", [_vm._v(">>")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-12 text-right" }, [
+      _c("button", { staticClass: "btn btn-link" }, [
+        _c("h5", { staticClass: "text-dp" }, [
+          _vm._v("Work enviroment "),
+          _c("strong", [_vm._v(">>")])
+        ])
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

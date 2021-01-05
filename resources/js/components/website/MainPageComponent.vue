@@ -3,26 +3,43 @@
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" class="card-header head-dp text-center"><h2 class="text-white" v-text="dato.item.title"></h2></div>
                     <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
-                        <div  class="row">
+                        <div class="container">
+                            <div  class="row">
                             <div class="col-sm-6">
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
+                                <h4 class="pre-formatted text-center" v-text="dato.item.description"></h4>
                                 <br>
-                                <h3 class="pre-formatted text-center" v-text="dato.item.description"></h3>
+                                <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                       <span v-text="detail.description"></span> 
+                                </h4>
+                                <br>  
+                            </div>
+                            <div class="col-sm-12 text-right">
+                                    <button class="btn btn-link" @click="menuData()" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
                             </div>
                         </div>
-
-
+                        </div>
                     </div>
                     <div v-if="dato.item.element == 'div-left'" class="card-header head-dp text-center"><h2 class="text-white" v-text="dato.item.title"></h2></div>
                     <div v-if="dato.item.element == 'div-left'" class="card-body bg-dp-white">
-                        <div  class="row">
-                             <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>                        
-                            </div>
-                            <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                        <div class="container">
+                             <div  class="row">
+                                <div class="col-sm-6 text-center">
+                                    <h4 class="pre-formatted text-center" v-text="dato.item.description"></h4>
+                                    <br>
+                                    <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                       <span v-text="detail.description"></span> 
+                                    </h4>
+                                    <br>                      
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <button class="btn btn-link"><h5 class="text-dp" @click="menuData()" >More about our service <strong>>></strong></h5></button>
+                                </div>
                             </div>
                         </div>
                      </div>
@@ -30,13 +47,24 @@
                         <div class="col-sm-12 text-center">
                             <h2 class="text-dp" v-text="dato.item.title"></h2>
                         </div>
-                        <div  class="row">
+                        <div class="container">
+                            <div  class="row">
                             <div class="col-sm-6">
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
-                            <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>
+                            <div class="col-sm-6 text-center">
+                                <h4 v-text="dato.item.description"></h4>
+                                <br>
+                                <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                       <span v-text="detail.description"></span> 
+                                </h4>
+                                <br>
                             </div>
+                            <div class="col-sm-12 text-right">
+                                    <button class="btn btn-link"><h5 class="text-dp">Work enviroment <strong>>></strong></h5></button>
+                            </div>
+                        </div>
+                        
                         </div>
                     </div>
                     <div v-else-if="dato.item.element == 'slide'" id="demo" class="carousel slide" data-ride="carousel">
@@ -54,7 +82,7 @@
                                 <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="Los Angeles">
                                 <div class="slide-info-dp">
                                     <h1 class="slide-title-centered-dp text-warning" v-text="detail.name"></h1>
-                                    <h3 class ="slide-content-centered-dp text-light" v-text="detail.description"></h3>
+                                    <h4 class ="slide-content-centered-dp text-light" v-text="detail.description"></h4>
                                 </div>
                             </div>
                         </div>
@@ -90,6 +118,9 @@
                 })
                 $(".content-site").fadeIn('slow');
         },
+        menuData(){
+                this.$emit("menu",2)
+        }
         },
         mounted() {
             console.log('Component mounted.')

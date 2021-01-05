@@ -1,7 +1,7 @@
 <header id="header" class="content-site">
         
             <template v-if="menu==0">
-                    <main-page-component></main-page-component>
+                    <main-page-component ></main-page-component>
             </template>
             <template v-if="menu==1">
                      <about-us-component></about-us-component>
@@ -14,5 +14,5 @@
             </template>
             <template v-if="menu==4">
             </template>
-                <!-- end of container -->
+         <!-- end of container -->
     </header> <!-- end of header -->

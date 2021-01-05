@@ -16,7 +16,10 @@
  
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">  
+            <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=0" >{{ __('Home') }}</button>
+                    </li> 
                     <li class="nav-item btn-dp">
                         <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=1" >{{ __('About us') }}</button>
                     </li>
