@@ -10,7 +10,7 @@
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>
+                                <h4 v-text="dato.item.description"></h4>
                             </div>
                         </div>
 
@@ -20,21 +20,27 @@
                     <div v-if="dato.item.element == 'div-not-head'" class="card-body">
                         <div class="col-sm-12 text-center">
                             <h2 class="text-dp" v-text="dato.item.title"></h2>
+                            <h4 class="text-dp" v-text="dato.item.description"></h4>
                         </div>
-                        <div  class="row">
-                            <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
-                            </div>
-                            <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>
+                        <div class="container">
+                            <div  class="row">
+                                <div class="col-sm-6">
+                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                       <span v-text="detail.description"></span> 
+                                    </h4>
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
                     <div v-else-if="dato.item.element == 'div-group-img'" class="card-body bg-dp-white">
 
                         <div class="col-sm-12">
                             <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
-                            <h6 class="text-center" v-text="dato.item.description"></h6>
+                            <h4 class="text-center" v-text="dato.item.description"></h4>
                         </div>
                         <br>
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
@@ -57,7 +63,7 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
-                            <h6 class="text-center" v-text="dato.item.description"></h6>
+                            <h4 class="text-center" v-text="dato.item.description"></h4>
                         </div>
                         <div class="container">
                             <div class="row">

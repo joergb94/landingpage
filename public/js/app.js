@@ -2019,6 +2019,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -40426,14 +40432,10 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          item.element == "div-group-img" ||
-                          item.element == "div-group" ||
-                          item.element == "slide"
-                            ? _c("a", {
-                                staticClass: "btn btn-info btn-sm",
-                                attrs: { href: "/itemDetails/" + item.id }
-                              })
-                            : _vm._e(),
+                          _c("a", {
+                            staticClass: "btn btn-info btn-sm",
+                            attrs: { href: "/itemDetails/" + item.id }
+                          }),
                           _vm._v(" "),
                           item.deleted_at == null
                             ? _c(
@@ -43775,7 +43777,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-sm-6" }, [
-                  _c("h3", {
+                  _c("h4", {
                     domProps: { textContent: _vm._s(dato.item.description) }
                   })
                 ])
@@ -43789,21 +43791,44 @@ var render = function() {
                 _c("h2", {
                   staticClass: "text-dp",
                   domProps: { textContent: _vm._s(dato.item.title) }
+                }),
+                _vm._v(" "),
+                _c("h4", {
+                  staticClass: "text-dp",
+                  domProps: { textContent: _vm._s(dato.item.description) }
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("img", {
-                    staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("h3", {
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
+              _c("div", { staticClass: "container" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("img", {
+                      staticClass: "img-fluid max-h",
+                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-sm-6" },
+                    _vm._l(dato.detail, function(detail) {
+                      return _c(
+                        "h4",
+                        {
+                          key: detail.id,
+                          staticClass: "pre-formatted text-center"
+                        },
+                        [
+                          _c("span", {
+                            domProps: {
+                              textContent: _vm._s(detail.description)
+                            }
+                          })
+                        ]
+                      )
+                    }),
+                    0
+                  )
                 ])
               ])
             ])
@@ -43818,7 +43843,7 @@ var render = function() {
                     domProps: { textContent: _vm._s(dato.item.title) }
                   }),
                   _vm._v(" "),
-                  _c("h6", {
+                  _c("h4", {
                     staticClass: "text-center",
                     domProps: { textContent: _vm._s(dato.item.description) }
                   })
@@ -43878,7 +43903,7 @@ var render = function() {
                   domProps: { textContent: _vm._s(dato.item.title) }
                 }),
                 _vm._v(" "),
-                _c("h6", {
+                _c("h4", {
                   staticClass: "text-center",
                   domProps: { textContent: _vm._s(dato.item.description) }
                 })
