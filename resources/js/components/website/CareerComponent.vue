@@ -5,12 +5,19 @@
                         <h2 class="text-white" v-text="dato.item.title"></h2>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body">
-                        <div  class="row">
-                            <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
-                            </div>
-                            <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>                          
+                        <div class="contianer">
+                            <div  class="row">
+                                <div class="col-sm-6">
+                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                                    <br>
+                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                        <span v-text="detail.description"></span> 
+                                    </h4>
+                                    <br>                           
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -18,12 +25,19 @@
                         <div class="col-sm-12 text-center">
                             <h2 class="text-dp" v-text="dato.item.title"></h2>
                         </div>
-                        <div  class="row">
-                            <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
-                            </div>
-                            <div class="col-sm-6">
-                                <h3 v-text="dato.item.description"></h3>
+                        <div class="container">
+                            <div  class="row">
+                                <div class="col-sm-6">
+                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                                    <br>
+                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                        <span v-text="detail.description"></span> 
+                                    </h4>
+                                    <br> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -31,7 +45,7 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center" v-text='dato.item.title'></h2>
-                            <h6 class="text-center" v-text="dato.item.description"></h6>
+                            <h6 class="text-left" v-text="dato.item.description"></h6>
                         </div>
                         <br>
                         <div class="col-sm-12"  v-for="detail in dato.detail" :key="detail.id">
@@ -40,35 +54,35 @@
                                     <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm">
-                                    <h3 class="text-center" v-text="detail.description"></h3>
+                                    <h4 class="text-left" v-text="detail.description"></h4>
                                 </div>
                             </div>
                         </div>
                         
                     </div>
                    <div v-else-if="dato.item.element == 'div-group-head'" class="card-body este">
-                        <div class="row">
-                            <div class="col-sm-3" v-for="detail in dato.detail" :key="detail.id">
-                                <div class="col-sm-12">
-                                    <div class="row">
-                                        <div class="col-sm-12 text-center">
-                                            <img class="img-fluid max-h" v-bind:src="detail.image" alt="DedicatedPeople">
-                                            <h2 class="text-dp" v-text="detail.name"></h2>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <h3 class="text-center" v-text="detail.description"></h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3" v-for="detail in dato.detail" :key="detail.id">
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-12 text-left">
+                                                <img class="img-fluid max-h" v-bind:src="detail.image" alt="DedicatedPeople">
+                                                <h2 class="text-dp" v-text="detail.name"></h2>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <h4 class="text-left" v-text="detail.description"></h4>
+                                            </div>
                                         </div>
                                     </div>
+                                    <br>
                                 </div>
-                                <br>
-                            </div>
-                            <div v-if="dato.item.description != null" class="col-sm-12">
-                                <h2 class="text-center" v-text='dato.item.description'></h2>
-                                <br>
+                                <div v-if="dato.item.description != null" class="col-sm-12">
+                                    <h2 class="text-left" v-text='dato.item.description'></h2>
+                                    <br>
+                                </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
