@@ -46,7 +46,7 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center" v-text='dato.item.title'></h2>
-                            <h6 class="text-center" v-text="dato.item.description"></h6>
+                            <h6 class="text-left" v-text="dato.item.description"></h6>
                         </div>
                         <br>
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
@@ -55,7 +55,7 @@
                                     <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm">
-                                    <h3 class="text-center" v-text="detail.description"></h3>
+                                    <h3 class="text-left" v-text="detail.description"></h3>
                                 </div>
                             </div>
                         </div>
@@ -75,30 +75,30 @@
                                                         <div class="col-sm-12 col-md-4">
                                                             <img class="img-fluid" v-bind:src="detail.image" alt="DedicatedPeople">
                                                         </div>
-                                                        <div class="col-sm-12 col-md-8 text-center">
+                                                        <div class="col-sm-12 col-md-8 text-left">
                                                             <br>
-                                                            <div class="col-sm-12 text-center">
-                                                                <h3 class="text-dp pre-formatted text-center" v-text="detail.name"></h3>
+                                                            <div class="col-sm-12 text-left">
+                                                                <h3 class="text-dp pre-formatted text-left" v-text="detail.name"></h3>
                                                             </div>
-                                                            <div class="col-sm-12 text-center">
-                                                                <h6 class="text-center pre-formatted" v-text="detail.description"></h6>
+                                                            <div class="col-sm-12 text-left">
+                                                                <h6 class="text-left pre-formatted" v-text="detail.description"></h6>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div  class="col-sm-12 text-center" v-else>
+                                                <div  class="col-sm-12 text-left" v-else>
                                                         <br>
                                                         <h2 class="text-dp" v-text="detail.name"></h2>
                                                         <br>
                                                         <div class="col-sm-12">
-                                                            <h3 class="text-center" v-text="detail.description"></h3>
+                                                            <h3 class="text-left" v-text="detail.description"></h3>
                                                         </div>
                                                 </div>
                                     
                                     <br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h2 class="text-center text-dp-yellow" v-text='dato.item.description'></h2>
+                                    <h2 class="text-left text-dp-yellow" v-text='dato.item.description'></h2>
                                     <br>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                                 <div class="col-sm-6">
                                     <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 text-left">
                                     <h3 class="text-warning" v-text="dato.item.description"></h3>
                                     <ul>
                                     <li v-for="detail in dato.detail" :key="detail.id">
@@ -133,7 +133,7 @@
                         </div>
                         <div class="container">
                             <div  class="row">
-                                <div class="col-sm-6 text-center">
+                                <div class="col-sm-6 text-left">
                                     <h3 class="text-dp-yellow" v-text="dato.item.description"></h3>
                                     <br>
                                     <ul class="text-left">

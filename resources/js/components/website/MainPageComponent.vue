@@ -9,9 +9,9 @@
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
-                                <h4 class="pre-formatted text-center" v-text="dato.item.description"></h4>
+                                <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
                                 <br>
-                                <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
                                 </h4>
                                 <br>  
@@ -26,10 +26,10 @@
                     <div v-if="dato.item.element == 'div-left'" class="card-body bg-dp-white">
                         <div class="container">
                              <div  class="row">
-                                <div class="col-sm-6 text-center">
-                                    <h4 class="pre-formatted text-center" v-text="dato.item.description"></h4>
+                                <div class="col-sm-6 text-left">
+                                    <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
                                     <br>
-                                    <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
                                     </h4>
                                     <br>                      
@@ -52,10 +52,10 @@
                             <div class="col-sm-6">
                                 <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
-                            <div class="col-sm-6 text-center">
+                            <div class="col-sm-6 text-left">
                                 <h4 v-text="dato.item.description"></h4>
                                 <br>
-                                <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
                                 </h4>
                                 <br>

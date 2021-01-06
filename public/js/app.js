@@ -43832,7 +43832,7 @@ var render = function() {
                         "h4",
                         {
                           key: detail.id,
-                          staticClass: "pre-formatted text-center"
+                          staticClass: "pre-formatted text-left"
                         },
                         [
                           _c("span", {
@@ -43860,7 +43860,7 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("h4", {
-                    staticClass: "text-center",
+                    staticClass: "text-left",
                     domProps: { textContent: _vm._s(dato.item.description) }
                   })
                 ]),
@@ -43891,14 +43891,14 @@ var render = function() {
                             { staticClass: "badge badge-dark col-sm-12" },
                             [
                               _c("h4", {
-                                staticClass: "text-center text-warning",
+                                staticClass: "text-left text-warning",
                                 domProps: { textContent: _vm._s(detail.name) }
                               })
                             ]
                           ),
                           _vm._v(" "),
                           _c("h4", {
-                            staticClass: "text-center",
+                            staticClass: "text-left",
                             domProps: {
                               textContent: _vm._s(detail.description)
                             }
@@ -43920,7 +43920,7 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("h4", {
-                  staticClass: "text-center",
+                  staticClass: "text-left",
                   domProps: { textContent: _vm._s(dato.item.description) }
                 })
               ]),
@@ -43939,7 +43939,7 @@ var render = function() {
                             detail.image !== null
                               ? _c(
                                   "div",
-                                  { staticClass: "col-sm-12 text-center" },
+                                  { staticClass: "col-sm-12 text-left" },
                                   [
                                     _c("img", {
                                       staticClass: "img-fluid max-icon",
@@ -43955,7 +43955,7 @@ var render = function() {
                             _c("div", { staticClass: "col-sm-12" }, [
                               _c("div", { staticClass: "container" }, [
                                 _c("h6", {
-                                  staticClass: "text-center",
+                                  staticClass: "text-left",
                                   domProps: {
                                     textContent: _vm._s(detail.description)
                                   }
@@ -44318,7 +44318,7 @@ var render = function() {
                     { staticClass: "col-sm-6" },
                     [
                       _c("h4", {
-                        staticClass: "pre-formatted text-center",
+                        staticClass: "pre-formatted text-left",
                         domProps: { textContent: _vm._s(dato.item.description) }
                       }),
                       _vm._v(" "),
@@ -44329,7 +44329,7 @@ var render = function() {
                           "h4",
                           {
                             key: detail.id,
-                            staticClass: "pre-formatted text-center"
+                            staticClass: "pre-formatted text-left"
                           },
                           [
                             _c("span", {
@@ -44380,10 +44380,10 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c(
                     "div",
-                    { staticClass: "col-sm-6 text-center" },
+                    { staticClass: "col-sm-6 text-left" },
                     [
                       _c("h4", {
-                        staticClass: "pre-formatted text-center",
+                        staticClass: "pre-formatted text-left",
                         domProps: { textContent: _vm._s(dato.item.description) }
                       }),
                       _vm._v(" "),
@@ -44394,7 +44394,7 @@ var render = function() {
                           "h4",
                           {
                             key: detail.id,
-                            staticClass: "pre-formatted text-center"
+                            staticClass: "pre-formatted text-left"
                           },
                           [
                             _c("span", {
@@ -44462,7 +44462,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "col-sm-6 text-center" },
+                    { staticClass: "col-sm-6 text-left" },
                     [
                       _c("h4", {
                         domProps: { textContent: _vm._s(dato.item.description) }
@@ -44475,7 +44475,7 @@ var render = function() {
                           "h4",
                           {
                             key: detail.id,
-                            staticClass: "pre-formatted text-center"
+                            staticClass: "pre-formatted text-left"
                           },
                           [
                             _c("span", {
@@ -44756,7 +44756,7 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("h6", {
-                    staticClass: "text-center",
+                    staticClass: "text-left",
                     domProps: { textContent: _vm._s(dato.item.description) }
                   })
                 ]),
@@ -44781,7 +44781,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("div", { staticClass: "col-sm" }, [
                           _c("h3", {
-                            staticClass: "text-center",
+                            staticClass: "text-left",
                             domProps: {
                               textContent: _vm._s(detail.description)
                             }
@@ -44836,20 +44836,18 @@ var render = function() {
                                     "div",
                                     {
                                       staticClass:
-                                        "col-sm-12 col-md-8 text-center"
+                                        "col-sm-12 col-md-8 text-left"
                                     },
                                     [
                                       _c("br"),
                                       _vm._v(" "),
                                       _c(
                                         "div",
-                                        {
-                                          staticClass: "col-sm-12 text-center"
-                                        },
+                                        { staticClass: "col-sm-12 text-left" },
                                         [
                                           _c("h3", {
                                             staticClass:
-                                              "text-dp pre-formatted text-center",
+                                              "text-dp pre-formatted text-left",
                                             domProps: {
                                               textContent: _vm._s(detail.name)
                                             }
@@ -44859,13 +44857,11 @@ var render = function() {
                                       _vm._v(" "),
                                       _c(
                                         "div",
-                                        {
-                                          staticClass: "col-sm-12 text-center"
-                                        },
+                                        { staticClass: "col-sm-12 text-left" },
                                         [
                                           _c("h6", {
                                             staticClass:
-                                              "text-center pre-formatted",
+                                              "text-left pre-formatted",
                                             domProps: {
                                               textContent: _vm._s(
                                                 detail.description
@@ -44880,7 +44876,7 @@ var render = function() {
                               ])
                             : _c(
                                 "div",
-                                { staticClass: "col-sm-12 text-center" },
+                                { staticClass: "col-sm-12 text-left" },
                                 [
                                   _c("br"),
                                   _vm._v(" "),
@@ -44895,7 +44891,7 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-sm-12" }, [
                                     _c("h3", {
-                                      staticClass: "text-center",
+                                      staticClass: "text-left",
                                       domProps: {
                                         textContent: _vm._s(detail.description)
                                       }
@@ -44911,7 +44907,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-sm-6" }, [
                       _c("h2", {
-                        staticClass: "text-center text-dp-yellow",
+                        staticClass: "text-left text-dp-yellow",
                         domProps: { textContent: _vm._s(dato.item.description) }
                       }),
                       _vm._v(" "),
@@ -44942,7 +44938,7 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6" }, [
+                  _c("div", { staticClass: "col-sm-6 text-left" }, [
                     _c("h3", {
                       staticClass: "text-warning",
                       domProps: { textContent: _vm._s(dato.item.description) }
@@ -44978,7 +44974,7 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "container" }, [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6 text-center" }, [
+                  _c("div", { staticClass: "col-sm-6 text-left" }, [
                     _c("h3", {
                       staticClass: "text-dp-yellow",
                       domProps: { textContent: _vm._s(dato.item.description) }

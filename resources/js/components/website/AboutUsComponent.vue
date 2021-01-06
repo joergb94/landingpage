@@ -28,7 +28,7 @@
                                     <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="pre-formatted text-center" v-for="detail in dato.detail" :key="detail.id">
+                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
                                     </h4>
                                 </div>
@@ -40,7 +40,7 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
-                            <h4 class="text-center" v-text="dato.item.description"></h4>
+                            <h4 class="text-left" v-text="dato.item.description"></h4>
                         </div>
                         <br>
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
@@ -51,9 +51,9 @@
                                 <div class="col-sm">
                                     
                                     <span class="badge badge-dark col-sm-12">
-                                        <h4 class="text-center text-warning"  v-text="detail.name"></h4>
+                                        <h4 class="text-left text-warning"  v-text="detail.name"></h4>
                                     </span>
-                                    <h4 class="text-center" v-text="detail.description"></h4>
+                                    <h4 class="text-left" v-text="detail.description"></h4>
                                 </div>
                             </div>
                         </div>
@@ -63,19 +63,19 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
-                            <h4 class="text-center" v-text="dato.item.description"></h4>
+                            <h4 class="text-left" v-text="dato.item.description"></h4>
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-4" v-for="detail in dato.detail" :key="detail.id">
                                     <div class="card-dp-gray">
                                         <div class="row">
-                                            <div class="col-sm-12 text-center" v-if="detail.image !== null">
+                                            <div class="col-sm-12 text-left" v-if="detail.image !== null">
                                                 <img class="img-fluid max-icon" v-bind:src="detail.image" alt="DedicatedPeople">
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="container">
-                                                    <h6 class="text-center" v-text="detail.description"></h6>
+                                                    <h6 class="text-left" v-text="detail.description"></h6>
                                                 </div>
                                                 <br>
                                             </div>
