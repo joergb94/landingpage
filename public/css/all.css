@@ -3154,7 +3154,7 @@ a:hover.back-to-top {
 }
 /* end of min-width width 1200px */
 .head-dp{
-	background-color:#00518c;
+	background-image: linear-gradient(#00518c, #0068b3)!important;
 	color: rgba(219, 219, 219, 0.616);
 
 }
