@@ -29,7 +29,7 @@
     <link rel="icon" href="{{ asset('img/logo.png') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
+
     <!-- Preloader -->
 	<div class="spinner-wrapper">
             <div class="col-sm-12 text-center" style="padding-top:20vh;">

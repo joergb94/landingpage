@@ -2025,6 +2025,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2061,6 +2070,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main */ "./resources/js/components/main.js");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2288,6 +2305,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2326,6 +2345,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main */ "./resources/js/components/main.js");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -43771,51 +43798,57 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "carousel" },
-    _vm._l(_vm.dataUser, function(dato, index) {
-      return _c("div", { key: index }, [
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
-              _c("h2", {
-                staticClass: "text-white",
-                domProps: { textContent: _vm._s(dato.item.title) }
-              })
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("img", {
-                    staticClass: "img-fluid max-h",
-                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-6" }, [
-                  _c("h4", {
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-not-head"
-          ? _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "col-sm-12 text-center" }, [
-                _c("h2", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                }),
-                _vm._v(" "),
-                _c("h4", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.description) }
-                })
-              ]),
+    [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
+          attrs: { type: "button", "data-toggle": "dropdown" }
+        },
+        [_vm._v("\n            About Us Menu\n        ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dropdown-menu col-sm-12 col-md-6" },
+        _vm._l(_vm.dataUser, function(dato, index) {
+          return _c(
+            "a",
+            {
+              key: index,
+              staticClass: "dropdown-item pre-formatted",
+              attrs: { href: "#section" + index }
+            },
+            [
+              _vm._m(0, true),
               _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
+              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.dataUser, function(dato, index) {
+        return _c("div", { key: index }, [
+          dato.item.element == "div"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-header head-dp text-center",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("h2", {
+                    staticClass: "text-white",
+                    domProps: { textContent: _vm._s(dato.item.title) }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div"
+            ? _c("div", { staticClass: "card-body" }, [
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-sm-6" }, [
                     _c("img", {
@@ -43824,188 +43857,254 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-6" },
-                    _vm._l(dato.detail, function(detail) {
-                      return _c(
-                        "h4",
-                        {
-                          key: detail.id,
-                          staticClass: "pre-formatted text-left"
-                        },
-                        [
-                          _c("span", {
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          })
-                        ]
-                      )
-                    }),
-                    0
-                  )
+                  _c("div", { staticClass: "col-sm-6" }, [
+                    _c("h4", {
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    })
+                  ])
                 ])
               ])
-            ])
-          : dato.item.element == "div-group-img"
-          ? _c(
-              "div",
-              { staticClass: "card-body bg-dp-white" },
-              [
-                _c("div", { staticClass: "col-sm-12" }, [
-                  _c("h2", {
-                    staticClass: "text-center text-dp",
-                    domProps: { textContent: _vm._s(dato.item.title) }
-                  }),
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-not-head"
+            ? _c(
+                "div",
+                { staticClass: "card-body", attrs: { id: "section" + index } },
+                [
+                  _c("div", { staticClass: "col-sm-12 text-center" }, [
+                    _c("h2", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("h4", {
-                    staticClass: "text-left",
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _vm._l(dato.detail, function(detail) {
-                  return _c(
-                    "div",
-                    { key: detail.id, staticClass: "container" },
-                    [
-                      _c("div", { staticClass: "row" }, [
-                        detail.image !== null
-                          ? _c("div", { staticClass: "col-sm" }, [
-                              _c("img", {
-                                staticClass: "img-fluid max-h",
-                                attrs: {
-                                  src: detail.image,
-                                  alt: "DedicatedPeople"
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-sm-6" }, [
+                        _c("img", {
+                          staticClass: "img-fluid max-h",
+                          attrs: {
+                            src: dato.item.image,
+                            alt: "DedicatedPeople"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-sm-6" },
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "h4",
+                            {
+                              key: detail.id,
+                              staticClass: "pre-formatted text-left"
+                            },
+                            [
+                              _c("span", {
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
                                 }
                               })
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm" }, [
-                          _c(
-                            "span",
-                            { staticClass: "badge badge-dark col-sm-12" },
-                            [
-                              _c("h4", {
-                                staticClass: "text-left text-warning",
-                                domProps: { textContent: _vm._s(detail.name) }
-                              })
                             ]
-                          ),
-                          _vm._v(" "),
-                          _c("h4", {
-                            staticClass: "text-left",
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          })
-                        ])
-                      ])
-                    ]
-                  )
-                })
-              ],
-              2
-            )
-          : dato.item.element == "div-group"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "col-sm-12" }, [
-                _c("h2", {
-                  staticClass: "text-center text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                }),
-                _vm._v(" "),
-                _c("h4", {
-                  staticClass: "text-left",
-                  domProps: { textContent: _vm._s(dato.item.description) }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
-                _c(
-                  "div",
-                  { staticClass: "row" },
+                          )
+                        }),
+                        0
+                      )
+                    ])
+                  ])
+                ]
+              )
+            : dato.item.element == "div-group-img"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("h2", {
+                      staticClass: "text-center text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", {
+                      staticClass: "text-left",
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
                   _vm._l(dato.detail, function(detail) {
                     return _c(
                       "div",
-                      { key: detail.id, staticClass: "col-sm-4" },
+                      { key: detail.id, staticClass: "container" },
                       [
-                        _c("div", { staticClass: "card-dp-gray" }, [
-                          _c("div", { staticClass: "row" }, [
-                            detail.image !== null
-                              ? _c(
-                                  "div",
-                                  { staticClass: "col-sm-12 text-left" },
-                                  [
-                                    _c("img", {
-                                      staticClass: "img-fluid max-icon",
-                                      attrs: {
-                                        src: detail.image,
-                                        alt: "DedicatedPeople"
-                                      }
-                                    })
-                                  ]
-                                )
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "col-sm-12" }, [
-                              _c("div", { staticClass: "container" }, [
-                                _c("h6", {
-                                  staticClass: "text-left",
-                                  domProps: {
-                                    textContent: _vm._s(detail.description)
+                        _c("div", { staticClass: "row" }, [
+                          detail.image !== null
+                            ? _c("div", { staticClass: "col-sm" }, [
+                                _c("img", {
+                                  staticClass: "img-fluid max-h",
+                                  attrs: {
+                                    src: detail.image,
+                                    alt: "DedicatedPeople"
                                   }
                                 })
-                              ]),
-                              _vm._v(" "),
-                              _c("br")
-                            ])
+                              ])
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-sm" }, [
+                            _c(
+                              "span",
+                              { staticClass: "badge badge-dark col-sm-12" },
+                              [
+                                _c("h4", {
+                                  staticClass: "text-left text-warning",
+                                  domProps: { textContent: _vm._s(detail.name) }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("h4", {
+                              staticClass: "text-left",
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
                           ])
-                        ]),
-                        _vm._v(" "),
-                        _c("br")
+                        ])
                       ]
                     )
+                  })
+                ],
+                2
+              )
+            : dato.item.element == "div-group"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("h2", {
+                      staticClass: "text-center text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", {
+                      staticClass: "text-left",
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "container" }, [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      _vm._l(dato.detail, function(detail) {
+                        return _c(
+                          "div",
+                          { key: detail.id, staticClass: "col-sm-4" },
+                          [
+                            _c("div", { staticClass: "card-dp-gray" }, [
+                              _c("div", { staticClass: "row" }, [
+                                detail.image !== null
+                                  ? _c(
+                                      "div",
+                                      { staticClass: "col-sm-12 text-left" },
+                                      [
+                                        _c("img", {
+                                          staticClass: "img-fluid max-icon",
+                                          attrs: {
+                                            src: detail.image,
+                                            alt: "DedicatedPeople"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-sm-12" }, [
+                                  _c("div", { staticClass: "container" }, [
+                                    _c("h6", {
+                                      staticClass: "text-left",
+                                      domProps: {
+                                        textContent: _vm._s(detail.description)
+                                      }
+                                    })
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("br")
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("br")
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  ])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-yellow"
+            ? _c(
+                "div",
+                {
+                  staticClass: "container-yellow col-sm-12",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("img", {
+                    staticClass: "img-yellow",
+                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                   }),
-                  0
-                )
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-yellow"
-          ? _c("div", { staticClass: "container-yellow col-sm-12" }, [
-              _c("img", {
-                staticClass: "img-yellow",
-                attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "centered" }, [
-                _c("br"),
-                _vm._v(" "),
-                _c("h1", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                }),
-                _vm._v(" "),
-                _c("p", {
-                  domProps: { textContent: _vm._s(dato.item.description) }
-                }),
-                _vm._v(" "),
-                _c("br")
-              ])
-            ])
-          : _vm._e()
-      ])
-    }),
-    0
+                  _vm._v(" "),
+                  _c("div", { staticClass: "centered" }, [
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("h1", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("p", {
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    }),
+                    _vm._v(" "),
+                    _c("br")
+                  ])
+                ]
+              )
+            : _vm._e()
+        ])
+      })
+    ],
+    2
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "text-dp-yellow" }, [
+      _c("strong", [_vm._v(">>")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -44030,243 +44129,312 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "carousel" },
-    _vm._l(_vm.dataUser, function(dato, index) {
-      return _c("div", { key: index }, [
-        dato.item.element == "div" || dato.item.element == "div-group-head"
-          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
-              _c("h2", {
-                staticClass: "text-white",
-                domProps: { textContent: _vm._s(dato.item.title) }
-              })
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "contianer" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-6" },
-                    [
-                      _c("h4", {
-                        staticClass: "pre-formatted text-left",
-                        domProps: { textContent: _vm._s(dato.item.description) }
-                      }),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _vm._l(dato.detail, function(detail) {
-                        return _c(
-                          "h4",
-                          {
-                            key: detail.id,
-                            staticClass: "pre-formatted text-left"
-                          },
-                          [
-                            _c("span", {
-                              domProps: {
-                                textContent: _vm._s(detail.description)
-                              }
-                            })
-                          ]
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c("br")
-                    ],
-                    2
-                  )
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-not-head"
-          ? _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "col-sm-12 text-center" }, [
-                _c("h2", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                })
-              ]),
+    [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
+          attrs: { type: "button", "data-toggle": "dropdown" }
+        },
+        [_vm._v("\n            Careers Menu\n        ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dropdown-menu" },
+        _vm._l(_vm.dataUser, function(dato, index) {
+          return _c(
+            "a",
+            {
+              key: index,
+              staticClass: "dropdown-item pre-formatted",
+              attrs: { href: "#section" + index }
+            },
+            [
+              _vm._m(0, true),
               _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.dataUser, function(dato, index) {
+        return _c("div", { key: index }, [
+          dato.item.element == "div" || dato.item.element == "div-group-head"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-header head-dp text-center",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("h2", {
+                    staticClass: "text-white",
+                    domProps: { textContent: _vm._s(dato.item.title) }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div"
+            ? _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "contianer" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("img", {
+                        staticClass: "img-fluid max-h",
+                        attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "col-sm-6" },
+                      [
+                        _c("h4", {
+                          staticClass: "pre-formatted text-left",
+                          domProps: {
+                            textContent: _vm._s(dato.item.description)
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "h4",
+                            {
+                              key: detail.id,
+                              staticClass: "pre-formatted text-left"
+                            },
+                            [
+                              _c("span", {
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              })
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c("br")
+                      ],
+                      2
+                    )
+                  ])
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-not-head"
+            ? _c(
+                "div",
+                { staticClass: "card-body", attrs: { id: "section" + index } },
+                [
+                  _c("div", { staticClass: "col-sm-12 text-center" }, [
+                    _c("h2", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
                     })
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-6" },
-                    [
-                      _c("h4", {
-                        staticClass: "pre-formatted text-left",
-                        domProps: { textContent: _vm._s(dato.item.description) }
-                      }),
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-sm-6" }, [
+                        _c("img", {
+                          staticClass: "img-fluid max-h",
+                          attrs: {
+                            src: dato.item.image,
+                            alt: "DedicatedPeople"
+                          }
+                        })
+                      ]),
                       _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _vm._l(dato.detail, function(detail) {
-                        return _c(
-                          "h4",
-                          {
-                            key: detail.id,
-                            staticClass: "pre-formatted text-left"
-                          },
-                          [
-                            _c("span", {
-                              domProps: {
-                                textContent: _vm._s(detail.description)
-                              }
-                            })
-                          ]
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c("br")
-                    ],
-                    2
-                  )
-                ])
-              ])
-            ])
-          : dato.item.element == "div-group-img"
-          ? _c(
-              "div",
-              { staticClass: "card-body este" },
-              [
-                _c("div", { staticClass: "col-sm-12" }, [
-                  _c("h2", {
-                    staticClass: "text-center",
-                    domProps: { textContent: _vm._s(dato.item.title) }
-                  }),
-                  _vm._v(" "),
-                  _c("h6", {
-                    staticClass: "text-left",
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _vm._l(dato.detail, function(detail) {
-                  return _c(
-                    "div",
-                    { key: detail.id, staticClass: "col-sm-12" },
-                    [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-sm" }, [
-                          _c("img", {
-                            staticClass: "img-fluid max-h",
-                            attrs: {
-                              src: dato.item.image,
-                              alt: "DedicatedPeople"
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm" }, [
-                          _c("h4", {
-                            staticClass: "text-left",
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          })
-                        ])
-                      ])
-                    ]
-                  )
-                })
-              ],
-              2
-            )
-          : dato.item.element == "div-group-head"
-          ? _c("div", { staticClass: "card-body este" }, [
-              _c("div", { staticClass: "container" }, [
-                _c(
-                  "div",
-                  { staticClass: "row" },
-                  [
-                    _vm._l(dato.detail, function(detail) {
-                      return _c(
+                      _c(
                         "div",
-                        { key: detail.id, staticClass: "col-sm-3" },
+                        { staticClass: "col-sm-6" },
                         [
-                          _c("div", { staticClass: "col-sm-12" }, [
-                            _c("div", { staticClass: "row" }, [
-                              _c(
-                                "div",
-                                { staticClass: "col-sm-12 text-left" },
-                                [
-                                  _c("img", {
-                                    staticClass: "img-fluid max-h",
-                                    attrs: {
-                                      src: detail.image,
-                                      alt: "DedicatedPeople"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("h2", {
-                                    staticClass: "text-dp",
-                                    domProps: {
-                                      textContent: _vm._s(detail.name)
-                                    }
-                                  })
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "col-sm-12" }, [
-                                _c("h4", {
-                                  staticClass: "text-left",
-                                  domProps: {
-                                    textContent: _vm._s(detail.description)
-                                  }
-                                })
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("br")
-                        ]
-                      )
-                    }),
-                    _vm._v(" "),
-                    dato.item.description != null
-                      ? _c("div", { staticClass: "col-sm-12" }, [
-                          _c("h2", {
-                            staticClass: "text-left",
+                          _c("h4", {
+                            staticClass: "pre-formatted text-left",
                             domProps: {
                               textContent: _vm._s(dato.item.description)
                             }
                           }),
                           _vm._v(" "),
+                          _c("br"),
+                          _vm._v(" "),
+                          _vm._l(dato.detail, function(detail) {
+                            return _c(
+                              "h4",
+                              {
+                                key: detail.id,
+                                staticClass: "pre-formatted text-left"
+                              },
+                              [
+                                _c("span", {
+                                  domProps: {
+                                    textContent: _vm._s(detail.description)
+                                  }
+                                })
+                              ]
+                            )
+                          }),
+                          _vm._v(" "),
                           _c("br")
+                        ],
+                        2
+                      )
+                    ])
+                  ])
+                ]
+              )
+            : dato.item.element == "div-group-img"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body este",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("h2", {
+                      staticClass: "text-center",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("h6", {
+                      staticClass: "text-left",
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _vm._l(dato.detail, function(detail) {
+                    return _c(
+                      "div",
+                      { key: detail.id, staticClass: "col-sm-12" },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-sm" }, [
+                            _c("img", {
+                              staticClass: "img-fluid max-h",
+                              attrs: {
+                                src: dato.item.image,
+                                alt: "DedicatedPeople"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-sm" }, [
+                            _c("h4", {
+                              staticClass: "text-left",
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
+                          ])
                         ])
-                      : _vm._e()
-                  ],
-                  2
-                )
-              ])
-            ])
-          : _vm._e()
-      ])
-    }),
-    0
+                      ]
+                    )
+                  })
+                ],
+                2
+              )
+            : dato.item.element == "div-group-head"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body este",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "container" }, [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      [
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "div",
+                            { key: detail.id, staticClass: "col-sm-3" },
+                            [
+                              _c("div", { staticClass: "col-sm-12" }, [
+                                _c("div", { staticClass: "row" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-sm-12 text-left" },
+                                    [
+                                      _c("img", {
+                                        staticClass: "img-fluid max-h",
+                                        attrs: {
+                                          src: detail.image,
+                                          alt: "DedicatedPeople"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("h2", {
+                                        staticClass: "text-dp",
+                                        domProps: {
+                                          textContent: _vm._s(detail.name)
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "col-sm-12" }, [
+                                    _c("h4", {
+                                      staticClass: "text-left",
+                                      domProps: {
+                                        textContent: _vm._s(detail.description)
+                                      }
+                                    })
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("br")
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        dato.item.description != null
+                          ? _c("div", { staticClass: "col-sm-12" }, [
+                              _c("h2", {
+                                staticClass: "text-left",
+                                domProps: {
+                                  textContent: _vm._s(dato.item.description)
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("br")
+                            ])
+                          : _vm._e()
+                      ],
+                      2
+                    )
+                  ])
+                ]
+              )
+            : _vm._e()
+        ])
+      })
+    ],
+    2
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "text-dp-yellow" }, [
+      _c("strong", [_vm._v(">>")])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -44291,272 +44459,358 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "carousel" },
-    _vm._l(_vm.dataUser, function(dato, index) {
-      return _c("div", { key: index }, [
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
-              _c("h2", {
-                staticClass: "text-white",
-                domProps: { textContent: _vm._s(dato.item.title) }
-              })
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-6" },
-                    [
-                      _c("h4", {
-                        staticClass: "pre-formatted text-left",
-                        domProps: { textContent: _vm._s(dato.item.description) }
-                      }),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _vm._l(dato.detail, function(detail) {
-                        return _c(
-                          "h4",
-                          {
-                            key: detail.id,
-                            staticClass: "pre-formatted text-left"
-                          },
-                          [
-                            _c("span", {
-                              domProps: {
-                                textContent: _vm._s(detail.description)
-                              }
-                            })
-                          ]
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c("br")
-                    ],
-                    2
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-12 text-right" }, [
+    [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
+          attrs: { type: "button", "data-toggle": "dropdown" }
+        },
+        [_vm._v("\n            Home Menu\n        ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dropdown-menu" },
+        _vm._l(_vm.dataUser, function(dato, index) {
+          return _c(
+            "a",
+            {
+              key: index,
+              staticClass: "dropdown-item pre-formatted",
+              attrs: { href: "#section" + index }
+            },
+            [
+              _vm._m(0, true),
+              _vm._v(" "),
+              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.dataUser, function(dato, index) {
+        return _c("div", { key: index }, [
+          dato.item.element == "div"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-header head-dp text-center",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("h2", {
+                    staticClass: "text-white",
+                    domProps: { textContent: _vm._s(dato.item.title) }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div"
+            ? _c("div", { staticClass: "card-body bg-dp-white" }, [
+                _c("div", { staticClass: "container" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("img", {
+                        staticClass: "img-fluid max-h",
+                        attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                      })
+                    ]),
+                    _vm._v(" "),
                     _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-link",
-                        on: {
-                          click: function($event) {
-                            return _vm.menuData()
+                      "div",
+                      { staticClass: "col-sm-6" },
+                      [
+                        _c("h4", {
+                          staticClass: "pre-formatted text-left",
+                          domProps: {
+                            textContent: _vm._s(dato.item.description)
                           }
-                        }
-                      },
-                      [_vm._m(0, true)]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-left"
-          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
-              _c("h2", {
-                staticClass: "text-white",
-                domProps: { textContent: _vm._s(dato.item.title) }
-              })
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-left"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
-                    "div",
-                    { staticClass: "col-sm-6 text-left" },
-                    [
-                      _c("h4", {
-                        staticClass: "pre-formatted text-left",
-                        domProps: { textContent: _vm._s(dato.item.description) }
-                      }),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _vm._l(dato.detail, function(detail) {
-                        return _c(
-                          "h4",
-                          {
-                            key: detail.id,
-                            staticClass: "pre-formatted text-left"
-                          },
-                          [
-                            _c("span", {
-                              domProps: {
-                                textContent: _vm._s(detail.description)
-                              }
-                            })
-                          ]
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c("br")
-                    ],
-                    2
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6 text-right" }, [
-                    _c("button", { staticClass: "btn btn-link" }, [
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "h4",
+                            {
+                              key: detail.id,
+                              staticClass: "pre-formatted text-left"
+                            },
+                            [
+                              _c("span", {
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              })
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c("br")
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-12 text-right" }, [
                       _c(
-                        "h5",
+                        "button",
                         {
-                          staticClass: "text-dp",
+                          staticClass: "btn btn-link",
                           on: {
                             click: function($event) {
                               return _vm.menuData()
                             }
                           }
                         },
-                        [
-                          _vm._v("More about our service "),
-                          _c("strong", [_vm._v(">>")])
-                        ]
+                        [_vm._m(1, true)]
                       )
                     ])
                   ])
                 ])
               ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-not-head"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "col-sm-12 text-center" }, [
-                _c("h2", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-left"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-header head-dp text-center",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("h2", {
+                    staticClass: "text-white",
+                    domProps: { textContent: _vm._s(dato.item.title) }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-left"
+            ? _c("div", { staticClass: "card-body bg-dp-white" }, [
+                _c("div", { staticClass: "container" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-sm-6 text-left" },
+                      [
+                        _c("h4", {
+                          staticClass: "pre-formatted text-left",
+                          domProps: {
+                            textContent: _vm._s(dato.item.description)
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "h4",
+                            {
+                              key: detail.id,
+                              staticClass: "pre-formatted text-left"
+                            },
+                            [
+                              _c("span", {
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              })
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c("br")
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("img", {
+                        staticClass: "img-fluid max-h",
+                        attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                      })
+                    ])
+                  ])
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-not-head"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12 text-center" }, [
+                    _c("h2", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-sm-6" }, [
+                        _c("img", {
+                          staticClass: "img-fluid max-h",
+                          attrs: {
+                            src: dato.item.image,
+                            alt: "DedicatedPeople"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-sm-6 text-left" },
+                        [
+                          _c("h4", {
+                            domProps: {
+                              textContent: _vm._s(dato.item.description)
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("br"),
+                          _vm._v(" "),
+                          _vm._l(dato.detail, function(detail) {
+                            return _c(
+                              "h4",
+                              {
+                                key: detail.id,
+                                staticClass: "pre-formatted text-left"
+                              },
+                              [
+                                _c("span", {
+                                  domProps: {
+                                    textContent: _vm._s(detail.description)
+                                  }
+                                })
+                              ]
+                            )
+                          }),
+                          _vm._v(" "),
+                          _c("br")
+                        ],
+                        2
+                      )
+                    ])
+                  ])
+                ]
+              )
+            : dato.item.element == "slide"
+            ? _c(
+                "div",
+                {
+                  staticClass: "carousel slide",
+                  attrs: { id: "section" + index, "data-ride": "carousel" }
+                },
+                [
+                  _c("ul", { staticClass: "carousel-indicators" }, [
+                    _c("li", {
+                      staticClass: "active",
+                      attrs: {
+                        "data-target": "#section" + index,
+                        "data-slide-to": "0"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("li", {
+                      attrs: {
+                        "data-target": "#section" + index,
+                        "data-slide-to": "1"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("li", {
+                      attrs: {
+                        "data-target": "#section" + index,
+                        "data-slide-to": "2"
+                      }
                     })
                   ]),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "col-sm-6 text-left" },
-                    [
-                      _c("h4", {
-                        domProps: { textContent: _vm._s(dato.item.description) }
-                      }),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
-                      _vm._l(dato.detail, function(detail) {
-                        return _c(
-                          "h4",
-                          {
-                            key: detail.id,
-                            staticClass: "pre-formatted text-left"
-                          },
-                          [
-                            _c("span", {
+                    { staticClass: "carousel-inner" },
+                    _vm._l(dato.detail, function(detail, index) {
+                      return _c(
+                        "div",
+                        {
+                          key: index,
+                          class: [
+                            index > 0
+                              ? "carousel-item slide-content-dp"
+                              : "carousel-item active slide-content-dp"
+                          ]
+                        },
+                        [
+                          _c("img", {
+                            staticStyle: { width: "100%", height: "100vh" },
+                            attrs: { src: detail.image, alt: "Los Angeles" }
+                          }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "slide-info-dp" }, [
+                            _c("h1", {
+                              staticClass:
+                                "slide-title-centered-dp text-warning",
+                              domProps: { textContent: _vm._s(detail.name) }
+                            }),
+                            _vm._v(" "),
+                            _c("h4", {
+                              staticClass:
+                                "slide-content-centered-dp text-light",
                               domProps: {
                                 textContent: _vm._s(detail.description)
                               }
                             })
-                          ]
-                        )
-                      }),
-                      _vm._v(" "),
-                      _c("br")
-                    ],
-                    2
+                          ])
+                        ]
+                      )
+                    }),
+                    0
                   ),
                   _vm._v(" "),
-                  _vm._m(1, true)
-                ])
-              ])
-            ])
-          : dato.item.element == "slide"
-          ? _c(
-              "div",
-              {
-                staticClass: "carousel slide",
-                attrs: { id: "demo", "data-ride": "carousel" }
-              },
-              [
-                _vm._m(2, true),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "carousel-inner" },
-                  _vm._l(dato.detail, function(detail, index) {
-                    return _c(
-                      "div",
-                      {
-                        key: index,
-                        class: [
-                          index > 0
-                            ? "carousel-item slide-content-dp"
-                            : "carousel-item active slide-content-dp"
-                        ]
-                      },
-                      [
-                        _c("img", {
-                          staticStyle: { width: "100%", height: "100vh" },
-                          attrs: { src: detail.image, alt: "Los Angeles" }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "slide-info-dp" }, [
-                          _c("h1", {
-                            staticClass: "slide-title-centered-dp text-warning",
-                            domProps: { textContent: _vm._s(detail.name) }
-                          }),
-                          _vm._v(" "),
-                          _c("h4", {
-                            staticClass: "slide-content-centered-dp text-light",
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          })
-                        ])
-                      ]
-                    )
-                  }),
-                  0
-                ),
-                _vm._v(" "),
-                _vm._m(3, true),
-                _vm._v(" "),
-                _vm._m(4, true)
-              ]
-            )
-          : _vm._e()
-      ])
-    }),
-    0
+                  _c(
+                    "a",
+                    {
+                      staticClass: "carousel-control-prev",
+                      attrs: { href: "#section" + index, "data-slide": "prev" }
+                    },
+                    [_c("span", { staticClass: "carousel-control-prev-icon" })]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "carousel-control-next",
+                      attrs: { href: "#section" + index, "data-slide": "next" }
+                    },
+                    [_c("span", { staticClass: "carousel-control-next-icon" })]
+                  )
+                ]
+              )
+            : _vm._e()
+        ])
+      })
+    ],
+    2
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "text-dp-yellow" }, [
+      _c("strong", [_vm._v(">>")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -44565,60 +44819,6 @@ var staticRenderFns = [
       _vm._v("More About us "),
       _c("strong", [_vm._v(">>")])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 text-right" }, [
-      _c("button", { staticClass: "btn btn-link" }, [
-        _c("h5", { staticClass: "text-dp" }, [
-          _vm._v("Work enviroment "),
-          _c("strong", [_vm._v(">>")])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "carousel-indicators" }, [
-      _c("li", {
-        staticClass: "active",
-        attrs: { "data-target": "#demo", "data-slide-to": "0" }
-      }),
-      _vm._v(" "),
-      _c("li", { attrs: { "data-target": "#demo", "data-slide-to": "1" } }),
-      _vm._v(" "),
-      _c("li", { attrs: { "data-target": "#demo", "data-slide-to": "2" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "carousel-control-prev",
-        attrs: { href: "#demo", "data-slide": "prev" }
-      },
-      [_c("span", { staticClass: "carousel-control-prev-icon" })]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      {
-        staticClass: "carousel-control-next",
-        attrs: { href: "#demo", "data-slide": "next" }
-      },
-      [_c("span", { staticClass: "carousel-control-next-icon" })]
-    )
   }
 ]
 render._withStripped = true
@@ -44645,211 +44845,242 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "carousel" },
-    _vm._l(_vm.dataUser, function(dato, index) {
-      return _c("div", { key: index }, [
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
-              _c("h2", {
-                staticClass: "text-white",
-                domProps: { textContent: _vm._s(dato.item.title) }
-              })
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid rounded max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("h3", {
-                      staticClass: "text-dp-yellow",
-                      domProps: { textContent: _vm._s(dato.item.description) }
-                    }),
-                    _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      { staticClass: "text-left" },
-                      _vm._l(dato.detail, function(detail) {
-                        return _c("li", { key: detail.id }, [
-                          _c("h4", {
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("br")
-                        ])
-                      }),
-                      0
-                    )
-                  ])
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-left"
-          ? _c("div", { staticClass: "card-header head-dp text-center" }, [
-              _c("h2", {
-                staticClass: "text-white",
-                domProps: { textContent: _vm._s(dato.item.title) }
-              })
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-left"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("h3", {
-                      domProps: { textContent: _vm._s(dato.item.description) }
-                    }),
-                    _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      { staticClass: "text-left" },
-                      _vm._l(dato.detail, function(detail) {
-                        return _c("li", { key: detail.id }, [
-                          _c("h4", {
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("br")
-                        ])
-                      }),
-                      0
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid rounded max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
-                  ])
-                ])
-              ])
-            ])
-          : dato.item.element == "div-group-img"
-          ? _c(
-              "div",
-              { staticClass: "card-body bg-dp-white" },
-              [
-                _c("div", { staticClass: "col-sm-12" }, [
-                  _c("h2", {
-                    staticClass: "text-center",
-                    domProps: { textContent: _vm._s(dato.item.title) }
-                  }),
-                  _vm._v(" "),
-                  _c("h6", {
-                    staticClass: "text-left",
-                    domProps: { textContent: _vm._s(dato.item.description) }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _vm._l(dato.detail, function(detail) {
-                  return _c(
-                    "div",
-                    { key: detail.id, staticClass: "container" },
-                    [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-sm" }, [
-                          _c("img", {
-                            staticClass: "img-fluid max-h",
-                            attrs: {
-                              src: dato.item.image,
-                              alt: "DedicatedPeople"
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm" }, [
-                          _c("h3", {
-                            staticClass: "text-left",
-                            domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          })
-                        ])
-                      ])
-                    ]
-                  )
-                })
-              ],
-              2
-            )
-          : dato.item.element == "div-group"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "col-sm-12" }, [
-                _c("h2", {
-                  staticClass: "text-center text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                }),
-                _vm._v(" "),
-                _c("br")
-              ]),
+    [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
+          attrs: { type: "button", "data-toggle": "dropdown" }
+        },
+        [_vm._v("\n            Our service Menu\n        ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dropdown-menu col-sm-12" },
+        _vm._l(_vm.dataUser, function(dato, index) {
+          return _c(
+            "a",
+            {
+              key: index,
+              staticClass: "dropdown-item pre-formatted",
+              attrs: { href: "#section" + index }
+            },
+            [
+              _vm._m(0, true),
               _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
-                _c(
-                  "div",
-                  { staticClass: "row" },
-                  [
-                    _vm._l(dato.detail, function(detail) {
-                      return _c(
-                        "div",
-                        { key: detail.id, staticClass: "col-sm-6" },
-                        [
-                          detail.image !== null
-                            ? _c("div", { staticClass: "col-sm-12" }, [
-                                _c("div", { staticClass: "row" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "col-sm-12 col-md-4" },
-                                    [
-                                      _c("img", {
-                                        staticClass: "img-fluid",
-                                        attrs: {
-                                          src: detail.image,
-                                          alt: "DedicatedPeople"
-                                        }
-                                      })
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-sm-12 col-md-8 text-left"
-                                    },
-                                    [
-                                      _c("br"),
-                                      _vm._v(" "),
+              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.dataUser, function(dato, index) {
+        return _c("div", { key: index }, [
+          dato.item.element == "div"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-header head-dp text-center",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("h2", {
+                    staticClass: "text-white",
+                    domProps: { textContent: _vm._s(dato.item.title) }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div"
+            ? _c("div", { staticClass: "card-body bg-dp-white" }, [
+                _c("div", { staticClass: "container" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("img", {
+                        staticClass: "img-fluid rounded max-h",
+                        attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("h3", {
+                        staticClass: "text-dp-yellow",
+                        domProps: { textContent: _vm._s(dato.item.description) }
+                      }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "ul",
+                        { staticClass: "text-left" },
+                        _vm._l(dato.detail, function(detail) {
+                          return _c("li", { key: detail.id }, [
+                            _c("h4", {
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("br")
+                          ])
+                        }),
+                        0
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-left"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-header head-dp text-center",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("h2", {
+                    staticClass: "text-white",
+                    domProps: { textContent: _vm._s(dato.item.title) }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-left"
+            ? _c("div", { staticClass: "card-body bg-dp-white" }, [
+                _c("div", { staticClass: "container" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("h3", {
+                        domProps: { textContent: _vm._s(dato.item.description) }
+                      }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "ul",
+                        { staticClass: "text-left" },
+                        _vm._l(dato.detail, function(detail) {
+                          return _c("li", { key: detail.id }, [
+                            _c("h4", {
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("br")
+                          ])
+                        }),
+                        0
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("img", {
+                        staticClass: "img-fluid rounded max-h",
+                        attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                      })
+                    ])
+                  ])
+                ])
+              ])
+            : dato.item.element == "div-group-img"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("h2", {
+                      staticClass: "text-center",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("h6", {
+                      staticClass: "text-left",
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _vm._l(dato.detail, function(detail) {
+                    return _c(
+                      "div",
+                      { key: detail.id, staticClass: "container" },
+                      [
+                        _c("div", { staticClass: "row" }, [
+                          _c("div", { staticClass: "col-sm" }, [
+                            _c("img", {
+                              staticClass: "img-fluid max-h",
+                              attrs: {
+                                src: dato.item.image,
+                                alt: "DedicatedPeople"
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "col-sm" }, [
+                            _c("h3", {
+                              staticClass: "text-left",
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
+                          ])
+                        ])
+                      ]
+                    )
+                  })
+                ],
+                2
+              )
+            : dato.item.element == "div-group"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("h2", {
+                      staticClass: "text-center text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("br")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "container" }, [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      [
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "div",
+                            { key: detail.id, staticClass: "col-sm-6" },
+                            [
+                              detail.image !== null
+                                ? _c("div", { staticClass: "col-sm-12" }, [
+                                    _c("div", { staticClass: "row" }, [
                                       _c(
                                         "div",
-                                        { staticClass: "col-sm-12 text-left" },
+                                        { staticClass: "col-sm-12 col-md-4" },
                                         [
-                                          _c("h3", {
-                                            staticClass:
-                                              "text-dp pre-formatted text-left",
-                                            domProps: {
-                                              textContent: _vm._s(detail.name)
+                                          _c("img", {
+                                            staticClass: "img-fluid",
+                                            attrs: {
+                                              src: detail.image,
+                                              alt: "DedicatedPeople"
                                             }
                                           })
                                         ]
@@ -44857,189 +45088,264 @@ var render = function() {
                                       _vm._v(" "),
                                       _c(
                                         "div",
-                                        { staticClass: "col-sm-12 text-left" },
+                                        {
+                                          staticClass:
+                                            "col-sm-12 col-md-8 text-left"
+                                        },
                                         [
-                                          _c("h6", {
-                                            staticClass:
-                                              "text-left pre-formatted",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                detail.description
-                                              )
-                                            }
-                                          })
+                                          _c("br"),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass: "col-sm-12 text-left"
+                                            },
+                                            [
+                                              _c("h3", {
+                                                staticClass:
+                                                  "text-dp pre-formatted text-left",
+                                                domProps: {
+                                                  textContent: _vm._s(
+                                                    detail.name
+                                                  )
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass: "col-sm-12 text-left"
+                                            },
+                                            [
+                                              _c("h6", {
+                                                staticClass:
+                                                  "text-left pre-formatted",
+                                                domProps: {
+                                                  textContent: _vm._s(
+                                                    detail.description
+                                                  )
+                                                }
+                                              })
+                                            ]
+                                          )
                                         ]
                                       )
-                                    ]
-                                  )
-                                ])
-                              ])
-                            : _c(
-                                "div",
-                                { staticClass: "col-sm-12 text-left" },
-                                [
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("h2", {
-                                    staticClass: "text-dp",
-                                    domProps: {
-                                      textContent: _vm._s(detail.name)
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("br"),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "col-sm-12" }, [
-                                    _c("h3", {
-                                      staticClass: "text-left",
-                                      domProps: {
-                                        textContent: _vm._s(detail.description)
-                                      }
-                                    })
+                                    ])
                                   ])
-                                ]
-                              ),
-                          _vm._v(" "),
-                          _c("br")
-                        ]
-                      )
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-sm-6" }, [
-                      _c("h2", {
-                        staticClass: "text-left text-dp-yellow",
-                        domProps: { textContent: _vm._s(dato.item.description) }
-                      }),
-                      _vm._v(" "),
-                      _c("br")
-                    ])
-                  ],
-                  2
-                )
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-not-head"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "col-sm-12 text-center" }, [
-                _c("h2", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6 text-left" }, [
-                    _c("h3", {
-                      staticClass: "text-warning",
-                      domProps: { textContent: _vm._s(dato.item.description) }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      _vm._l(dato.detail, function(detail) {
-                        return _c("li", { key: detail.id }, [
-                          _c("h6", {
+                                : _c(
+                                    "div",
+                                    { staticClass: "col-sm-12 text-left" },
+                                    [
+                                      _c("br"),
+                                      _vm._v(" "),
+                                      _c("h2", {
+                                        staticClass: "text-dp",
+                                        domProps: {
+                                          textContent: _vm._s(detail.name)
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("br"),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "col-sm-12" }, [
+                                        _c("h3", {
+                                          staticClass: "text-left",
+                                          domProps: {
+                                            textContent: _vm._s(
+                                              detail.description
+                                            )
+                                          }
+                                        })
+                                      ])
+                                    ]
+                                  ),
+                              _vm._v(" "),
+                              _c("br")
+                            ]
+                          )
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-sm-6" }, [
+                          _c("h2", {
+                            staticClass: "text-left text-dp-yellow",
                             domProps: {
-                              textContent: _vm._s(detail.description)
-                            }
-                          })
-                        ])
-                      }),
-                      0
-                    )
-                  ])
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-not-head-left"
-          ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-              _c("div", { staticClass: "col-sm-12 text-center" }, [
-                _c("h2", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "container" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6 text-left" }, [
-                    _c("h3", {
-                      staticClass: "text-dp-yellow",
-                      domProps: { textContent: _vm._s(dato.item.description) }
-                    }),
-                    _vm._v(" "),
-                    _c("br"),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      { staticClass: "text-left" },
-                      _vm._l(dato.detail, function(detail) {
-                        return _c("li", { key: detail.id }, [
-                          _c("h4", {
-                            domProps: {
-                              textContent: _vm._s(detail.description)
+                              textContent: _vm._s(dato.item.description)
                             }
                           }),
                           _vm._v(" "),
                           _c("br")
                         ])
-                      }),
-                      0
+                      ],
+                      2
                     )
+                  ])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-not-head"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12 text-center" }, [
+                    _c("h2", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6" }, [
-                    _c("img", {
-                      staticClass: "img-fluid max-h",
-                      attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                    })
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-sm-6" }, [
+                        _c("img", {
+                          staticClass: "img-fluid max-h",
+                          attrs: {
+                            src: dato.item.image,
+                            alt: "DedicatedPeople"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-sm-6 text-left" }, [
+                        _c("h3", {
+                          staticClass: "text-warning",
+                          domProps: {
+                            textContent: _vm._s(dato.item.description)
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "ul",
+                          _vm._l(dato.detail, function(detail) {
+                            return _c("li", { key: detail.id }, [
+                              _c("h6", {
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              })
+                            ])
+                          }),
+                          0
+                        )
+                      ])
+                    ])
                   ])
-                ])
-              ])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        dato.item.element == "div-yellow"
-          ? _c("div", { staticClass: "container-yellow col-sm-12" }, [
-              _c("img", {
-                staticClass: "img-yellow",
-                attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-              }),
-              _vm._v(" "),
-              _c("div", { staticClass: "centered" }, [
-                _c("br"),
-                _vm._v(" "),
-                _c("h1", {
-                  staticClass: "text-dp",
-                  domProps: { textContent: _vm._s(dato.item.title) }
-                }),
-                _vm._v(" "),
-                _c("p", {
-                  domProps: { textContent: _vm._s(dato.item.description) }
-                }),
-                _vm._v(" "),
-                _c("br")
-              ])
-            ])
-          : _vm._e()
-      ])
-    }),
-    0
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-not-head-left"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12 text-center" }, [
+                    _c("h2", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "container" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-sm-6 text-left" }, [
+                        _c("h3", {
+                          staticClass: "text-dp-yellow",
+                          domProps: {
+                            textContent: _vm._s(dato.item.description)
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c(
+                          "ul",
+                          { staticClass: "text-left" },
+                          _vm._l(dato.detail, function(detail) {
+                            return _c("li", { key: detail.id }, [
+                              _c("h4", {
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("br")
+                            ])
+                          }),
+                          0
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-sm-6" }, [
+                        _c("img", {
+                          staticClass: "img-fluid max-h",
+                          attrs: {
+                            src: dato.item.image,
+                            alt: "DedicatedPeople"
+                          }
+                        })
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-yellow"
+            ? _c(
+                "div",
+                {
+                  staticClass: "container-yellow col-sm-12",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("img", {
+                    staticClass: "img-yellow",
+                    attrs: { src: dato.item.image, alt: "DedicatedPeople" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "centered" }, [
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("h1", {
+                      staticClass: "text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("p", {
+                      domProps: { textContent: _vm._s(dato.item.description) }
+                    }),
+                    _vm._v(" "),
+                    _c("br")
+                  ])
+                ]
+              )
+            : _vm._e()
+        ])
+      })
+    ],
+    2
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "text-dp-yellow" }, [
+      _c("strong", [_vm._v(">>")])
+    ])
+  }
+]
 render._withStripped = true
 
 

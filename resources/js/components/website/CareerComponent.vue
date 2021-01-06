@@ -1,7 +1,15 @@
 <template>
             <div class="carousel">
+                <button  type="button" class="btn btn-primary dropdown-toggle fixed-top btn-sticky" data-toggle="dropdown">
+                        Careers Menu
+                    </button>
+                    <div  class="dropdown-menu">
+                             <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
+                                 <span class="text-dp-yellow"><strong>>></strong></span>
+                                 <span v-text="dato.item.title"></span></a>
+                    </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'div'|| dato.item.element =='div-group-head'" class="card-header head-dp text-center">
+                    <div v-if="dato.item.element == 'div'|| dato.item.element =='div-group-head'" v-bind:id="'section'+index" class="card-header head-dp text-center">
                         <h2 class="text-white" v-text="dato.item.title"></h2>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body">
@@ -21,7 +29,7 @@
                             </div>
                         </div>
                     </div>
-                    <div v-if="dato.item.element == 'div-not-head'" class="card-body">
+                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body">
                         <div class="col-sm-12 text-center">
                             <h2 class="text-dp" v-text="dato.item.title"></h2>
                         </div>
@@ -41,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div v-else-if="dato.item.element == 'div-group-img'" class="card-body este">
+                    <div v-else-if="dato.item.element == 'div-group-img'" v-bind:id="'section'+index" class="card-body este">
 
                         <div class="col-sm-12">
                             <h2 class="text-center" v-text='dato.item.title'></h2>
@@ -60,7 +68,7 @@
                         </div>
                         
                     </div>
-                   <div v-else-if="dato.item.element == 'div-group-head'" class="card-body este">
+                   <div v-else-if="dato.item.element == 'div-group-head'" v-bind:id="'section'+index" class="card-body este">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-3" v-for="detail in dato.detail" :key="detail.id">
