@@ -2325,6 +2325,12 @@ a:hover.back-to-top {
 	text-shadow: 3px 3px #00518c;
   }
 
+  .img-head{
+	padding-top: 35vh;
+	color:#e6b800;
+	text-shadow: 3px 3px #00518c;
+  }
+
   .btn-sticky {
 	top: 15vh;
   }
