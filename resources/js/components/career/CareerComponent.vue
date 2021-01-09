@@ -21,16 +21,6 @@
                         </div>
                     </div>
                     <div class="card-body">
-
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div class="input-group">
-                                    <input type="date" v-model="search" @keyup.enter="ListCareer(1)" class="form-control">
-                                    <button type="submit" @click="ListCareer(1)" class="btn btn-primary"><i class="fa fa-search"></i> Buscar</button>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="table-responsive">
                             <table class="table table-bordered">
                             <thead class="thead-dark">

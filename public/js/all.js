@@ -105,6 +105,20 @@ $('.gotocover').on('click',function(){
     $('body,html').animate({ scrollTop:'0px' },1000);
 })
 
+typeWriter(0);
+
+function typeWriter(i) {
+   
+    var txt = 'STAFFING 24/7 TO MEET YOUR NEEDS';
+    var speed = 50;
+
+  if (i < txt.length) {
+    document.getElementById("head-i-y").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter(i), speed);
+  }
+}
+
 function downMenubar(){
     $('#navbarsExampleDefault').slideToggle();
 }
@@ -121,7 +135,21 @@ function downMenubar(){
 				preloader.fadeOut(preloaderFadeOutTime);
 			}, 500);
 		}
-		hidePreloader();
+        hidePreloader();
+        $(window).scroll(function() {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $(".fade").each(function() {
+              /* Check the location of each desired element */
+              var objectBottom = $(this).offset().top + $(this).outerHeight();
+              
+              /* If the element is completely within bounds of the window, fade it in */
+              if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+              } else { //object goes out of view (scrolling up)
+                if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+              }
+            });
+          }).scroll();
 	});
 
 	

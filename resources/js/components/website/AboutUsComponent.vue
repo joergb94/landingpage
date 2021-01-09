@@ -16,7 +16,7 @@
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
                                 <h4 v-text="dato.item.description"></h4>
@@ -29,12 +29,12 @@
                     <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body">
                         <div class="col-sm-12 text-center">
                             <h2 class="text-dp" v-text="dato.item.title"></h2>
-                            <h4 class="text-dp" v-text="dato.item.description"></h4>
+                            <h3 class="text-dp" v-text="dato.item.description"></h3>
                         </div>
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
@@ -47,20 +47,25 @@
                     </div>
                     <div v-else-if="dato.item.element == 'div-group-img'"  v-bind:id="'section'+index" class="card-body bg-dp-white">
 
-                        <div class="col-sm-12">
-                            <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
-                            <h4 class="text-left" v-text="dato.item.description"></h4>
+                        <div class="container">
+                            <h2 class="text-center">
+                                        <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                        </span>
+                            </h2>
+                            <!--<h3 class="text-left" v-text="dato.item.description"></h3>-->
                         </div>
                         <br>
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
-                                <div class="col-sm" v-if="detail.image !== null">
-                                    <img class="img-fluid max-h" v-bind:src="detail.image" alt="DedicatedPeople">
+                                <div class="col-sm fade" v-if="detail.image !== null">
+                                    <img class="img-fluid max-h " v-bind:src="detail.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm">
+                                <div class="col-sm fade">
                                     
                                     <span class="badge badge-dark col-sm-12">
-                                        <h4 class="text-left text-warning"  v-text="detail.name"></h4>
+                                        <h4 class="text-center text-warning"  v-text="detail.name"></h4>
                                     </span>
                                     <h4 class="text-left" v-text="detail.description"></h4>
                                 </div>
@@ -72,19 +77,20 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
-                            <h4 class="text-left" v-text="dato.item.description"></h4>
+                            <h3 class="text-left" v-text="dato.item.description"></h3>
+                            <br>
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-sm-4" v-for="detail in dato.detail" :key="detail.id">
-                                    <div class="card-dp-gray">
+                                <div class="col-sm-12 col-md-6 col-lg-4" v-for="detail in dato.detail" :key="detail.id">
+                                    <div class="card-dp-gray fade">
                                         <div class="row">
                                             <div class="col-sm-12 text-left" v-if="detail.image !== null">
                                                 <img class="img-fluid max-icon" v-bind:src="detail.image" alt="DedicatedPeople">
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="container">
-                                                    <h6 class="text-left" v-text="detail.description"></h6>
+                                                    <h4 class="text-left" v-text="detail.description"></h4>
                                                 </div>
                                                 <br>
                                             </div>
@@ -102,8 +108,8 @@
                         <img class="img-yellow" v-bind:src="dato.item.image" alt="DedicatedPeople">
                         <div class="centered">
                             <br>
-                            <h1 class="text-dp" v-text="dato.item.title"></h1>
-                            <p v-text="dato.item.description"></p>
+                            <h2 class="text-dp fade" v-text="dato.item.title"></h2>
+                            <h4 v-text="dato.item.description"></h4>
                             <br>
                         </div>
                     </div>
@@ -129,6 +135,23 @@
                 ;})
                 $(".content-site").fadeIn('slow');
         
+        }, TitleBiColor(data){
+            var text = data.split(" ");
+            var No = text.length;
+            console.log(No)
+            var pos= parseInt(No/2);
+             console.log(pos)
+            var arrayBiColor = [];
+            for (var i = 0; i < No; i++) {
+
+                var dato = i < pos ? {text:text[i], class:'text-dp'} : {text:text[i], class:'text-dp-yellow'};
+                 console.log(dato)
+                 arrayBiColor.push(dato);
+
+            }
+            
+
+           return arrayBiColor;
         },
         },
         mounted() {

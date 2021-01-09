@@ -16,7 +16,7 @@
                         <div class="contianer">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
@@ -36,7 +36,7 @@
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid max-h fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
@@ -53,13 +53,13 @@
 
                         <div class="col-sm-12">
                             <h2 class="text-center" v-text='dato.item.title'></h2>
-                            <h6 class="text-left" v-text="dato.item.description"></h6>
+                            <h4 class="text-left" v-text="dato.item.description"></h4>
                         </div>
                         <br>
                         <div class="col-sm-12"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
                                 <div class="col-sm">
-                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid max-h " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm">
                                     <h4 class="text-left" v-text="detail.description"></h4>
@@ -75,8 +75,8 @@
                                     <div class="col-sm-12">
                                         <div class="row">
                                             <div class="col-sm-12 text-left">
-                                                <img class="img-fluid max-h" v-bind:src="detail.image" alt="DedicatedPeople">
-                                                <h2 class="text-dp" v-text="detail.name"></h2>
+                                                <img class="img-fluid max-h fade" v-bind:src="detail.image" alt="DedicatedPeople">
+                                                <h3 class="text-dp" v-text="detail.name"></h3>
                                             </div>
                                             <div class="col-sm-12">
                                                 <h4 class="text-left" v-text="detail.description"></h4>
@@ -86,7 +86,7 @@
                                     <br>
                                 </div>
                                 <div v-if="dato.item.description != null" class="col-sm-12">
-                                    <h2 class="text-left" v-text='dato.item.description'></h2>
+                                    <h3 class="text-left" v-text='dato.item.description'></h3>
                                     <br>
                                 </div>
                             </div>
@@ -114,6 +114,23 @@
                 ;})
                 $(".content-site").fadeIn('slow');
         
+        }, TitleBiColor(data){
+            var text = data.split(" ");
+            var No = text.length;
+            console.log(No)
+            var pos= parseInt(No/2);
+             console.log(pos)
+            var arrayBiColor = [];
+            for (var i = 0; i < No; i++) {
+
+                var dato = i < pos ? {text:text[i], class:'text-dp-yellow'} : {text:text[i], class:'text-dp'};
+                 console.log(dato)
+                 arrayBiColor.push(dato);
+
+            }
+            
+
+           return arrayBiColor;
         },
         },
         mounted() {

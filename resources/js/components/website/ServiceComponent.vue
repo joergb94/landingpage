@@ -9,18 +9,27 @@
                                  <span v-text="dato.item.title"></span></a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center" > <h2 class="text-white" v-text="dato.item.title"></h2></div>
+                    <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center" >
+                        <div class="container text-center">
+                             <h2 class="text-white" v-text="dato.item.title"></h2>
+                        </div>
+                    </div>
                     <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid rounded max-h" v-bind:src="dato.item.image"  alt="DedicatedPeople">
+                                    <img class="img-fluid rounded max-h fade" v-bind:src="dato.item.image"  alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
-                                    <h3 class="text-dp-yellow" v-text="dato.item.description"></h3>
+                                    <h3 class="text-left">
+                                        <span   v-for="(title, i) in TitleBiColor(dato.item.description,1)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                        </span>
+                                    </h3>
                                     <br>
                                     <ul class="text-left">
-                                    <li v-for="detail in dato.detail" :key="detail.id">
+                                    <li class="fade" v-for="detail in dato.detail" :key="detail.id">
                                             <h4 v-text="detail.description"></h4>
                                             <br>
                                         </li>
@@ -30,22 +39,31 @@
                         </div>
                         
                     </div>
-                    <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center" > <h2 class="text-white" v-text="dato.item.title"></h2></div>
+                    <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center" >
+                        <div class="container text-center">
+                             <h2 class="text-white" v-text="dato.item.title"></h2>
+                        </div>
+                    </div>
                     <div v-if="dato.item.element == 'div-left'" class="card-body bg-dp-white">
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <h3 v-text="dato.item.description"></h3>
+                                     <h3 class="text-left">
+                                        <span   v-for="(title, i) in TitleBiColor(dato.item.description,1)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                        </span>
+                                    </h3>
                                     <br>
                                     <ul class="text-left">
-                                    <li v-for="detail in dato.detail" :key="detail.id">
+                                    <li class="fade" v-for="detail in dato.detail" :key="detail.id">
                                             <h4 v-text="detail.description"></h4>
                                             <br>
                                         </li>
                                     </ul>                                  
                                 </div>
                                 <div class="col-sm-6">
-                                    <img class="img-fluid rounded max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid rounded max-h fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                             </div>
                         </div>
@@ -59,11 +77,11 @@
                         <br>
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
-                                <div class="col-sm">
+                                <div class="col-sm fade">
                                     <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm">
-                                    <h3 class="text-left" v-text="detail.description"></h3>
+                                <div class="col-sm fade">
+                                    <h2 class="text-left" v-text="detail.description"></h2>
                                 </div>
                             </div>
                         </div>
@@ -72,13 +90,18 @@
                     <div v-else-if="dato.item.element == 'div-group'" v-bind:id="'section'+index" class="card-body bg-dp-white">
 
                         <div class="col-sm-12">
-                            <h2 class="text-center text-dp" v-text='dato.item.title'></h2>
+                             <h2 class="text-center">
+                                    <span  v-for="(title, i) in TitleBiColor(dato.item.title,2)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                    </span>
+                                </h2>
                             <br>
                         </div>
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-6" v-for="detail in dato.detail" :key="detail.id">
-                                                <div v-if="detail.image !== null" class="col-sm-12">
+                                                <div v-if="detail.image !== null" class="col-sm-12 fade">
                                                     <div  class="row">
                                                         <div class="col-sm-12 col-md-4">
                                                             <img class="img-fluid" v-bind:src="detail.image" alt="DedicatedPeople">
@@ -89,24 +112,31 @@
                                                                 <h3 class="text-dp pre-formatted text-left" v-text="detail.name"></h3>
                                                             </div>
                                                             <div class="col-sm-12 text-left">
-                                                                <h6 class="text-left pre-formatted" v-text="detail.description"></h6>
+                                                                <h4 class="text-left pre-formatted" v-text="detail.description"></h4>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div  class="col-sm-12 text-left" v-else>
+                                                <div  class="col-sm-12 text-left fade" v-else>
                                                         <br>
-                                                        <h2 class="text-dp" v-text="detail.name"></h2>
+                                                        <h3 class="text-dp" v-text="detail.name"></h3>
                                                         <br>
                                                         <div class="col-sm-12">
-                                                            <h3 class="text-left" v-text="detail.description"></h3>
+                                                            <h4 class="text-left" v-text="detail.description"></h4>
                                                         </div>
                                                 </div>
                                     
                                     <br>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h2 class="text-left text-dp-yellow" v-text='dato.item.description'></h2>
+                                    <div class="container fade">
+                                         <h2 class="text-center">
+                                            <span  v-for="(title, i) in TitleBiColor(dato.item.description,2)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                            </span>
+                                        </h2>
+                                    </div>
                                     <br>
                                 </div>
                             </div>
@@ -122,13 +152,18 @@
                         <div class="container">
                               <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6 text-left">
-                                    <h3 class="text-warning" v-text="dato.item.description"></h3>
+                                     <h3 class="text-left">
+                                        <span   v-for="(title, i) in TitleBiColor(dato.item.description,2)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                        </span>
+                                    </h3>
                                     <ul>
                                     <li v-for="detail in dato.detail" :key="detail.id">
-                                            <h6 v-text="detail.description"></h6>
+                                            <h4 v-text="detail.description"></h4>
                                         </li>
                                     </ul> 
                                 </div>
@@ -142,10 +177,15 @@
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6 text-left">
-                                    <h3 class="text-dp-yellow" v-text="dato.item.description"></h3>
+                                     <h3 class="text-left">
+                                        <span   v-for="(title, i) in TitleBiColor(dato.item.description,2)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                        </span>
+                                    </h3>
                                     <br>
                                     <ul class="text-left">
-                                    <li v-for="detail in dato.detail" :key="detail.id">
+                                    <li class="fade" v-for="detail in dato.detail" :key="detail.id">
                                             <h4 v-text="detail.description"></h4>
                                             <br>
                                         </li>
@@ -177,6 +217,7 @@
          data () {
             return {
             dataUser:[],
+            DataBiColor:[],
             url:'/site?page=3',
             }
         },  
@@ -189,6 +230,33 @@
                 ;})
                 $(".content-site").fadeIn('slow');
         
+        },
+        TitleBiColor(data,type){
+            var text = data.split(" ");
+            var No = text.length;
+            console.log(No)
+            var pos= parseInt(No/2);
+             console.log(pos)
+            var arrayBiColor = [];
+            if(type == 1){
+                for (var i = 0; i < No; i++) {
+
+                 var dato = i < pos ? {text:text[i], class:'text-dp-yellow'} : {text:text[i], class:'text-dp'};
+                 arrayBiColor.push(dato);
+
+                }
+
+            } else {
+
+                for (var i = 0; i < No; i++) {
+
+                 var dato = i < pos ? {text:text[i], class:'text-dp'} : {text:text[i], class:'text-dp-yellow'};
+                 arrayBiColor.push(dato);
+
+                }
+            }
+
+           return arrayBiColor;
         },
         },
         mounted() {

@@ -9,7 +9,11 @@
                                  <span v-text="dato.item.title"></span></a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center"><h2 class="text-white" v-text="dato.item.title"></h2></div>
+                    <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center">
+                        <div class="container text-center">
+                             <h2 class="text-white" v-text="dato.item.title"></h2>
+                        </div>
+                    </div>
                     <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
                         <div class="container">
                             <div  class="row">
@@ -30,12 +34,21 @@
                         </div>
                         </div>
                     </div>
-                    <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center"><h2 class="text-white" v-text="dato.item.title"></h2></div>
+                    <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center">
+                        <div class="container text-center">
+                             <h2 class="text-white" v-text="dato.item.title"></h2>
+                        </div>
+                    </div>
                     <div v-if="dato.item.element == 'div-left'"  class="card-body bg-dp-white">
                         <div class="container">
                              <div  class="row">
                                 <div class="col-sm-6 text-left">
-                                    <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                                    <h3 class="text-left">
+                                        <span   v-for="(title, i) in TitleBiColor(dato.item.description)" :key="i" 
+                                                v-bind:class="title.class"
+                                                v-text="title.text+' '">
+                                        </span>
+                                    </h3>
                                     <br>
                                     <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
@@ -43,7 +56,7 @@
                                     <br>                      
                                 </div>
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                             </div>
                         </div>
@@ -55,7 +68,7 @@
                         <div class="container">
                             <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6 text-left">
                                 <h4 v-text="dato.item.description"></h4>
@@ -83,8 +96,8 @@
                             <div  v-for="(detail,index) in dato.detail" :key="index" v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
                                 <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="Los Angeles">
                                 <div class="slide-info-dp">
-                                    <h1 class="slide-title-centered-dp text-warning" v-text="detail.name"></h1>
-                                    <h4 class ="slide-content-centered-dp text-light" v-text="detail.description"></h4>
+                                    <h2 class="slide-title-centered-dp text-warning fade" v-text="detail.name"></h2>
+                                    <h4 class ="slide-content-centered-dp text-light fade" v-text="detail.description"></h4>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +135,25 @@
         },
         menuData(){
                 this.$emit("menu",2)
-        }
+        },
+         TitleBiColor(data){
+            var text = data.split(" ");
+            var No = text.length;
+            console.log(No)
+            var pos= parseInt(No/2);
+             console.log(pos)
+            var arrayBiColor = [];
+            for (var i = 0; i < No; i++) {
+
+                var dato = i < pos ? {text:text[i], class:'text-dp'} : {text:text[i], class:'text-dp-yellow'};
+                 console.log(dato)
+                 arrayBiColor.push(dato);
+
+            }
+            
+
+           return arrayBiColor;
+        },
         },
         mounted() {
             console.log('Component mounted.')
