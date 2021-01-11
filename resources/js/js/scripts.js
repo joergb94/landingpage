@@ -14,19 +14,6 @@ $('.gotocover').on('click',function(){
     $('body,html').animate({ scrollTop:'0px' },1000);
 })
 
-typeWriter(0);
-
-function typeWriter(i) {
-   
-    var txt = 'STAFFING 24/7 TO MEET YOUR NEEDS';
-    var speed = 50;
-
-  if (i < txt.length) {
-    document.getElementById("head-i-y").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter(i), speed);
-  }
-}
 
 function downMenubar(){
     $('#navbarsExampleDefault').slideToggle();
