@@ -43699,7 +43699,7 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("h2", {
+                  _c("h1", {
                     staticClass: "text-white",
                     domProps: { textContent: _vm._s(dato.item.title) }
                   })
@@ -43718,7 +43718,7 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-sm-6" }, [
-                    _c("h4", {
+                    _c("h5", {
                       domProps: { textContent: _vm._s(dato.item.description) }
                     })
                   ])
@@ -43732,7 +43732,7 @@ var render = function() {
                 { staticClass: "card-body", attrs: { id: "section" + index } },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-dp",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     }),
@@ -43760,7 +43760,7 @@ var render = function() {
                         { staticClass: "col-sm-6" },
                         _vm._l(dato.detail, function(detail) {
                           return _c(
-                            "h4",
+                            "h5",
                             {
                               key: detail.id,
                               staticClass: "pre-formatted text-left"
@@ -43790,7 +43790,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "container" }, [
                     _c(
-                      "h2",
+                      "h1",
                       { staticClass: "text-center" },
                       _vm._l(_vm.TitleBiColor(dato.item.title), function(
                         title,
@@ -43831,14 +43831,14 @@ var render = function() {
                               "span",
                               { staticClass: "badge badge-dark col-sm-12" },
                               [
-                                _c("h4", {
+                                _c("h5", {
                                   staticClass: "text-center text-warning",
                                   domProps: { textContent: _vm._s(detail.name) }
                                 })
                               ]
                             ),
                             _vm._v(" "),
-                            _c("h4", {
+                            _c("h5", {
                               staticClass: "text-left",
                               domProps: {
                                 textContent: _vm._s(detail.description)
@@ -43861,7 +43861,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-center text-dp",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     }),
@@ -43906,7 +43906,7 @@ var render = function() {
                                 _vm._v(" "),
                                 _c("div", { staticClass: "col-sm-12" }, [
                                   _c("div", { staticClass: "container" }, [
-                                    _c("h4", {
+                                    _c("h5", {
                                       staticClass: "text-left",
                                       domProps: {
                                         textContent: _vm._s(detail.description)
@@ -43946,12 +43946,12 @@ var render = function() {
                   _c("div", { staticClass: "centered" }, [
                     _c("br"),
                     _vm._v(" "),
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-dp fade",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     }),
                     _vm._v(" "),
-                    _c("h4", {
+                    _c("h5", {
                       domProps: { textContent: _vm._s(dato.item.description) }
                     }),
                     _vm._v(" "),
