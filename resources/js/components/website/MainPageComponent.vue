@@ -1,42 +1,43 @@
 <template>
             <div class="carousel">
-                 <button  type="button" class="btn btn-primary dropdown-toggle fixed-top btn-sticky" data-toggle="dropdown">
-                        Home Menu
+                 <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu">
+                    <div  class="dropdown-menu col-sm-12 col-md-4">
                              <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
                                  <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title"></span></a>
+                                 <span v-text="dato.item.title"></span>
+                            </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center">
                         <div class="container text-center">
-                             <h2 class="text-white" v-text="dato.item.title"></h2>
+                             <h1 class="text-white" v-text="dato.item.title"></h1>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
                         <div class="container">
-                            <div  class="row">
-                            <div class="col-sm-6">
-                                <img class="img-fluid max-h" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                            <div  class="row child-div">
+                            <div class="col-sm-6 child-div">
+                                <img class="image-conten" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
-                            <div class="col-sm-6">
-                                <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                            <div class="col-sm-6 child-div">
+                                <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
                                 <br>
-                                <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
-                                </h4>
-                                <br>  
+                                </h5>
+                                <br> 
+                                <div class="col-sm-12 text-right">
+                                    <button class="btn btn-link" @click="menu=1" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
+                                </div> 
                             </div>
-                            <div class="col-sm-12 text-right">
-                                    <button class="btn btn-link" @click="menuData()" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
-                            </div>
+                            
                         </div>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center">
                         <div class="container text-center">
-                             <h2 class="text-white" v-text="dato.item.title"></h2>
+                             <h1 class="text-white" v-text="dato.item.title"></h1>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div-left'"  class="card-body bg-dp-white">
@@ -50,32 +51,32 @@
                                         </span>
                                     </h3>
                                     <br>
-                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                    <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
-                                    </h4>
+                                    </h5>
                                     <br>                      
                                 </div>
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                             </div>
                         </div>
                      </div>
                      <div v-if="dato.item.element == 'div-not-head'"  v-bind:id="'section'+index" class="card-body bg-dp-white">
                         <div class="col-sm-12 text-center">
-                            <h2 class="text-dp" v-text="dato.item.title"></h2>
+                            <h1 class="text-dp" v-text="dato.item.title"></h1>
                         </div>
                         <div class="container">
                             <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6 text-left">
-                                <h4 v-text="dato.item.description"></h4>
+                                <h5 v-text="dato.item.description"></h5>
                                 <br>
-                                <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
-                                </h4>
+                                </h5>
                                 <br>
                             </div>
                         </div>
@@ -96,8 +97,10 @@
                             <div  v-for="(detail,index) in dato.detail" :key="index" v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
                                 <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="Los Angeles">
                                 <div class="slide-info-dp">
-                                    <h2 class="slide-title-centered-dp text-warning fade" v-text="detail.name"></h2>
-                                    <h4 class ="slide-content-centered-dp text-light fade" v-text="detail.description"></h4>
+                                    <div class="container">
+                                        <h1 class="slide-title-centered-dp text-warning fade" v-text="detail.name"></h1>
+                                        <h5 class ="slide-content-centered-dp text-light fade" v-text="detail.description"></h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -23,6 +23,7 @@ window.Vue = require('vue');
 Vue.component('main-page-component', require('./components/website/MainPageComponent.vue').default);
 Vue.component('about-us-component', require('./components/website/AboutUsComponent.vue').default);
 Vue.component('service-component', require('./components/website/ServiceComponent.vue').default);
+Vue.component('testimonies-component', require('./components/website/testimonies.vue').default);
 Vue.component('career-component', require('./components/website/CareerComponent.vue').default);
 Vue.component('main-page', require('./components/main/MainComponent.vue').default);
 Vue.component('about-us', require('./components/aboutUs/AboutUsComponent.vue').default);

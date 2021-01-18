@@ -16,7 +16,7 @@
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div  class="row">
                             <div class="col-sm-6">
-                                <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6">
                                 <h5 v-text="dato.item.description"></h5>
@@ -34,7 +34,7 @@
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
@@ -60,7 +60,7 @@
                         <div class="container"  v-for="detail in dato.detail" :key="detail.id">
                             <div class="row">
                                 <div class="col-sm fade" v-if="detail.image !== null">
-                                    <img class="img-fluid max-h " v-bind:src="detail.image" alt="DedicatedPeople">
+                                    <img class="img-fluid" v-bind:src="detail.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm fade">
                                     

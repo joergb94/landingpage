@@ -10,7 +10,7 @@
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'|| dato.item.element =='div-group-head'" v-bind:id="'section'+index" class="card-header head-dp text-center">
-                        <h2 class="text-white" v-text="dato.item.title"></h2>
+                        <h1 class="text-white" v-text="dato.item.title"></h1>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div class="contianer">
@@ -19,11 +19,11 @@
                                     <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                                    <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
                                     <br>
-                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                    <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                         <span v-text="detail.description"></span> 
-                                    </h4>
+                                    </h5>
                                     <br>                           
                                 </div>
                             </div>
@@ -31,19 +31,19 @@
                     </div>
                     <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body">
                         <div class="col-sm-12 text-center">
-                            <h2 class="text-dp" v-text="dato.item.title"></h2>
+                            <h1 class="text-dp" v-text="dato.item.title"></h1>
                         </div>
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="image-conten fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                                    <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
                                     <br>
-                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                    <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                         <span v-text="detail.description"></span> 
-                                    </h4>
+                                    </h5>
                                     <br> 
                                 </div>
                             </div>
@@ -52,8 +52,8 @@
                     <div v-else-if="dato.item.element == 'div-group-img'" v-bind:id="'section'+index" class="card-body este">
 
                         <div class="col-sm-12">
-                            <h2 class="text-center" v-text='dato.item.title'></h2>
-                            <h4 class="text-left" v-text="dato.item.description"></h4>
+                            <h1 class="text-center" v-text='dato.item.title'></h1>
+                            <h5 class="text-left" v-text="dato.item.description"></h5>
                         </div>
                         <br>
                         <div class="col-sm-12"  v-for="detail in dato.detail" :key="detail.id">
@@ -62,7 +62,7 @@
                                     <img class="img-fluid max-h " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm">
-                                    <h4 class="text-left" v-text="detail.description"></h4>
+                                    <h5 class="text-left" v-text="detail.description"></h5>
                                 </div>
                             </div>
                         </div>
@@ -75,11 +75,11 @@
                                     <div class="col-sm-12">
                                         <div class="row">
                                             <div class="col-sm-12 text-left">
-                                                <img class="img-fluid max-h fade" v-bind:src="detail.image" alt="DedicatedPeople">
+                                                <img class="image-conten fade" v-bind:src="detail.image" alt="DedicatedPeople">
                                                 <h3 class="text-dp" v-text="detail.name"></h3>
                                             </div>
                                             <div class="col-sm-12">
-                                                <h4 class="text-left" v-text="detail.description"></h4>
+                                                <h5 class="text-left" v-text="detail.description"></h5>
                                             </div>
                                         </div>
                                     </div>

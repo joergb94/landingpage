@@ -4,8 +4,7 @@
      
               <!-- Image Logo -->
             <button class="navbar-brand btn btn-link logo-image col-sm text-center text-dark pag-scroll" @click="menu=0">
-                <img class="text-center"style="width:64px; height:64px;" src="{{ asset('img/logo.png') }}" alt="alternative">
-                    Dedicated People
+                <img class="text-center"style="width:200px; height:64px;" src="{{ asset('img/logoDP.png') }}" alt="DedicatedPeople">
             </button>
         
             <!-- Mobile Menu Toggle Button -->
@@ -30,13 +29,10 @@
                         <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=3" >{{ __('Careers') }}</button>
                     </li>
                     <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=0" >{{ __('Testimonies') }}</button>
+                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=4" >{{ __('Testimonies') }}</button>
                     </li>
                     <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover"  @click="menu=4" >{{ __('Contact us') }}</button>
-                    </li>
-                    <li class="nav-item btn-dp">
-                        @include('website/items/btn-social')
+                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover"  @click="menu=5" >{{ __('Contact us') }}</button>
                     </li>
             </ul>
         </div>

@@ -13,6 +13,10 @@
                      <career-component></career-component>
             </template>
             <template v-if="menu==4">
+                  <testimonies-component></testimonies-component>
+            </template>
+            <template v-if="menu==5">
+                 
             </template>
          <!-- end of container -->
     </header> <!-- end of header -->

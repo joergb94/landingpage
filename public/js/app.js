@@ -2370,6 +2370,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2691,6 +2694,107 @@ __webpack_require__.r(__webpack_exports__);
           };
           arrayBiColor.push(dato);
         }
+      }
+
+      return arrayBiColor;
+    },
+    toggleItems: function toggleItems(data) {
+      $('#panel' + data.id).slideToggle();
+    }
+  },
+  mounted: function mounted() {
+    console.log('Component mounted.');
+    this.ListUsers();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/website/testimonies.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/website/testimonies.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main */ "./resources/js/components/main.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      dataUser: [],
+      url: '/site?page=1'
+    };
+  },
+  methods: {
+    ListUsers: function ListUsers() {
+      var me = this;
+      _main__WEBPACK_IMPORTED_MODULE_0__["default"].ListItems(me.url).then(function (r) {
+        me.dataUser = r.data;
+      });
+      $(".content-site").fadeIn('slow');
+    },
+    menuData: function menuData() {
+      this.$emit("menu", 2);
+    },
+    TitleBiColor: function TitleBiColor(data) {
+      var text = data.split(" ");
+      var No = text.length;
+      console.log(No);
+      var pos = parseInt(No / 2);
+      console.log(pos);
+      var arrayBiColor = [];
+
+      for (var i = 0; i < No; i++) {
+        var dato = i < pos ? {
+          text: text[i],
+          "class": 'text-dp'
+        } : {
+          text: text[i],
+          "class": 'text-dp-yellow'
+        };
+        console.log(dato);
+        arrayBiColor.push(dato);
       }
 
       return arrayBiColor;
@@ -43712,7 +43816,7 @@ var render = function() {
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-sm-6" }, [
                     _c("img", {
-                      staticClass: "img-fluid max-h fade",
+                      staticClass: "image-conten fade",
                       attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                     })
                   ]),
@@ -43747,7 +43851,7 @@ var render = function() {
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "img-fluid max-h fade",
+                          staticClass: "image-conten fade",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -43817,7 +43921,7 @@ var render = function() {
                           detail.image !== null
                             ? _c("div", { staticClass: "col-sm fade" }, [
                                 _c("img", {
-                                  staticClass: "img-fluid max-h ",
+                                  staticClass: "img-fluid",
                                   attrs: {
                                     src: detail.image,
                                     alt: "DedicatedPeople"
@@ -44041,7 +44145,7 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("h2", {
+                  _c("h1", {
                     staticClass: "text-white",
                     domProps: { textContent: _vm._s(dato.item.title) }
                   })
@@ -44064,7 +44168,7 @@ var render = function() {
                       "div",
                       { staticClass: "col-sm-6" },
                       [
-                        _c("h4", {
+                        _c("h5", {
                           staticClass: "pre-formatted text-left",
                           domProps: {
                             textContent: _vm._s(dato.item.description)
@@ -44075,7 +44179,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm._l(dato.detail, function(detail) {
                           return _c(
-                            "h4",
+                            "h5",
                             {
                               key: detail.id,
                               staticClass: "pre-formatted text-left"
@@ -44105,7 +44209,7 @@ var render = function() {
                 { staticClass: "card-body", attrs: { id: "section" + index } },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-dp",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -44115,7 +44219,7 @@ var render = function() {
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "img-fluid max-h fade ",
+                          staticClass: "image-conten fade ",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44127,7 +44231,7 @@ var render = function() {
                         "div",
                         { staticClass: "col-sm-6" },
                         [
-                          _c("h4", {
+                          _c("h5", {
                             staticClass: "pre-formatted text-left",
                             domProps: {
                               textContent: _vm._s(dato.item.description)
@@ -44138,7 +44242,7 @@ var render = function() {
                           _vm._v(" "),
                           _vm._l(dato.detail, function(detail) {
                             return _c(
-                              "h4",
+                              "h5",
                               {
                                 key: detail.id,
                                 staticClass: "pre-formatted text-left"
@@ -44170,12 +44274,12 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-center",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     }),
                     _vm._v(" "),
-                    _c("h4", {
+                    _c("h5", {
                       staticClass: "text-left",
                       domProps: { textContent: _vm._s(dato.item.description) }
                     })
@@ -44200,7 +44304,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "col-sm" }, [
-                            _c("h4", {
+                            _c("h5", {
                               staticClass: "text-left",
                               domProps: {
                                 textContent: _vm._s(detail.description)
@@ -44239,7 +44343,7 @@ var render = function() {
                                     { staticClass: "col-sm-12 text-left" },
                                     [
                                       _c("img", {
-                                        staticClass: "img-fluid max-h fade",
+                                        staticClass: "image-conten fade",
                                         attrs: {
                                           src: detail.image,
                                           alt: "DedicatedPeople"
@@ -44256,7 +44360,7 @@ var render = function() {
                                   ),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "col-sm-12" }, [
-                                    _c("h4", {
+                                    _c("h5", {
                                       staticClass: "text-left",
                                       domProps: {
                                         textContent: _vm._s(detail.description)
@@ -44331,18 +44435,14 @@ var render = function() {
     "div",
     { staticClass: "carousel" },
     [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
-          attrs: { type: "button", "data-toggle": "dropdown" }
-        },
-        [_vm._v("\n            Home Menu\n        ")]
-      ),
+      _c("button", {
+        staticClass: "btn btn-primary dropdown-toggle btn-sticky btn-round",
+        attrs: { type: "button", "data-toggle": "dropdown" }
+      }),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -44372,7 +44472,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-white",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -44384,19 +44484,19 @@ var render = function() {
           dato.item.element == "div"
             ? _c("div", { staticClass: "card-body bg-dp-white" }, [
                 _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-sm-6" }, [
+                  _c("div", { staticClass: "row child-div" }, [
+                    _c("div", { staticClass: "col-sm-6 child-div" }, [
                       _c("img", {
-                        staticClass: "img-fluid max-h",
+                        staticClass: "image-conten",
                         attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                       })
                     ]),
                     _vm._v(" "),
                     _c(
                       "div",
-                      { staticClass: "col-sm-6" },
+                      { staticClass: "col-sm-6 child-div" },
                       [
-                        _c("h4", {
+                        _c("h5", {
                           staticClass: "pre-formatted text-left",
                           domProps: {
                             textContent: _vm._s(dato.item.description)
@@ -44407,7 +44507,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm._l(dato.detail, function(detail) {
                           return _c(
-                            "h4",
+                            "h5",
                             {
                               key: detail.id,
                               staticClass: "pre-formatted text-left"
@@ -44422,25 +44522,25 @@ var render = function() {
                           )
                         }),
                         _vm._v(" "),
-                        _c("br")
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-sm-12 text-right" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-link",
+                              on: {
+                                click: function($event) {
+                                  _vm.menu = 1
+                                }
+                              }
+                            },
+                            [_vm._m(1, true)]
+                          )
+                        ])
                       ],
                       2
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-sm-12 text-right" }, [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-link",
-                          on: {
-                            click: function($event) {
-                              return _vm.menuData()
-                            }
-                          }
-                        },
-                        [_vm._m(1, true)]
-                      )
-                    ])
+                    )
                   ])
                 ])
               ])
@@ -44455,7 +44555,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-white",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -44494,7 +44594,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm._l(dato.detail, function(detail) {
                           return _c(
-                            "h4",
+                            "h5",
                             {
                               key: detail.id,
                               staticClass: "pre-formatted text-left"
@@ -44516,7 +44616,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-sm-6" }, [
                       _c("img", {
-                        staticClass: "img-fluid max-h fade",
+                        staticClass: "image-conten fade",
                         attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                       })
                     ])
@@ -44534,7 +44634,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-dp",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -44544,7 +44644,7 @@ var render = function() {
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "img-fluid max-h fade",
+                          staticClass: "image-conten fade",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44556,7 +44656,7 @@ var render = function() {
                         "div",
                         { staticClass: "col-sm-6 text-left" },
                         [
-                          _c("h4", {
+                          _c("h5", {
                             domProps: {
                               textContent: _vm._s(dato.item.description)
                             }
@@ -44566,7 +44666,7 @@ var render = function() {
                           _vm._v(" "),
                           _vm._l(dato.detail, function(detail) {
                             return _c(
-                              "h4",
+                              "h5",
                               {
                                 key: detail.id,
                                 staticClass: "pre-formatted text-left"
@@ -44642,19 +44742,21 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "slide-info-dp" }, [
-                            _c("h2", {
-                              staticClass:
-                                "slide-title-centered-dp text-warning fade",
-                              domProps: { textContent: _vm._s(detail.name) }
-                            }),
-                            _vm._v(" "),
-                            _c("h4", {
-                              staticClass:
-                                "slide-content-centered-dp text-light fade",
-                              domProps: {
-                                textContent: _vm._s(detail.description)
-                              }
-                            })
+                            _c("div", { staticClass: "container" }, [
+                              _c("h1", {
+                                staticClass:
+                                  "slide-title-centered-dp text-warning fade",
+                                domProps: { textContent: _vm._s(detail.name) }
+                              }),
+                              _vm._v(" "),
+                              _c("h5", {
+                                staticClass:
+                                  "slide-content-centered-dp text-light fade",
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              })
+                            ])
                           ])
                         ]
                       )
@@ -44773,7 +44875,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-white",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -44788,7 +44890,7 @@ var render = function() {
                   _c("div", { staticClass: "row" }, [
                     _c("div", { staticClass: "col-sm-6" }, [
                       _c("img", {
-                        staticClass: "img-fluid rounded max-h fade",
+                        staticClass: "image-conten fade",
                         attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                       })
                     ]),
@@ -44822,7 +44924,7 @@ var render = function() {
                             "li",
                             { key: detail.id, staticClass: "fade" },
                             [
-                              _c("h4", {
+                              _c("h5", {
                                 domProps: {
                                   textContent: _vm._s(detail.description)
                                 }
@@ -44849,7 +44951,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-white",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -44891,7 +44993,7 @@ var render = function() {
                             "li",
                             { key: detail.id, staticClass: "fade" },
                             [
-                              _c("h4", {
+                              _c("h5", {
                                 domProps: {
                                   textContent: _vm._s(detail.description)
                                 }
@@ -44907,7 +45009,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-sm-6" }, [
                       _c("img", {
-                        staticClass: "img-fluid rounded max-h fade ",
+                        staticClass: "image-conten fade ",
                         attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                       })
                     ])
@@ -44923,7 +45025,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-center",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     }),
@@ -44953,7 +45055,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "col-sm fade" }, [
-                            _c("h2", {
+                            _c("h1", {
                               staticClass: "text-left",
                               domProps: {
                                 textContent: _vm._s(detail.description)
@@ -44977,7 +45079,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
                     _c(
-                      "h2",
+                      "h1",
                       { staticClass: "text-center" },
                       _vm._l(_vm.TitleBiColor(dato.item.title, 2), function(
                         title,
@@ -45044,6 +45146,13 @@ var render = function() {
                                                   textContent: _vm._s(
                                                     detail.name
                                                   )
+                                                },
+                                                on: {
+                                                  click: function($event) {
+                                                    return _vm.toggleItems(
+                                                      detail
+                                                    )
+                                                  }
                                                 }
                                               })
                                             ]
@@ -45052,10 +45161,13 @@ var render = function() {
                                           _c(
                                             "div",
                                             {
-                                              staticClass: "col-sm-12 text-left"
+                                              staticClass:
+                                                "col-sm-12 text-left",
+                                              staticStyle: { display: "none" },
+                                              attrs: { id: "panel" + detail.id }
                                             },
                                             [
-                                              _c("h4", {
+                                              _c("h5", {
                                                 staticClass:
                                                   "text-left pre-formatted",
                                                 domProps: {
@@ -45086,7 +45198,7 @@ var render = function() {
                                       _c("br"),
                                       _vm._v(" "),
                                       _c("div", { staticClass: "col-sm-12" }, [
-                                        _c("h4", {
+                                        _c("h5", {
                                           staticClass: "text-left",
                                           domProps: {
                                             textContent: _vm._s(
@@ -45106,7 +45218,7 @@ var render = function() {
                         _c("div", { staticClass: "col-sm-6" }, [
                           _c("div", { staticClass: "container fade" }, [
                             _c(
-                              "h2",
+                              "h1",
                               { staticClass: "text-center" },
                               _vm._l(
                                 _vm.TitleBiColor(dato.item.description, 2),
@@ -45143,7 +45255,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-dp",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -45153,7 +45265,7 @@ var render = function() {
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "img-fluid max-h fade",
+                          staticClass: "image-conten fade",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -45184,7 +45296,7 @@ var render = function() {
                           "ul",
                           _vm._l(dato.detail, function(detail) {
                             return _c("li", { key: detail.id }, [
-                              _c("h4", {
+                              _c("h5", {
                                 domProps: {
                                   textContent: _vm._s(detail.description)
                                 }
@@ -45209,7 +45321,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h2", {
+                    _c("h1", {
                       staticClass: "text-dp",
                       domProps: { textContent: _vm._s(dato.item.title) }
                     })
@@ -45246,7 +45358,7 @@ var render = function() {
                               "li",
                               { key: detail.id, staticClass: "fade" },
                               [
-                                _c("h4", {
+                                _c("h5", {
                                   domProps: {
                                     textContent: _vm._s(detail.description)
                                   }
@@ -45262,7 +45374,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "img-fluid max-h",
+                          staticClass: "image-conten",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -45321,6 +45433,133 @@ var staticRenderFns = [
     ])
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/website/testimonies.vue?vue&type=template&id=dafb5e9a&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/website/testimonies.vue?vue&type=template&id=dafb5e9a& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "carousel" },
+    _vm._l(_vm.dataUser, function(dato, index) {
+      return _c("div", { key: index }, [
+        dato.item.element == "slide"
+          ? _c(
+              "div",
+              {
+                staticClass: "carousel slide",
+                attrs: { id: "section" + index, "data-ride": "carousel" }
+              },
+              [
+                _c("ul", { staticClass: "carousel-indicators" }, [
+                  _c("li", {
+                    staticClass: "active",
+                    attrs: {
+                      "data-target": "#section" + index,
+                      "data-slide-to": "0"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("li", {
+                    attrs: {
+                      "data-target": "#section" + index,
+                      "data-slide-to": "1"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("li", {
+                    attrs: {
+                      "data-target": "#section" + index,
+                      "data-slide-to": "2"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "carousel-inner" },
+                  _vm._l(dato.detail, function(detail, index) {
+                    return _c(
+                      "div",
+                      {
+                        key: index,
+                        class: [
+                          index > 0
+                            ? "carousel-item slide-content-dp"
+                            : "carousel-item active slide-content-dp"
+                        ]
+                      },
+                      [
+                        _c("img", {
+                          staticStyle: { width: "100%", height: "100vh" },
+                          attrs: { src: detail.image, alt: "Los Angeles" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "slide-info-dp" }, [
+                          _c("div", { staticClass: "container" }, [
+                            _c("h1", {
+                              staticClass:
+                                "slide-title-centered-dp text-warning fade",
+                              domProps: { textContent: _vm._s(detail.name) }
+                            }),
+                            _vm._v(" "),
+                            _c("h5", {
+                              staticClass:
+                                "slide-content-centered-dp text-light fade",
+                              domProps: {
+                                textContent: _vm._s(detail.description)
+                              }
+                            })
+                          ])
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "carousel-control-prev",
+                    attrs: { href: "#section" + index, "data-slide": "prev" }
+                  },
+                  [_c("span", { staticClass: "carousel-control-prev-icon" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "carousel-control-next",
+                    attrs: { href: "#section" + index, "data-slide": "next" }
+                  },
+                  [_c("span", { staticClass: "carousel-control-next-icon" })]
+                )
+              ]
+            )
+          : _vm._e()
+      ])
+    }),
+    0
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -57519,6 +57758,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('main-page-component', __webpack_require__(/*! ./components/website/MainPageComponent.vue */ "./resources/js/components/website/MainPageComponent.vue")["default"]);
 Vue.component('about-us-component', __webpack_require__(/*! ./components/website/AboutUsComponent.vue */ "./resources/js/components/website/AboutUsComponent.vue")["default"]);
 Vue.component('service-component', __webpack_require__(/*! ./components/website/ServiceComponent.vue */ "./resources/js/components/website/ServiceComponent.vue")["default"]);
+Vue.component('testimonies-component', __webpack_require__(/*! ./components/website/testimonies.vue */ "./resources/js/components/website/testimonies.vue")["default"]);
 Vue.component('career-component', __webpack_require__(/*! ./components/website/CareerComponent.vue */ "./resources/js/components/website/CareerComponent.vue")["default"]);
 Vue.component('main-page', __webpack_require__(/*! ./components/main/MainComponent.vue */ "./resources/js/components/main/MainComponent.vue")["default"]);
 Vue.component('about-us', __webpack_require__(/*! ./components/aboutUs/AboutUsComponent.vue */ "./resources/js/components/aboutUs/AboutUsComponent.vue")["default"]);
@@ -58790,6 +59030,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ServiceComponent_vue_vue_type_template_id_25c56e27___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ServiceComponent_vue_vue_type_template_id_25c56e27___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/website/testimonies.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/website/testimonies.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _testimonies_vue_vue_type_template_id_dafb5e9a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./testimonies.vue?vue&type=template&id=dafb5e9a& */ "./resources/js/components/website/testimonies.vue?vue&type=template&id=dafb5e9a&");
+/* harmony import */ var _testimonies_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./testimonies.vue?vue&type=script&lang=js& */ "./resources/js/components/website/testimonies.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _testimonies_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _testimonies_vue_vue_type_template_id_dafb5e9a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _testimonies_vue_vue_type_template_id_dafb5e9a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/website/testimonies.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/website/testimonies.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/website/testimonies.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_testimonies_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./testimonies.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/website/testimonies.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_testimonies_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/website/testimonies.vue?vue&type=template&id=dafb5e9a&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/website/testimonies.vue?vue&type=template&id=dafb5e9a& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_testimonies_vue_vue_type_template_id_dafb5e9a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./testimonies.vue?vue&type=template&id=dafb5e9a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/website/testimonies.vue?vue&type=template&id=dafb5e9a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_testimonies_vue_vue_type_template_id_dafb5e9a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_testimonies_vue_vue_type_template_id_dafb5e9a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
