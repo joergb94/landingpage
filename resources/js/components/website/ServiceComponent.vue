@@ -1,12 +1,12 @@
 <template>
             <div class="carousel">
-                <button  type="button" class="btn btn-primary dropdown-toggle fixed-top btn-sticky" data-toggle="dropdown">
-                        Our service Menu
+                <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu col-sm-12">
-                        <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
-                                <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title"></span></a>
+                    <div  class="dropdown-menu col-sm-12 col-md-4">
+                             <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
+                                 <span class="text-dp-yellow"><strong>>></strong></span>
+                                 <span v-text="dato.item.title"></span>
+                            </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center" >

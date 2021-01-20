@@ -11,13 +11,13 @@
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center">
                         <div class="container text-center">
-                             <h1 class="text-white" v-text="dato.item.title"></h1>
+                             <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                     </div>
-                    <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
-                        <div class="container">
-                            <div  class="row child-div">
-                            <div class="col-sm-6 child-div">
+                    <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white no-margin-bottom">
+                        <div class="container no-margin-bottom">
+                            <div  class="row child-div no-margin-bottom">
+                            <div class="col-sm-6 child-div no-margin-bottom">
                                 <img class="image-conten" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6 child-div">
@@ -27,9 +27,9 @@
                                        <span v-text="detail.description"></span> 
                                 </h5>
                                 <br> 
-                                <div class="col-sm-12 text-right">
-                                    <button class="btn btn-link" @click="menu=1" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
-                                </div> 
+                                
+                                    <button class="btn btn-link bottom-right" @click="$emit('click',1)" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
+                          
                             </div>
                             
                         </div>
@@ -37,7 +37,7 @@
                     </div>
                     <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center">
                         <div class="container text-center">
-                             <h1 class="text-white" v-text="dato.item.title"></h1>
+                             <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div-left'"  class="card-body bg-dp-white">
@@ -54,7 +54,9 @@
                                     <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
                                     </h5>
-                                    <br>                      
+                                    <br>
+                                    <br>
+                                    <button class="btn btn-link bottom-right" @click="$emit('click',2)" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>                     
                                 </div>
                                 <div class="col-sm-6">
                                     <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
@@ -62,13 +64,13 @@
                             </div>
                         </div>
                      </div>
-                     <div v-if="dato.item.element == 'div-not-head'"  v-bind:id="'section'+index" class="card-body bg-dp-white">
+                     <div v-if="dato.item.element == 'div-not-head'"  v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
                         <div class="col-sm-12 text-center">
-                            <h1 class="text-dp" v-text="dato.item.title"></h1>
+                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
-                        <div class="container">
-                            <div  class="row">
-                            <div class="col-sm-6">
+                        <div class="container no-margin-bottom">
+                            <div  class="row no-margin-bottom">
+                            <div class="col-sm-6 no-margin-bottom">
                                 <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6 text-left">
@@ -78,6 +80,9 @@
                                        <span v-text="detail.description"></span> 
                                 </h5>
                                 <br>
+                                 <br>
+                                    <button class="btn btn-link bottom-right" @click="$emit('click',3)" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
+
                             </div>
                         </div>
                         
@@ -127,7 +132,6 @@
             url:'/site?page=1',
             }
         },  
-        
         methods : {
         ListUsers(){
             let me = this;
@@ -135,9 +139,6 @@
                     me.dataUser =r.data;
                 })
                 $(".content-site").fadeIn('slow');
-        },
-        menuData(){
-                this.$emit("menu",2)
         },
          TitleBiColor(data){
             var text = data.split(" ");

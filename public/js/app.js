@@ -2373,6 +2373,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2388,9 +2393,6 @@ __webpack_require__.r(__webpack_exports__);
         me.dataUser = r.data;
       });
       $(".content-site").fadeIn('slow');
-    },
-    menuData: function menuData() {
-      this.$emit("menu", 2);
     },
     TitleBiColor: function TitleBiColor(data) {
       var text = data.split(" ");
@@ -43763,18 +43765,14 @@ var render = function() {
     "div",
     { staticClass: "carousel" },
     [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
-          attrs: { type: "button", "data-toggle": "dropdown" }
-        },
-        [_vm._v("\n            About Us Menu\n        ")]
-      ),
+      _c("button", {
+        staticClass: "btn btn-primary dropdown-toggle btn-sticky btn-round",
+        attrs: { type: "button", "data-toggle": "dropdown" }
+      }),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu col-sm-12 col-md-6" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -43786,7 +43784,9 @@ var render = function() {
             [
               _vm._m(0, true),
               _vm._v(" "),
-              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+              _c("span", {
+                domProps: { textContent: _vm._s(dato.item.title.toUpperCase()) }
+              })
             ]
           )
         }),
@@ -43805,7 +43805,9 @@ var render = function() {
                 [
                   _c("h1", {
                     staticClass: "text-white",
-                    domProps: { textContent: _vm._s(dato.item.title) }
+                    domProps: {
+                      textContent: _vm._s(dato.item.title.toUpperCase())
+                    }
                   })
                 ]
               )
@@ -43838,7 +43840,9 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
                     _c("h1", {
                       staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     }),
                     _vm._v(" "),
                     _c("h3", {
@@ -43903,7 +43907,9 @@ var render = function() {
                         return _c("span", {
                           key: i,
                           class: title.class,
-                          domProps: { textContent: _vm._s(title.text + " ") }
+                          domProps: {
+                            textContent: _vm._s(title.text.toUpperCase() + " ")
+                          }
                         })
                       }),
                       0
@@ -43967,7 +43973,9 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12" }, [
                     _c("h1", {
                       staticClass: "text-center text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     }),
                     _vm._v(" "),
                     _c("h3", {
@@ -43995,7 +44003,7 @@ var render = function() {
                                 detail.image !== null
                                   ? _c(
                                       "div",
-                                      { staticClass: "col-sm-12 text-left" },
+                                      { staticClass: "col-sm-12 text-center" },
                                       [
                                         _c("img", {
                                           staticClass: "img-fluid max-icon",
@@ -44052,7 +44060,9 @@ var render = function() {
                     _vm._v(" "),
                     _c("h1", {
                       staticClass: "text-dp fade",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     }),
                     _vm._v(" "),
                     _c("h5", {
@@ -44105,18 +44115,14 @@ var render = function() {
     "div",
     { staticClass: "carousel" },
     [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
-          attrs: { type: "button", "data-toggle": "dropdown" }
-        },
-        [_vm._v("\n            Careers Menu\n        ")]
-      ),
+      _c("button", {
+        staticClass: "btn btn-primary dropdown-toggle btn-sticky btn-round",
+        attrs: { type: "button", "data-toggle": "dropdown" }
+      }),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -44219,7 +44225,7 @@ var render = function() {
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "image-conten fade ",
+                          staticClass: "img-fluid fade ",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44340,10 +44346,10 @@ var render = function() {
                                 _c("div", { staticClass: "row" }, [
                                   _c(
                                     "div",
-                                    { staticClass: "col-sm-12 text-left" },
+                                    { staticClass: "col-sm-12 text-center" },
                                     [
                                       _c("img", {
-                                        staticClass: "image-conten fade",
+                                        staticClass: "img-fluid fade",
                                         attrs: {
                                           src: detail.image,
                                           alt: "DedicatedPeople"
@@ -44351,7 +44357,7 @@ var render = function() {
                                       }),
                                       _vm._v(" "),
                                       _c("h3", {
-                                        staticClass: "text-dp",
+                                        staticClass: "text-dp text-left",
                                         domProps: {
                                           textContent: _vm._s(detail.name)
                                         }
@@ -44474,7 +44480,9 @@ var render = function() {
                   _c("div", { staticClass: "container text-center" }, [
                     _c("h1", {
                       staticClass: "text-white",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ])
                 ]
@@ -44482,68 +44490,83 @@ var render = function() {
             : _vm._e(),
           _vm._v(" "),
           dato.item.element == "div"
-            ? _c("div", { staticClass: "card-body bg-dp-white" }, [
-                _c("div", { staticClass: "container" }, [
-                  _c("div", { staticClass: "row child-div" }, [
-                    _c("div", { staticClass: "col-sm-6 child-div" }, [
-                      _c("img", {
-                        staticClass: "image-conten",
-                        attrs: { src: dato.item.image, alt: "DedicatedPeople" }
-                      })
-                    ]),
-                    _vm._v(" "),
+            ? _c(
+                "div",
+                { staticClass: "card-body bg-dp-white no-margin-bottom" },
+                [
+                  _c("div", { staticClass: "container no-margin-bottom" }, [
                     _c(
                       "div",
-                      { staticClass: "col-sm-6 child-div" },
+                      { staticClass: "row child-div no-margin-bottom" },
                       [
-                        _c("h5", {
-                          staticClass: "pre-formatted text-left",
-                          domProps: {
-                            textContent: _vm._s(dato.item.description)
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("br"),
-                        _vm._v(" "),
-                        _vm._l(dato.detail, function(detail) {
-                          return _c(
-                            "h5",
-                            {
-                              key: detail.id,
-                              staticClass: "pre-formatted text-left"
-                            },
-                            [
-                              _c("span", {
-                                domProps: {
-                                  textContent: _vm._s(detail.description)
-                                }
-                              })
-                            ]
-                          )
-                        }),
-                        _vm._v(" "),
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-12 text-right" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-link",
-                              on: {
-                                click: function($event) {
-                                  _vm.menu = 1
-                                }
+                        _c(
+                          "div",
+                          {
+                            staticClass: "col-sm-6 child-div no-margin-bottom"
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "image-conten",
+                              attrs: {
+                                src: dato.item.image,
+                                alt: "DedicatedPeople"
                               }
-                            },
-                            [_vm._m(1, true)]
-                          )
-                        ])
-                      ],
-                      2
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col-sm-6 child-div" },
+                          [
+                            _c("h5", {
+                              staticClass: "pre-formatted text-left",
+                              domProps: {
+                                textContent: _vm._s(dato.item.description)
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _vm._l(dato.detail, function(detail) {
+                              return _c(
+                                "h5",
+                                {
+                                  key: detail.id,
+                                  staticClass: "pre-formatted text-left"
+                                },
+                                [
+                                  _c("span", {
+                                    domProps: {
+                                      textContent: _vm._s(detail.description)
+                                    }
+                                  })
+                                ]
+                              )
+                            }),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-link bottom-right",
+                                on: {
+                                  click: function($event) {
+                                    return _vm.$emit("click", 1)
+                                  }
+                                }
+                              },
+                              [_vm._m(1, true)]
+                            )
+                          ],
+                          2
+                        )
+                      ]
                     )
                   ])
-                ])
-              ])
+                ]
+              )
             : _vm._e(),
           _vm._v(" "),
           dato.item.element == "div-left"
@@ -44557,7 +44580,9 @@ var render = function() {
                   _c("div", { staticClass: "container text-center" }, [
                     _c("h1", {
                       staticClass: "text-white",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ])
                 ]
@@ -44609,7 +44634,22 @@ var render = function() {
                           )
                         }),
                         _vm._v(" "),
-                        _c("br")
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-link bottom-right",
+                            on: {
+                              click: function($event) {
+                                return _vm.$emit("click", 2)
+                              }
+                            }
+                          },
+                          [_vm._m(2, true)]
+                        )
                       ],
                       2
                     ),
@@ -44629,20 +44669,22 @@ var render = function() {
             ? _c(
                 "div",
                 {
-                  staticClass: "card-body bg-dp-white",
+                  staticClass: "card-body bg-dp-white no-margin-bottom",
                   attrs: { id: "section" + index }
                 },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
                     _c("h1", {
                       staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "container" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-sm-6" }, [
+                  _c("div", { staticClass: "container no-margin-bottom" }, [
+                    _c("div", { staticClass: "row no-margin-bottom" }, [
+                      _c("div", { staticClass: "col-sm-6 no-margin-bottom" }, [
                         _c("img", {
                           staticClass: "image-conten fade",
                           attrs: {
@@ -44681,7 +44723,22 @@ var render = function() {
                             )
                           }),
                           _vm._v(" "),
-                          _c("br")
+                          _c("br"),
+                          _vm._v(" "),
+                          _c("br"),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-link bottom-right",
+                              on: {
+                                click: function($event) {
+                                  return _vm.$emit("click", 3)
+                                }
+                              }
+                            },
+                            [_vm._m(3, true)]
+                          )
                         ],
                         2
                       )
@@ -44807,6 +44864,24 @@ var staticRenderFns = [
       _vm._v("More About us "),
       _c("strong", [_vm._v(">>")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-dp" }, [
+      _vm._v("More About us "),
+      _c("strong", [_vm._v(">>")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h5", { staticClass: "text-dp" }, [
+      _vm._v("More About us "),
+      _c("strong", [_vm._v(">>")])
+    ])
   }
 ]
 render._withStripped = true
@@ -44834,18 +44909,14 @@ var render = function() {
     "div",
     { staticClass: "carousel" },
     [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary dropdown-toggle fixed-top btn-sticky",
-          attrs: { type: "button", "data-toggle": "dropdown" }
-        },
-        [_vm._v("\n            Our service Menu\n        ")]
-      ),
+      _c("button", {
+        staticClass: "btn btn-primary dropdown-toggle btn-sticky btn-round",
+        attrs: { type: "button", "data-toggle": "dropdown" }
+      }),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu col-sm-12" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -57776,6 +57847,14 @@ var app = new Vue({
   el: '#app',
   data: {
     menu: 0
+  },
+  methods: {
+    menuC: function menuC(no) {
+      this.menu = no;
+      $('body,html').animate({
+        scrollTop: '0px'
+      }, 1000);
+    }
   },
   mounted: function mounted() {}
 });

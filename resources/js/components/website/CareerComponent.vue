@@ -1,12 +1,12 @@
 <template>
             <div class="carousel">
-                <button  type="button" class="btn btn-primary dropdown-toggle fixed-top btn-sticky" data-toggle="dropdown">
-                        Careers Menu
+                <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu">
+                    <div  class="dropdown-menu col-sm-12 col-md-4">
                              <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
                                  <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title"></span></a>
+                                 <span v-text="dato.item.title"></span>
+                            </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'|| dato.item.element =='div-group-head'" v-bind:id="'section'+index" class="card-header head-dp text-center">
@@ -36,7 +36,7 @@
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="image-conten fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="img-fluid fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
@@ -74,9 +74,9 @@
                                 <div class="col-sm-3" v-for="detail in dato.detail" :key="detail.id">
                                     <div class="col-sm-12">
                                         <div class="row">
-                                            <div class="col-sm-12 text-left">
-                                                <img class="image-conten fade" v-bind:src="detail.image" alt="DedicatedPeople">
-                                                <h3 class="text-dp" v-text="detail.name"></h3>
+                                            <div class="col-sm-12 text-center">
+                                                <img class="img-fluid fade" v-bind:src="detail.image" alt="DedicatedPeople">
+                                                <h3 class="text-dp text-left" v-text="detail.name"></h3>
                                             </div>
                                             <div class="col-sm-12">
                                                 <h5 class="text-left" v-text="detail.description"></h5>

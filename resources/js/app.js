@@ -40,8 +40,16 @@ Vue.component('user-component', require('./components/user/UsersComponent.vue').
 const app = new Vue({
     el: '#app',
     data:{
-        menu: 0
-    }, mounted() {
+        
+        menu:0
+
+    },methods:{
+        menuC(no){
+          this.menu = no;
+          $('body,html').animate({ scrollTop:'0px' },1000);
+        }
+    },
+    mounted() {
         
     }   
 });
