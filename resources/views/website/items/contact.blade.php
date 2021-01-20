@@ -1,4 +1,4 @@
-<div class="col-sm-12 card-header head-dp text-center"><h1 class="text-white">Send us a contact form message<h1/></div>
+<div class="col-sm-12 card-header head-dp text-center"><h1 class="text-white">SEND US A CONTACT FORM MESSAGE<h1/></div>
 <div id="contact" class="form-2 content-site">
         <div class="container">
             <div class="row">
