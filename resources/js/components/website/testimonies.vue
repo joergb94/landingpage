@@ -77,7 +77,7 @@
         },
         },
         mounted() {
-            console.log('Component mounted.')
+            
              this.ListUsers();
         }    
     }
