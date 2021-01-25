@@ -2,21 +2,21 @@
             <div class="carousel">
                 <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu col-sm-12 col-md-4">
+                    <div  class="dropdown-menu col-sm-12 col-md-4 drop-div">
                              <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
-                                 <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title"></span>
+                                <small class="text-dp-yellow pre-formatted"><strong>>></strong></small>
+                                <small  class="pre-formatted" v-text="dato.item.title"></small>
                             </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'|| dato.item.element =='div-group-head'" v-bind:id="'section'+index" class="card-header head-dp text-center">
-                        <h1 class="text-white" v-text="dato.item.title"></h1>
+                        <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body">
                         <div class="contianer">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid max-h fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
@@ -29,14 +29,14 @@
                             </div>
                         </div>
                     </div>
-                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body">
+                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
                         <div class="col-sm-12 text-center">
-                            <h1 class="text-dp" v-text="dato.item.title"></h1>
+                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                         <div class="container">
                             <div  class="row">
                                 <div class="col-sm-6">
-                                    <img class="img-fluid fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                    <img class="image-conten fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
                                 <div class="col-sm-6">
                                     <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
@@ -52,7 +52,7 @@
                     <div v-else-if="dato.item.element == 'div-group-img'" v-bind:id="'section'+index" class="card-body este">
 
                         <div class="col-sm-12">
-                            <h1 class="text-center" v-text='dato.item.title'></h1>
+                            <h1 class="text-center" v-text='dato.item.title.toUpperCase()'></h1>
                             <h5 class="text-left" v-text="dato.item.description"></h5>
                         </div>
                         <br>
@@ -132,6 +132,9 @@
 
            return arrayBiColor;
         },
+        dropShow(){
+             $(".drop-div").toggle();
+        }
         },
         mounted() {
          

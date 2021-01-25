@@ -2,10 +2,10 @@
             <div class="carousel">
                 <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu col-sm-12 col-md-4">
+                    <div  class="dropdown-menu col-sm-12 col-md-4 drop-div">
                              <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
-                                 <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title.toUpperCase()"></span>
+                                <small class="text-dp-yellow pre-formatted"><strong>>></strong></small>
+                                <small  class="pre-formatted" v-text="dato.item.title"></small>
                             </a>
                     </div>
 
@@ -26,7 +26,7 @@
 
                     </div>
                     
-                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body">
+                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
                         <div class="col-sm-12 text-center">
                             <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
                             <h3 class="text-dp" v-text="dato.item.description"></h3>
@@ -65,7 +65,7 @@
                                 <div class="col-sm fade">
                                     
                                     <span class="badge badge-dark col-sm-12">
-                                        <h5 class="text-center text-warning"  v-text="detail.name"></h5>
+                                        <h5 class="text-center text-dp-yellow"  v-text="detail.name"></h5>
                                     </span>
                                     <h5 class="text-left" v-text="detail.description"></h5>
                                 </div>

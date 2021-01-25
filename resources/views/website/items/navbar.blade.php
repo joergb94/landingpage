@@ -17,23 +17,24 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=0" >{{ __('Home') }}</button>
+                        <button class="btn btn-link text-dark  nav-link page-scroll up-menubar gotocover" @click="menu=0" ><strong>{{ __('Home') }}</strong></button>
                     </li> 
-                    <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=1" >{{ __('About us') }}</button>
+                    <li class="nav-item">
+                        <button class="btn btn-link text-dark  nav-link page-scroll up-menubar gotocover" @click="menu=1" ><strong>{{ __('About us') }}</strong></button>
                     </li>
-                    <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=2" >{{ __('Our service') }}</button>
+                    <li class="nav-item">
+                        <button class="btn btn-link text-dark nav-link page-scroll up-menubar gotocover" @click="menu=2" ><strong>{{ __('Our service') }}</strong></button>
                     </li>
-                    <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=3" >{{ __('Careers') }}</button>
+                    <li class="nav-item">
+                        <button class="btn btn-link text-dark nav-link page-scroll up-menubar gotocover" @click="menu=3" ><strong>{{ __('Careers') }}</strong></button>
                     </li>
-                    <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover" @click="menu=4" >{{ __('Testimonies') }}</button>
+                    <li class="nav-item">
+                        <button class="btn btn-link text-dark nav-link page-scroll up-menubar gotocover" @click="menu=4" ><strong>{{ __('Testimonies') }}</strong></button>
                     </li>
-                    <li class="nav-item btn-dp">
-                        <button class="btn btn-link nav-link page-scroll up-menubar gotocover"  @click="menu=5" >{{ __('Contact us') }}</button>
+                    <li class="nav-item">
+                        <button class="btn btn-link text-dark nav-link page-scroll up-menubar gotocover"  @click="menu=5" ><strong>{{ __('Contact us') }}</strong></button>
                     </li>
             </ul>
         </div>
+        
     </nav> 

@@ -1,7 +1,7 @@
 <template>
             <div class="carousel">
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'slide'"  v-bind:id="'section'+index" class="carousel slide" data-ride="carousel">
+                    <div v-if="dato.item.element == 'slide'"  v-bind:id="'section'+index" class="carousel slide bg-dp-white" data-ride="carousel">
 
                         <!-- Indicators -->
                         <ul class="carousel-indicators">

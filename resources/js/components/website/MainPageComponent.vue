@@ -2,10 +2,10 @@
             <div class="carousel">
                  <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu col-sm-12 col-md-4">
+                    <div  class="dropdown-menu col-sm-12 col-md-4 drop-div">
                              <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
-                                 <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title"></span>
+                                 <small class="text-dp-yellow pre-formatted"><strong>>></strong></small>
+                                 <small  class="pre-formatted" v-text="dato.item.title"></small>
                             </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
@@ -28,7 +28,7 @@
                                 </h5>
                                 <br> 
                                 
-                                    <button class="btn btn-link bottom-right" @click="$emit('click',1)" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
+                                    <button class="btn btn-link bottom-right text-dp" @click="$emit('click',1)" >More About us <strong>>></strong></button>
                           
                             </div>
                             
@@ -56,7 +56,7 @@
                                     </h5>
                                     <br>
                                     <br>
-                                    <button class="btn btn-link bottom-right" @click="$emit('click',2)" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>                     
+                                    <button class="btn btn-link bottom-right text-dp" @click="$emit('click',2)" >More About Our Service <strong>>></strong></button>                     
                                 </div>
                                 <div class="col-sm-6">
                                     <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
@@ -71,9 +71,9 @@
                         <div class="container no-margin-bottom">
                             <div  class="row no-margin-bottom">
                             <div class="col-sm-6 no-margin-bottom">
-                                <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                <img class="image-conten fade no-margin-bottom" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
-                            <div class="col-sm-6 text-left">
+                            <div class="col-sm-6 text-left no-margin-bottom">
                                 <h5 v-text="dato.item.description"></h5>
                                 <br>
                                 <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
@@ -81,7 +81,7 @@
                                 </h5>
                                 <br>
                                  <br>
-                                    <button class="btn btn-link bottom-right" @click="$emit('click',3)" ><h5 class="text-dp">More About us <strong>>></strong></h5></button>
+                                    <button class="btn btn-link bottom-right text-dp" @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
 
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                         </ul>
 
                         <!-- The slideshow -->
-                        <div class="carousel-inner">
+                        <div class="carousel-inner bg-dp-white">
                             <div  v-for="(detail,index) in dato.detail" :key="index" v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
                                 <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="Los Angeles">
                                 <div class="slide-info-dp">

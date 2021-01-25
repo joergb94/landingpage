@@ -21,6 +21,7 @@
     <title>Dedicated People</title>
     
    <!-- Styles -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">

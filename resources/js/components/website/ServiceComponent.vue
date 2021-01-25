@@ -2,16 +2,16 @@
             <div class="carousel">
                 <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
-                    <div  class="dropdown-menu col-sm-12 col-md-4">
+                    <div  class="dropdown-menu col-sm-12 col-md-4 drop-div">
                              <a  class="dropdown-item pre-formatted" v-for="(dato, index) in dataUser" :key="index"  v-bind:href="'#section'+index" >
-                                 <span class="text-dp-yellow"><strong>>></strong></span>
-                                 <span v-text="dato.item.title"></span>
+                                <small class="text-dp-yellow pre-formatted"><strong>>></strong></small>
+                                <small  class="pre-formatted" v-text="dato.item.title"></small>
                             </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center" >
                         <div class="container text-center">
-                             <h1 class="text-white" v-text="dato.item.title"></h1>
+                             <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white">
@@ -41,7 +41,7 @@
                     </div>
                     <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center" >
                         <div class="container text-center">
-                             <h1 class="text-white" v-text="dato.item.title"></h1>
+                             <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div-left'" class="card-body bg-dp-white">
@@ -71,7 +71,7 @@
                     <div v-else-if="dato.item.element == 'div-group-img'" v-bind:id="'section'+index" class="card-body bg-dp-white">
 
                         <div class="col-sm-12">
-                            <h1 class="text-center" v-text='dato.item.title'></h1>
+                            <h1 class="text-center" v-text='dato.item.title.toUpperCase()'></h1>
                             <h6 class="text-left" v-text="dato.item.description"></h6>
                         </div>
                         <br>
@@ -91,7 +91,7 @@
 
                         <div class="col-sm-12">
                              <h1 class="text-center">
-                                    <span  v-for="(title, i) in TitleBiColor(dato.item.title,2)" :key="i" 
+                                    <span  v-for="(title, i) in TitleBiColor(dato.item.title.toUpperCase(),2)" :key="i" 
                                                 v-bind:class="title.class"
                                                 v-text="title.text+' '">
                                     </span>
@@ -109,10 +109,11 @@
                                                         <div class="col-sm-12 col-md-8 text-left">
                                                             <br>
                                                             <div class="col-sm-12 text-left">
-                                                                <h3 class="text-dp pre-formatted text-left"  @click="toggleItems(detail)" v-text="detail.name"></h3>
+                                                                <button class="btn btn-link text-dp"><h3 class="text-dp pre-formatted text-left"  @click="toggleItems(detail)" v-text="detail.name"></h3></button>
                                                             </div>
+                                                            <br>
                                                             <div v-bind:id="'panel'+detail.id" class="col-sm-12 text-left" style="display:none">
-                                                                <h5 class="text-left pre-formatted" v-text="detail.description"></h5>
+                                                                <h5 class="" v-text="detail.description"></h5>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -147,7 +148,7 @@
                     </div>
                     <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white">
                         <div class="col-sm-12 text-center">
-                            <h1 class="text-dp" v-text="dato.item.title"></h1>
+                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                         <div class="container">
                               <div  class="row">
@@ -172,7 +173,7 @@
                     </div>
                     <div v-if="dato.item.element == 'div-not-head-left'" v-bind:id="'section'+index" class="card-body bg-dp-white">
                         <div class="col-sm-12 text-center">
-                            <h1 class="text-dp" v-text="dato.item.title"></h1>
+                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>
                         <div class="container">
                             <div  class="row">
@@ -202,7 +203,7 @@
                         <img class="img-yellow" v-bind:src="dato.item.image" alt="DedicatedPeople">
                         <div class="centered">
                             <br>
-                            <h1 class="text-dp" v-text="dato.item.title"></h1>
+                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
                             <p v-text="dato.item.description"></p>
                             <br>
                         </div>
@@ -260,6 +261,9 @@
         },
         toggleItems(data){
             $('#panel'+data.id).slideToggle();
+        },
+        dropShow(){
+             $(".drop-div").toggle();
         }
         },
         mounted() {

@@ -2234,6 +2234,9 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return arrayBiColor;
+    },
+    dropShow: function dropShow() {
+      $(".drop-div").toggle();
     }
   },
   mounted: function mounted() {
@@ -2648,6 +2651,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2702,6 +2706,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     toggleItems: function toggleItems(data) {
       $('#panel' + data.id).slideToggle();
+    },
+    dropShow: function dropShow() {
+      $(".drop-div").toggle();
     }
   },
   mounted: function mounted() {
@@ -2803,7 +2810,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    console.log('Component mounted.');
     this.ListUsers();
   }
 });
@@ -43772,7 +43778,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4 drop-div" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -43784,8 +43790,9 @@ var render = function() {
             [
               _vm._m(0, true),
               _vm._v(" "),
-              _c("span", {
-                domProps: { textContent: _vm._s(dato.item.title.toUpperCase()) }
+              _c("small", {
+                staticClass: "pre-formatted",
+                domProps: { textContent: _vm._s(dato.item.title) }
               })
             ]
           )
@@ -43835,7 +43842,10 @@ var render = function() {
           dato.item.element == "div-not-head"
             ? _c(
                 "div",
-                { staticClass: "card-body", attrs: { id: "section" + index } },
+                {
+                  staticClass: "card-body bg-dp-white no-margin-bottom",
+                  attrs: { id: "section" + index }
+                },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
                     _c("h1", {
@@ -43942,7 +43952,7 @@ var render = function() {
                               { staticClass: "badge badge-dark col-sm-12" },
                               [
                                 _c("h5", {
-                                  staticClass: "text-center text-warning",
+                                  staticClass: "text-center text-dp-yellow",
                                   domProps: { textContent: _vm._s(detail.name) }
                                 })
                               ]
@@ -44085,7 +44095,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "text-dp-yellow" }, [
+    return _c("small", { staticClass: "text-dp-yellow pre-formatted" }, [
       _c("strong", [_vm._v(">>")])
     ])
   }
@@ -44122,7 +44132,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4 drop-div" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -44134,7 +44144,10 @@ var render = function() {
             [
               _vm._m(0, true),
               _vm._v(" "),
-              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+              _c("small", {
+                staticClass: "pre-formatted",
+                domProps: { textContent: _vm._s(dato.item.title) }
+              })
             ]
           )
         }),
@@ -44153,7 +44166,9 @@ var render = function() {
                 [
                   _c("h1", {
                     staticClass: "text-white",
-                    domProps: { textContent: _vm._s(dato.item.title) }
+                    domProps: {
+                      textContent: _vm._s(dato.item.title.toUpperCase())
+                    }
                   })
                 ]
               )
@@ -44165,7 +44180,7 @@ var render = function() {
                   _c("div", { staticClass: "row" }, [
                     _c("div", { staticClass: "col-sm-6" }, [
                       _c("img", {
-                        staticClass: "img-fluid max-h fade",
+                        staticClass: "image-conten fade",
                         attrs: { src: dato.item.image, alt: "DedicatedPeople" }
                       })
                     ]),
@@ -44212,12 +44227,17 @@ var render = function() {
           dato.item.element == "div-not-head"
             ? _c(
                 "div",
-                { staticClass: "card-body", attrs: { id: "section" + index } },
+                {
+                  staticClass: "card-body bg-dp-white no-margin-bottom",
+                  attrs: { id: "section" + index }
+                },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
                     _c("h1", {
                       staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ]),
                   _vm._v(" "),
@@ -44225,7 +44245,7 @@ var render = function() {
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
                         _c("img", {
-                          staticClass: "img-fluid fade ",
+                          staticClass: "image-conten fade ",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44282,7 +44302,9 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12" }, [
                     _c("h1", {
                       staticClass: "text-center",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     }),
                     _vm._v(" "),
                     _c("h5", {
@@ -44411,7 +44433,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "text-dp-yellow" }, [
+    return _c("small", { staticClass: "text-dp-yellow pre-formatted" }, [
       _c("strong", [_vm._v(">>")])
     ])
   }
@@ -44448,7 +44470,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4 drop-div" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -44460,7 +44482,10 @@ var render = function() {
             [
               _vm._m(0, true),
               _vm._v(" "),
-              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+              _c("small", {
+                staticClass: "pre-formatted",
+                domProps: { textContent: _vm._s(dato.item.title) }
+              })
             ]
           )
         }),
@@ -44550,14 +44575,18 @@ var render = function() {
                             _c(
                               "button",
                               {
-                                staticClass: "btn btn-link bottom-right",
+                                staticClass:
+                                  "btn btn-link bottom-right text-dp",
                                 on: {
                                   click: function($event) {
                                     return _vm.$emit("click", 1)
                                   }
                                 }
                               },
-                              [_vm._m(1, true)]
+                              [
+                                _vm._v("More About us "),
+                                _c("strong", [_vm._v(">>")])
+                              ]
                             )
                           ],
                           2
@@ -44641,14 +44670,17 @@ var render = function() {
                         _c(
                           "button",
                           {
-                            staticClass: "btn btn-link bottom-right",
+                            staticClass: "btn btn-link bottom-right text-dp",
                             on: {
                               click: function($event) {
                                 return _vm.$emit("click", 2)
                               }
                             }
                           },
-                          [_vm._m(2, true)]
+                          [
+                            _vm._v("More About Our Service "),
+                            _c("strong", [_vm._v(">>")])
+                          ]
                         )
                       ],
                       2
@@ -44686,7 +44718,7 @@ var render = function() {
                     _c("div", { staticClass: "row no-margin-bottom" }, [
                       _c("div", { staticClass: "col-sm-6 no-margin-bottom" }, [
                         _c("img", {
-                          staticClass: "image-conten fade",
+                          staticClass: "image-conten fade no-margin-bottom",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44696,7 +44728,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "col-sm-6 text-left" },
+                        { staticClass: "col-sm-6 text-left no-margin-bottom" },
                         [
                           _c("h5", {
                             domProps: {
@@ -44730,14 +44762,17 @@ var render = function() {
                           _c(
                             "button",
                             {
-                              staticClass: "btn btn-link bottom-right",
+                              staticClass: "btn btn-link bottom-right text-dp",
                               on: {
                                 click: function($event) {
                                   return _vm.$emit("click", 3)
                                 }
                               }
                             },
-                            [_vm._m(3, true)]
+                            [
+                              _vm._v("Work With Us "),
+                              _c("strong", [_vm._v(">>")])
+                            ]
                           )
                         ],
                         2
@@ -44780,7 +44815,7 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "carousel-inner" },
+                    { staticClass: "carousel-inner bg-dp-white" },
                     _vm._l(dato.detail, function(detail, index) {
                       return _c(
                         "div",
@@ -44852,34 +44887,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "text-dp-yellow" }, [
-      _c("strong", [_vm._v(">>")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "text-dp" }, [
-      _vm._v("More About us "),
-      _c("strong", [_vm._v(">>")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "text-dp" }, [
-      _vm._v("More About us "),
-      _c("strong", [_vm._v(">>")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "text-dp" }, [
-      _vm._v("More About us "),
+    return _c("small", { staticClass: "text-dp-yellow pre-formatted" }, [
       _c("strong", [_vm._v(">>")])
     ])
   }
@@ -44916,7 +44924,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "dropdown-menu col-sm-12 col-md-4" },
+        { staticClass: "dropdown-menu col-sm-12 col-md-4 drop-div" },
         _vm._l(_vm.dataUser, function(dato, index) {
           return _c(
             "a",
@@ -44928,7 +44936,10 @@ var render = function() {
             [
               _vm._m(0, true),
               _vm._v(" "),
-              _c("span", { domProps: { textContent: _vm._s(dato.item.title) } })
+              _c("small", {
+                staticClass: "pre-formatted",
+                domProps: { textContent: _vm._s(dato.item.title) }
+              })
             ]
           )
         }),
@@ -44948,7 +44959,9 @@ var render = function() {
                   _c("div", { staticClass: "container text-center" }, [
                     _c("h1", {
                       staticClass: "text-white",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ])
                 ]
@@ -45024,7 +45037,9 @@ var render = function() {
                   _c("div", { staticClass: "container text-center" }, [
                     _c("h1", {
                       staticClass: "text-white",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ])
                 ]
@@ -45098,7 +45113,9 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12" }, [
                     _c("h1", {
                       staticClass: "text-center",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     }),
                     _vm._v(" "),
                     _c("h6", {
@@ -45152,16 +45169,16 @@ var render = function() {
                     _c(
                       "h1",
                       { staticClass: "text-center" },
-                      _vm._l(_vm.TitleBiColor(dato.item.title, 2), function(
-                        title,
-                        i
-                      ) {
-                        return _c("span", {
-                          key: i,
-                          class: title.class,
-                          domProps: { textContent: _vm._s(title.text + " ") }
-                        })
-                      }),
+                      _vm._l(
+                        _vm.TitleBiColor(dato.item.title.toUpperCase(), 2),
+                        function(title, i) {
+                          return _c("span", {
+                            key: i,
+                            class: title.class,
+                            domProps: { textContent: _vm._s(title.text + " ") }
+                          })
+                        }
+                      ),
                       0
                     ),
                     _vm._v(" "),
@@ -45210,24 +45227,35 @@ var render = function() {
                                               staticClass: "col-sm-12 text-left"
                                             },
                                             [
-                                              _c("h3", {
-                                                staticClass:
-                                                  "text-dp pre-formatted text-left",
-                                                domProps: {
-                                                  textContent: _vm._s(
-                                                    detail.name
-                                                  )
+                                              _c(
+                                                "button",
+                                                {
+                                                  staticClass:
+                                                    "btn btn-link text-dp"
                                                 },
-                                                on: {
-                                                  click: function($event) {
-                                                    return _vm.toggleItems(
-                                                      detail
-                                                    )
-                                                  }
-                                                }
-                                              })
+                                                [
+                                                  _c("h3", {
+                                                    staticClass:
+                                                      "text-dp pre-formatted text-left",
+                                                    domProps: {
+                                                      textContent: _vm._s(
+                                                        detail.name
+                                                      )
+                                                    },
+                                                    on: {
+                                                      click: function($event) {
+                                                        return _vm.toggleItems(
+                                                          detail
+                                                        )
+                                                      }
+                                                    }
+                                                  })
+                                                ]
+                                              )
                                             ]
                                           ),
+                                          _vm._v(" "),
+                                          _c("br"),
                                           _vm._v(" "),
                                           _c(
                                             "div",
@@ -45239,8 +45267,6 @@ var render = function() {
                                             },
                                             [
                                               _c("h5", {
-                                                staticClass:
-                                                  "text-left pre-formatted",
                                                 domProps: {
                                                   textContent: _vm._s(
                                                     detail.description
@@ -45328,7 +45354,9 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
                     _c("h1", {
                       staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ]),
                   _vm._v(" "),
@@ -45394,7 +45422,9 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
                     _c("h1", {
                       staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     })
                   ]),
                   _vm._v(" "),
@@ -45476,7 +45506,9 @@ var render = function() {
                     _vm._v(" "),
                     _c("h1", {
                       staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.title) }
+                      domProps: {
+                        textContent: _vm._s(dato.item.title.toUpperCase())
+                      }
                     }),
                     _vm._v(" "),
                     _c("p", {
@@ -45499,7 +45531,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "text-dp-yellow" }, [
+    return _c("small", { staticClass: "text-dp-yellow pre-formatted" }, [
       _c("strong", [_vm._v(">>")])
     ])
   }
@@ -45534,7 +45566,7 @@ var render = function() {
           ? _c(
               "div",
               {
-                staticClass: "carousel slide",
+                staticClass: "carousel slide bg-dp-white",
                 attrs: { id: "section" + index, "data-ride": "carousel" }
               },
               [
