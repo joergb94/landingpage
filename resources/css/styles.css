@@ -2475,7 +2475,14 @@ a:hover.back-to-top {
 			text-overflow: ellipsis; 
 			border: 1px solid #000000;
 		  }
-	
+	.navimage{
+		width: 200px;
+		height: 80px;
+	}
+	.navimage2{
+		width: 100% !important;
+		height: 100% !important;
+	}
 
   
 

@@ -4,7 +4,9 @@
      
               <!-- Image Logo -->
             <button class="navbar-brand btn btn-link logo-image col-sm text-center text-dark pag-scroll" @click="menu=0">
-                <img class="text-center"style="width:200px; height:64px;" src="{{ asset('img/logoDP.png') }}" alt="DedicatedPeople">
+            <figure class="navimage text-center" >
+                <img class="navimage2" src="{{ asset('img/logoDP.png') }}" alt="DedicatedPeople">
+                </figure>
             </button>
         
             <!-- Mobile Menu Toggle Button -->
