@@ -25,7 +25,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
-	
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
 	<!-- Favicon  -->
     <link rel="icon" href="{{ asset('img/logo.png') }}">
 </head>
@@ -73,6 +73,9 @@
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}" defer></script>
    <script src="{{ asset('js/all.js') }}" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+   <script> new WOW().init(); </script>
 
 </body>
 </html>

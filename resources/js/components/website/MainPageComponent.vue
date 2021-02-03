@@ -9,7 +9,7 @@
                             </a>
                     </div>
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
-                    <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center">
+                    <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center span3 wow swing center">
                         <div class="container text-center">
                              <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
                         </div>

@@ -1,6 +1,6 @@
 
-<header id="header" class="">
-        <div  class="container-yellow" style="width:100%; height:90vh;" >
+<header id="header" class="wow">
+        <div  class="container-head-dp">
                         <img class="img-head-dp" src="{{ asset('img/Cover.png') }}" alt="DedicatedPeople">
                         <div class="centered-head-dp">
                             <div class="container">

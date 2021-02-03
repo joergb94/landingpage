@@ -44498,7 +44498,8 @@ var render = function() {
             ? _c(
                 "div",
                 {
-                  staticClass: "card-header head-dp text-center",
+                  staticClass:
+                    "card-header head-dp text-center span3 wow swing center",
                   attrs: { id: "section" + index }
                 },
                 [
