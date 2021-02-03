@@ -3267,12 +3267,23 @@ a:hover.back-to-top {
 
 
   .container-head-dp {
-	position: relative;
-	text-align: center;
-	color: white;
-	height:50vh;
+      position: relative;
+      text-align: center;
+      color: white;
+      height:70vh;
 	
   }
+
+  @media screen and (max-width: 480px) {
+          .container-head-dp {
+            padding-top:15%;
+            position: relative;
+            text-align: center;
+            color: white;
+            height:60vh;
+        
+        }
+    }
   
   .centered-head-dp {
 	position: absolute;
@@ -3355,9 +3366,9 @@ a:hover.back-to-top {
 
   @media screen and (max-width: 480px) {
 	.text-head{
-		padding-top: 35vh;
-		color:#fff;
-		font-size: 43px;
+      padding-top: 35vh;
+      color:#fff;
+      font-size: 25px;
 	  }
   }
 
@@ -3464,8 +3475,8 @@ a:hover.back-to-top {
 	  } 
 	  
 	  .title-head-dp {
-		display: block;
-		animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+      display: block;
+      animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 	  }
 	  
 	  @keyframes reveal {
