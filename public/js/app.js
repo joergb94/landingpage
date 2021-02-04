@@ -40663,7 +40663,10 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("New Item +")]
+                  [
+                    _vm._v("New Item "),
+                    _c("i", { staticClass: "lni lni-circle-plus" })
+                  ]
                 )
               ])
             ])
@@ -41178,7 +41181,10 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("New Item +")]
+                  [
+                    _vm._v("New Item "),
+                    _c("i", { staticClass: "lni lni-circle-plus" })
+                  ]
                 )
               ])
             ])
@@ -41709,7 +41715,10 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("New Item +")]
+                  [
+                    _vm._v("New Item "),
+                    _c("i", { staticClass: "lni lni-circle-plus" })
+                  ]
                 )
               ])
             ])
@@ -42104,7 +42113,10 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("New Item +")]
+                  [
+                    _vm._v("New Item "),
+                    _c("i", { staticClass: "lni lni-circle-plus" })
+                  ]
                 )
               ])
             ])
@@ -42619,7 +42631,10 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("New Item +")]
+                  [
+                    _vm._v("New Item "),
+                    _c("i", { staticClass: "lni lni-circle-plus" })
+                  ]
                 )
               ])
             ])

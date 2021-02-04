@@ -14,7 +14,7 @@
                                 </h4>
                             </div>
                             <div class="col-sm-7 text-right">
-                                 <button class="btn btn-success" @click="openModalM('modal', 'add')">New Item +</button>
+                                 <button class="btn btn-success" @click="openModalM('modal', 'add')">New Item <i class="lni lni-circle-plus"></i></button>
                             </div>
                                    
          
