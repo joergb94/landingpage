@@ -2957,14 +2957,14 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         'id': item.id
       };
-      var m = "¿Estas segurop  que deseas eliminar la juego programado?";
-      var mt = "Se eliminara la programcion";
-      var btn = "Eliminalo";
+      var m = "Do you want delete this item?";
+      var mt = "The item will be deleted";
+      var btn = "Delete";
 
       if (item.deleted_at != null) {
-        m = "¿Estas segurop  que deseas restaurar la juego programado?";
-        mt = "Se restaura la programcion";
-        btn = "Restauralo";
+        m = "Do you want restore this item?";
+        mt = "The item will be restored ";
+        btn = "Restore";
       }
 
       Swal.fire({
@@ -3191,14 +3191,14 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         'id': item.id
       };
-      var m = "¿Estas segurop  que deseas eliminar la juego programado?";
-      var mt = "Se eliminara la programcion";
-      var btn = "Eliminalo";
+      var m = "Do you want delete this item?";
+      var mt = "The item will be deleted";
+      var btn = "Delete";
 
       if (item.deleted_at != null) {
-        m = "¿Estas segurop  que deseas restaurar la juego programado?";
-        mt = "Se restaura la programcion";
-        btn = "Restauralo";
+        m = "Do you want restore this item?";
+        mt = "The item will be restored ";
+        btn = "Restore";
       }
 
       Swal.fire({
@@ -3208,7 +3208,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si,' + btn + '!'
+        confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
           axios.post('/items/deleteOrResotore', data).then(function (response) {
@@ -3427,14 +3427,14 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         'id': item.id
       };
-      var m = "¿Estas segurop  que deseas eliminar la juego programado?";
-      var mt = "Se eliminara la programcion";
-      var btn = "Eliminalo";
+      var m = "Do you want delete this item?";
+      var mt = "The item will be deleted";
+      var btn = "Delete";
 
       if (item.deleted_at != null) {
-        m = "¿Estas segurop  que deseas restaurar la juego programado?";
-        mt = "Se restaura la programcion";
-        btn = "Restauralo";
+        m = "Do you want restore this item?";
+        mt = "The item will be restored ";
+        btn = "Restore";
       }
 
       Swal.fire({
@@ -3444,7 +3444,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si,' + btn + '!'
+        confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
           axios.post('/itemDetails/deleteOrResotore', data).then(function (response) {
@@ -3654,14 +3654,14 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         'id': item.id
       };
-      var m = "¿Estas segurop  que deseas eliminar la juego programado?";
-      var mt = "Se eliminara la programcion";
-      var btn = "Eliminalo";
+      var m = "Do you want delete this item?";
+      var mt = "The item will be deleted";
+      var btn = "Delete";
 
       if (item.deleted_at != null) {
-        m = "¿Estas segurop  que deseas restaurar la juego programado?";
-        mt = "Se restaura la programcion";
-        btn = "Restauralo";
+        m = "Do you want restore this item?";
+        mt = "The item will be restored ";
+        btn = "Restore";
       }
 
       Swal.fire({
@@ -3671,7 +3671,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si,' + btn + '!'
+        confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
           axios.post('/items/deleteOrResotore', data).then(function (response) {
@@ -3888,14 +3888,14 @@ __webpack_require__.r(__webpack_exports__);
       var data = {
         'id': item.id
       };
-      var m = "¿Estas segurop  que deseas eliminar la juego programado?";
-      var mt = "Se eliminara la programcion";
-      var btn = "Eliminalo";
+      var m = "Do you want delete this item?";
+      var mt = "The item will be deleted";
+      var btn = "Delete";
 
       if (item.deleted_at != null) {
-        m = "¿Estas segurop  que deseas restaurar la juego programado?";
-        mt = "Se restaura la programcion";
-        btn = "Restauralo";
+        m = "Do you want restore this item?";
+        mt = "The item will be restored ";
+        btn = "Restore";
       }
 
       Swal.fire({
@@ -3905,7 +3905,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si,' + btn + '!'
+        confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
           axios.post('/items/deleteOrResotore', data).then(function (response) {
@@ -40696,44 +40696,62 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          _c("a", {
-                            staticClass: "btn btn-info btn-sm",
-                            attrs: { href: "/itemDetails/" + item.id }
-                          }),
-                          _vm._v(" "),
-                          item.deleted_at == null
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openModalA(
-                                        "modal",
-                                        "update",
-                                        item
-                                      )
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "ti-pencil" })]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.DeleteOrRestoreA(item)
+                          _c("div", { staticClass: "btn-group" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-info btn-sm",
+                                attrs: {
+                                  href: "/itemDetails/" + item.id,
+                                  "data-toggle": "tooltip",
+                                  title: "Go to Detail"
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "ti-trash" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "lni lni-agenda" })]
+                            ),
+                            _vm._v(" "),
+                            item.deleted_at == null
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      type: "button",
+                                      "data-toggle": "tooltip",
+                                      title: "Edit Item"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.openModalA(
+                                          "modal",
+                                          "update",
+                                          item
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "lni lni-pencil" })]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "tooltip",
+                                  title: "Delete Item"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.DeleteOrRestoreA(item)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "lni lni-cross-circle" })]
+                            )
+                          ])
                         ])
                       ])
                     })
@@ -41055,7 +41073,9 @@ var render = function() {
           )
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c("br")
   ])
 }
 var staticRenderFns = [
@@ -41098,7 +41118,7 @@ var staticRenderFns = [
       [
         _c("h2", [
           _c("span", { staticClass: "badge  badge-pill badge-info" }, [
-            _vm._v("NO hay Juegos Porgamados")
+            _vm._v("Data Not Found")
           ])
         ])
       ]
@@ -41191,44 +41211,62 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          _c("a", {
-                            staticClass: "btn btn-info btn-sm",
-                            attrs: { href: "/itemDetails/" + item.id }
-                          }),
-                          _vm._v(" "),
-                          item.deleted_at == null
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openModalC(
-                                        "modal",
-                                        "update",
-                                        item
-                                      )
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "ti-pencil" })]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.DeleteOrRestoreC(item)
+                          _c("div", { staticClass: "btn-group" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-info btn-sm",
+                                attrs: {
+                                  href: "/itemDetails/" + item.id,
+                                  "data-toggle": "tooltip",
+                                  title: "Go to Detail"
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "ti-trash" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "lni lni-agenda" })]
+                            ),
+                            _vm._v(" "),
+                            item.deleted_at == null
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      type: "button",
+                                      "data-toggle": "tooltip",
+                                      title: "Edit Item"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.openModalC(
+                                          "modal",
+                                          "update",
+                                          item
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "lni lni-pencil" })]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "tooltip",
+                                  title: "Delete Item"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.DeleteOrRestoreC(item)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "lni lni-cross-circle" })]
+                            )
+                          ])
                         ])
                       ])
                     })
@@ -41550,7 +41588,9 @@ var render = function() {
           )
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c("br")
   ])
 }
 var staticRenderFns = [
@@ -41593,7 +41633,7 @@ var staticRenderFns = [
       [
         _c("h2", [
           _c("span", { staticClass: "badge  badge-pill badge-info" }, [
-            _vm._v("NO hay Juegos Porgamados")
+            _vm._v("Data Not Found")
           ])
         ])
       ]
@@ -41698,39 +41738,49 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          item.deleted_at == null
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openModalM(
-                                        "modal",
-                                        "update",
-                                        item
-                                      )
+                          _c("div", { staticClass: "btn-group" }, [
+                            item.deleted_at == null
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      type: "button",
+                                      "data-toggle": "tooltip",
+                                      title: "Edit Item"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.openModalM(
+                                          "modal",
+                                          "update",
+                                          item
+                                        )
+                                      }
                                     }
-                                  }
+                                  },
+                                  [_c("i", { staticClass: "lni lni-pencil" })]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "tooltip",
+                                  title: "Delete Item"
                                 },
-                                [_c("i", { staticClass: "ti-pencil" })]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.DeleteOrRestoreM(item)
+                                on: {
+                                  click: function($event) {
+                                    return _vm.DeleteOrRestoreM(item)
+                                  }
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "ti-trash" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "lni lni-cross-circle" })]
+                            )
+                          ])
                         ])
                       ])
                     })
@@ -42087,44 +42137,62 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          _c("a", {
-                            staticClass: "btn btn-info btn-sm",
-                            attrs: { href: "/itemDetails/" + item.id }
-                          }),
-                          _vm._v(" "),
-                          item.deleted_at == null
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openModalM(
-                                        "modal",
-                                        "update",
-                                        item
-                                      )
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "ti-pencil" })]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.DeleteOrRestoreM(item)
+                          _c("div", { staticClass: "btn-group" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-info btn-sm",
+                                attrs: {
+                                  href: "/itemDetails/" + item.id,
+                                  "data-toggle": "tooltip",
+                                  title: "Go to Detail"
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "ti-trash" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "lni lni-agenda" })]
+                            ),
+                            _vm._v(" "),
+                            item.deleted_at == null
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      type: "button",
+                                      "data-toggle": "tooltip",
+                                      title: "Edit Item"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.openModalM(
+                                          "modal",
+                                          "update",
+                                          item
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "lni lni-pencil" })]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "tooltip",
+                                  title: "Delete Item"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.DeleteOrRestoreM(item)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "lni lni-cross-circle" })]
+                            )
+                          ])
                         ])
                       ])
                     })
@@ -42446,7 +42514,9 @@ var render = function() {
           )
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c("br")
   ])
 }
 var staticRenderFns = [
@@ -42489,7 +42559,7 @@ var staticRenderFns = [
       [
         _c("h2", [
           _c("span", { staticClass: "badge  badge-pill badge-info" }, [
-            _vm._v("NO hay Juegos Porgamados")
+            _vm._v("Data Not Found")
           ])
         ])
       ]
@@ -42582,44 +42652,62 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("td", [
-                          _c("a", {
-                            staticClass: "btn btn-info btn-sm",
-                            attrs: { href: "/itemDetails/" + item.id }
-                          }),
-                          _vm._v(" "),
-                          item.deleted_at == null
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-warning btn-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.openModalS(
-                                        "modal",
-                                        "update",
-                                        item
-                                      )
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "ti-pencil" })]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-sm",
-                              attrs: { type: "button" },
-                              on: {
-                                click: function($event) {
-                                  return _vm.DeleteOrRestoreS(item)
+                          _c("div", { staticClass: "btn-group" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "btn btn-info btn-sm",
+                                attrs: {
+                                  href: "/itemDetails/" + item.id,
+                                  "data-toggle": "tooltip",
+                                  title: "Go to Detail"
                                 }
-                              }
-                            },
-                            [_c("i", { staticClass: "ti-trash" })]
-                          )
+                              },
+                              [_c("i", { staticClass: "lni lni-agenda" })]
+                            ),
+                            _vm._v(" "),
+                            item.deleted_at == null
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-warning btn-sm",
+                                    attrs: {
+                                      type: "button",
+                                      "data-toggle": "tooltip",
+                                      title: "Edit Item"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        return _vm.openModalS(
+                                          "modal",
+                                          "update",
+                                          item
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [_c("i", { staticClass: "lni lni-pencil" })]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary btn-sm",
+                                attrs: {
+                                  type: "button",
+                                  "data-toggle": "tooltip",
+                                  title: "Delete Item"
+                                },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.DeleteOrRestoreS(item)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "lni lni-cross-circle" })]
+                            )
+                          ])
                         ])
                       ])
                     })
@@ -42941,7 +43029,9 @@ var render = function() {
           )
         ])
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _c("br")
   ])
 }
 var staticRenderFns = [
@@ -42984,7 +43074,7 @@ var staticRenderFns = [
       [
         _c("h2", [
           _c("span", { staticClass: "badge  badge-pill badge-info" }, [
-            _vm._v("NO hay Juegos Porgamados")
+            _vm._v("Data Not Found")
           ])
         ])
       ]

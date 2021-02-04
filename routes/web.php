@@ -30,7 +30,7 @@ Auth::routes([
 ]);
 
 Route::group(['middleware'=>['auth']], function(){
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [AdminSiteController::class, 'index'])->name('home');
 
     //user
     Route::get('/users', [UserController::class, 'index']);

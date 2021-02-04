@@ -41,12 +41,14 @@
                                     <td v-text="item.name"></td>
                                     <td v-text="item.description"></td>
                                     <td>
-                                        <button type="button" class="btn btn-warning btn-sm" v-if="item.deleted_at == null"  @click="openModalM('modal', 'update', item)" >
-                                          <i class="ti-pencil"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-primary btn-sm" @click="DeleteOrRestoreM(item)">
-                                          <i class="ti-trash"></i>
-                                        </button>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit Item" v-if="item.deleted_at == null"  @click="openModalM('modal', 'update', item)" >
+                                            <i class="lni lni-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Delete Item" @click="DeleteOrRestoreM(item)">
+                                            <i class="lni lni-cross-circle"></i>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>

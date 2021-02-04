@@ -34,7 +34,7 @@
                             <tbody>
                                 <tr v-if="pagination.total == 0" class="text-center">
                                     <th colspan="5" class="text-center no-data">
-                                        <h2><span class="badge  badge-pill badge-info">NO hay Juegos Porgamados</span></h2>
+                                        <h2><span class="badge  badge-pill badge-info">Data Not Found</span></h2>
                                     </th>
                                 </tr>
 
@@ -43,13 +43,15 @@
                                     <td v-text="item.description"></td>
                                     <td v-text="item.element"></td>
                                     <td>
-                                         <a  class="btn btn-info btn-sm" v-bind:href="'/itemDetails/'+item.id"  > </a>
-                                        <button type="button" class="btn btn-warning btn-sm" v-if="item.deleted_at == null"  @click="openModalA('modal', 'update', item)" >
-                                          <i class="ti-pencil"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-primary btn-sm" @click="DeleteOrRestoreA(item)">
-                                          <i class="ti-trash"></i>
-                                        </button>
+                                        <div class="btn-group">
+                                            <a  class="btn btn-info btn-sm" v-bind:href="'/itemDetails/'+item.id"  data-toggle="tooltip" title="Go to Detail" ><i class="lni lni-agenda"></i></a>
+                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit Item" v-if="item.deleted_at == null"  @click="openModalA('modal', 'update', item)" >
+                                            <i class="lni lni-pencil"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Delete Item" @click="DeleteOrRestoreA(item)">
+                                            <i class="lni lni-cross-circle"></i>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -127,7 +129,7 @@
                     </div>
                 </div>
                 </div>
-        
+        <br>
     </div>
 </template>
 <script src="./aboutUs.js"></script>

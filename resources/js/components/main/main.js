@@ -135,15 +135,15 @@ export default {
             var data = {
                 'id': item.id,
                 };
-             var m = "¿Estas segurop  que deseas eliminar la juego programado?";
-             var mt = "Se eliminara la programcion";
-             var btn = "Eliminalo";
+             var m = "Do you want delete this item?";
+             var mt = "The item will be deleted";
+             var btn = "Delete";
 
 
             if(item.deleted_at != null){
-                 m = "¿Estas segurop  que deseas restaurar la juego programado?";
-                 mt = "Se restaura la programcion";
-                 btn = "Restauralo";
+                 m = "Do you want restore this item?";
+                 mt = "The item will be restored ";
+                 btn = "Restore";
             }
 
                 Swal.fire({
@@ -153,7 +153,7 @@ export default {
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si,'+btn+'!'
+                    confirmButtonText: 'Yes,'+btn+'!'
                 }).then((result) => {
                     if (result.value) {
                          axios.post('/items/deleteOrResotore',data).then(function (response) {
