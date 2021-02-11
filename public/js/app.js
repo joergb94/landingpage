@@ -2040,6 +2040,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2078,6 +2081,9 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return arrayBiColor;
+    },
+    toggleItems: function toggleItems(data) {
+      $('#panel' + data.id).slideToggle();
     }
   },
   mounted: function mounted() {
@@ -2098,6 +2104,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main */ "./resources/js/components/main.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2237,6 +2256,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     dropShow: function dropShow() {
       $(".drop-div").toggle();
+    },
+    toggleItems: function toggleItems(data) {
+      $('#panel' + data.id).slideToggle();
     }
   },
   mounted: function mounted() {
@@ -2381,6 +2403,70 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2400,20 +2486,19 @@ __webpack_require__.r(__webpack_exports__);
     TitleBiColor: function TitleBiColor(data) {
       var text = data.split(" ");
       var No = text.length;
-      console.log(No);
       var pos = parseInt(No / 2);
-      console.log(pos);
       var arrayBiColor = [];
 
       for (var i = 0; i < No; i++) {
         var dato = i < pos ? {
           text: text[i],
-          "class": 'text-dp'
+          "class": 'text-dp',
+          No: pos
         } : {
           text: text[i],
-          "class": 'text-dp-yellow'
+          "class": 'text-dp-yellow',
+          No: false
         };
-        console.log(dato);
         arrayBiColor.push(dato);
       }
 
@@ -2438,9 +2523,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main */ "./resources/js/components/main.js");
-//
-//
-//
 //
 //
 //
@@ -2974,7 +3056,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si,' + btn + '!'
+        confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
           axios.post('/items/deleteOrResotore', data).then(function (response) {
@@ -43952,25 +44034,11 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h1", {
-                      staticClass: "text-dp",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("h3", {
-                      staticClass: "text-dp",
-                      domProps: { textContent: _vm._s(dato.item.description) }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "container" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-sm-6" }, [
+                  _c("div", { staticClass: "container no-margin-bottom" }, [
+                    _c("div", { staticClass: "row no-margin-bottom" }, [
+                      _c("div", { staticClass: "col-sm-7 no-margin-bottom" }, [
                         _c("img", {
-                          staticClass: "image-conten fade",
+                          staticClass: "image-conten fade no-margin-bottom",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -43978,27 +44046,57 @@ var render = function() {
                         })
                       ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-sm-6" },
-                        _vm._l(dato.detail, function(detail) {
-                          return _c(
-                            "h5",
-                            {
-                              key: detail.id,
-                              staticClass: "pre-formatted text-left"
-                            },
-                            [
-                              _c("span", {
-                                domProps: {
-                                  textContent: _vm._s(detail.description)
+                      _c("div", { staticClass: "col-sm-5" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm-12 text-left" },
+                          [
+                            _c(
+                              "h2",
+                              _vm._l(
+                                _vm.TitleBiColor(dato.item.title),
+                                function(title, i) {
+                                  return _c("span", {
+                                    key: i,
+                                    class: title.class,
+                                    domProps: {
+                                      textContent: _vm._s(title.text + " ")
+                                    }
+                                  })
                                 }
-                              })
-                            ]
-                          )
-                        }),
-                        0
-                      )
+                              ),
+                              0
+                            ),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _c("h4", {
+                              staticClass: "text-dp",
+                              domProps: {
+                                textContent: _vm._s(dato.item.description)
+                              }
+                            }),
+                            _vm._v(" "),
+                            _vm._l(dato.detail, function(detail) {
+                              return _c(
+                                "h4",
+                                {
+                                  key: detail.id,
+                                  staticClass: "pre-formatted text-left"
+                                },
+                                [
+                                  _c("span", {
+                                    domProps: {
+                                      textContent: _vm._s(detail.description)
+                                    }
+                                  })
+                                ]
+                              )
+                            })
+                          ],
+                          2
+                        )
+                      ])
                     ])
                   ])
                 ]
@@ -44012,70 +44110,71 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container" }, [
-                    _c(
-                      "h1",
-                      { staticClass: "text-center" },
-                      _vm._l(_vm.TitleBiColor(dato.item.title), function(
-                        title,
-                        i
-                      ) {
-                        return _c("span", {
-                          key: i,
-                          class: title.class,
-                          domProps: {
-                            textContent: _vm._s(title.text.toUpperCase() + " ")
-                          }
-                        })
-                      }),
-                      0
-                    )
+                    _c("h1", {
+                      staticClass: "text-center text-dp",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    })
                   ]),
                   _vm._v(" "),
                   _c("br"),
                   _vm._v(" "),
-                  _vm._l(dato.detail, function(detail) {
-                    return _c(
-                      "div",
-                      { key: detail.id, staticClass: "container" },
-                      [
-                        _c("div", { staticClass: "row" }, [
+                  _c(
+                    "div",
+                    { staticClass: "container" },
+                    _vm._l(dato.detail, function(detail) {
+                      return _c(
+                        "div",
+                        {
+                          key: detail.id,
+                          staticClass: "row  text-center magin-image-div-group"
+                        },
+                        [
                           detail.image !== null
-                            ? _c("div", { staticClass: "col-sm fade" }, [
-                                _c("img", {
-                                  staticClass: "img-fluid",
-                                  attrs: {
-                                    src: detail.image,
-                                    alt: "DedicatedPeople"
-                                  }
-                                })
-                              ])
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "col-sm-7 fade text-left magin-image-div-group"
+                                },
+                                [
+                                  _c("img", {
+                                    staticClass: "img-div-group float-left",
+                                    attrs: {
+                                      border: "0",
+                                      src: detail.image,
+                                      alt: "DedicatedPeople"
+                                    }
+                                  })
+                                ]
+                              )
                             : _vm._e(),
                           _vm._v(" "),
-                          _c("div", { staticClass: "col-sm fade" }, [
-                            _c(
-                              "span",
-                              { staticClass: "badge badge-dark col-sm-12" },
-                              [
-                                _c("h5", {
-                                  staticClass: "text-center text-dp-yellow",
-                                  domProps: { textContent: _vm._s(detail.name) }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("h5", {
-                              staticClass: "text-left",
-                              domProps: {
-                                textContent: _vm._s(detail.description)
-                              }
-                            })
-                          ])
-                        ])
-                      ]
-                    )
-                  })
-                ],
-                2
+                          _c(
+                            "div",
+                            {
+                              staticClass: "col-sm-5 fade magin-image-div-group"
+                            },
+                            [
+                              _c("h3", {
+                                staticClass:
+                                  "text-center text-dp-yellow magin-title-div-group",
+                                domProps: { textContent: _vm._s(detail.name) }
+                              }),
+                              _vm._v(" "),
+                              _c("h5", {
+                                staticClass: "text-left",
+                                domProps: {
+                                  textContent: _vm._s(detail.description)
+                                }
+                              })
+                            ]
+                          )
+                        ]
+                      )
+                    }),
+                    0
+                  )
+                ]
               )
             : dato.item.element == "div-group"
             ? _c(
@@ -44102,56 +44201,86 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
-                    _c(
-                      "div",
-                      { staticClass: "row" },
-                      _vm._l(dato.detail, function(detail) {
-                        return _c(
-                          "div",
-                          {
-                            key: detail.id,
-                            staticClass: "col-sm-12 col-md-6 col-lg-4"
-                          },
-                          [
-                            _c("div", { staticClass: "card-dp-gray fade" }, [
-                              _c("div", { staticClass: "row" }, [
-                                detail.image !== null
-                                  ? _c(
-                                      "div",
-                                      { staticClass: "col-sm-12 text-center" },
-                                      [
-                                        _c("img", {
-                                          staticClass: "img-fluid max-icon",
-                                          attrs: {
-                                            src: detail.image,
-                                            alt: "DedicatedPeople"
+                    _c("div", { staticClass: "col-sm-10 mx-auto d-block" }, [
+                      _c(
+                        "div",
+                        { staticClass: "row" },
+                        _vm._l(dato.detail, function(detail) {
+                          return _c(
+                            "div",
+                            {
+                              key: detail.id,
+                              staticClass: "col-sm-12 col-md-6 col-lg-4"
+                            },
+                            [
+                              _c("div", { staticClass: "container" }, [
+                                _c("div", { staticClass: "row" }, [
+                                  _c(
+                                    "div",
+                                    { staticClass: "col-sm-12 text-center" },
+                                    [
+                                      detail.image !== null
+                                        ? _c(
+                                            "div",
+                                            {
+                                              staticClass: "card-dp-gray",
+                                              on: {
+                                                click: function($event) {
+                                                  return _vm.toggleItems(detail)
+                                                }
+                                              }
+                                            },
+                                            [
+                                              _c("img", {
+                                                staticClass:
+                                                  "max-icon mx-auto d-block",
+                                                attrs: {
+                                                  src: detail.image,
+                                                  alt: "DedicatedPeople"
+                                                }
+                                              }),
+                                              _vm._v(" "),
+                                              _c("br")
+                                            ]
+                                          )
+                                        : _vm._e()
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "col-sm-12 text-left",
+                                      staticStyle: { display: "none" },
+                                      attrs: { id: "panel" + detail.id }
+                                    },
+                                    [
+                                      _c("div", { staticClass: "container" }, [
+                                        _c("br"),
+                                        _vm._v(" "),
+                                        _c("h5", {
+                                          staticClass: "text-left",
+                                          domProps: {
+                                            textContent: _vm._s(
+                                              detail.description
+                                            )
                                           }
                                         })
-                                      ]
-                                    )
-                                  : _vm._e(),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "col-sm-12" }, [
-                                  _c("div", { staticClass: "container" }, [
-                                    _c("h5", {
-                                      staticClass: "text-left",
-                                      domProps: {
-                                        textContent: _vm._s(detail.description)
-                                      }
-                                    })
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("br")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("br")
+                                    ]
+                                  )
                                 ])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("br")
-                          ]
-                        )
-                      }),
-                      0
-                    )
+                              ]),
+                              _vm._v(" "),
+                              _c("br")
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    ])
                   ])
                 ]
               )
@@ -44261,7 +44390,7 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.dataUser, function(dato, index) {
         return _c("div", { key: index }, [
-          dato.item.element == "div" || dato.item.element == "div-group-head"
+          dato.item.element == "div"
             ? _c(
                 "div",
                 {
@@ -44269,11 +44398,9 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("h1", {
+                  _c("h2", {
                     staticClass: "text-white",
-                    domProps: {
-                      textContent: _vm._s(dato.item.title.toUpperCase())
-                    }
+                    domProps: { textContent: _vm._s(dato.item.title) }
                   })
                 ]
               )
@@ -44294,7 +44421,7 @@ var render = function() {
                       "div",
                       { staticClass: "col-sm-6" },
                       [
-                        _c("h5", {
+                        _c("h3", {
                           staticClass: "pre-formatted text-left",
                           domProps: {
                             textContent: _vm._s(dato.item.description)
@@ -44338,12 +44465,20 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h1", {
-                      staticClass: "text-dp",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
-                    })
+                    _c(
+                      "h2",
+                      _vm._l(_vm.TitleBiColor(dato.item.title), function(
+                        title,
+                        i
+                      ) {
+                        return _c("span", {
+                          key: i,
+                          class: title.class,
+                          domProps: { textContent: _vm._s(title.text + " ") }
+                        })
+                      }),
+                      0
+                    )
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
@@ -44405,7 +44540,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-center",
                       domProps: {
                         textContent: _vm._s(dato.item.title.toUpperCase())
@@ -44455,11 +44590,18 @@ var render = function() {
             ? _c(
                 "div",
                 {
-                  staticClass: "card-body este",
+                  staticClass: "card-body head-dp",
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("div", { staticClass: "container" }, [
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("h2", {
+                      staticClass: "text-center text-white",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "container line-content" }, [
                     _c(
                       "div",
                       { staticClass: "row" },
@@ -44476,30 +44618,55 @@ var render = function() {
                                     { staticClass: "col-sm-12 text-center" },
                                     [
                                       _c("img", {
-                                        staticClass: "img-fluid fade",
+                                        staticClass: "img-fluid fade ",
                                         attrs: {
                                           src: detail.image,
                                           alt: "DedicatedPeople"
                                         }
                                       }),
                                       _vm._v(" "),
-                                      _c("h3", {
-                                        staticClass: "text-dp text-left",
-                                        domProps: {
-                                          textContent: _vm._s(detail.name)
-                                        }
-                                      })
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-link text-white"
+                                        },
+                                        [
+                                          _c("h3", {
+                                            staticClass:
+                                              "text-dp pre-formatted text-left text-white",
+                                            domProps: {
+                                              textContent: _vm._s(detail.name)
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.toggleItems(detail)
+                                              }
+                                            }
+                                          })
+                                        ]
+                                      )
                                     ]
                                   ),
                                   _vm._v(" "),
-                                  _c("div", { staticClass: "col-sm-12" }, [
-                                    _c("h5", {
-                                      staticClass: "text-left",
-                                      domProps: {
-                                        textContent: _vm._s(detail.description)
-                                      }
-                                    })
-                                  ])
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "col-sm-12 text-left",
+                                      staticStyle: { display: "none" },
+                                      attrs: { id: "panel" + detail.id }
+                                    },
+                                    [
+                                      _c("h5", {
+                                        staticClass:
+                                          "text-center text-ligth-gray",
+                                        domProps: {
+                                          textContent: _vm._s(
+                                            detail.description
+                                          )
+                                        }
+                                      })
+                                    ]
+                                  )
                                 ])
                               ]),
                               _vm._v(" "),
@@ -44511,7 +44678,7 @@ var render = function() {
                         dato.item.description != null
                           ? _c("div", { staticClass: "col-sm-12" }, [
                               _c("h3", {
-                                staticClass: "text-left",
+                                staticClass: "text-left text-ligth-gray",
                                 domProps: {
                                   textContent: _vm._s(dato.item.description)
                                 }
@@ -44609,11 +44776,9 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-white",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
+                      domProps: { textContent: _vm._s(dato.item.title) }
                     })
                   ])
                 ]
@@ -44650,7 +44815,7 @@ var render = function() {
                           "div",
                           { staticClass: "col-sm-6 child-div" },
                           [
-                            _c("h5", {
+                            _c("h4", {
                               staticClass: "pre-formatted text-left",
                               domProps: {
                                 textContent: _vm._s(dato.item.description)
@@ -44661,7 +44826,7 @@ var render = function() {
                             _vm._v(" "),
                             _vm._l(dato.detail, function(detail) {
                               return _c(
-                                "h5",
+                                "h4",
                                 {
                                   key: detail.id,
                                   staticClass: "pre-formatted text-left"
@@ -44713,11 +44878,9 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-white",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
+                      domProps: { textContent: _vm._s(dato.item.title) }
                     })
                   ])
                 ]
@@ -44733,12 +44896,44 @@ var render = function() {
                       { staticClass: "col-sm-6 text-left" },
                       [
                         _c(
-                          "h3",
-                          { staticClass: "text-left" },
+                          "h2",
                           _vm._l(
                             _vm.TitleBiColor(dato.item.description),
                             function(title, i) {
                               return _c("span", {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: title.class == "text-dp",
+                                    expression: "title.class == 'text-dp'"
+                                  }
+                                ],
+                                key: i,
+                                class: title.class,
+                                domProps: {
+                                  textContent: _vm._s(title.text + " ")
+                                }
+                              })
+                            }
+                          ),
+                          0
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "h2",
+                          _vm._l(
+                            _vm.TitleBiColor(dato.item.description),
+                            function(title, i) {
+                              return _c("span", {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: title.class != "text-dp",
+                                    expression: "title.class != 'text-dp'"
+                                  }
+                                ],
                                 key: i,
                                 class: title.class,
                                 domProps: {
@@ -44754,7 +44949,7 @@ var render = function() {
                         _vm._v(" "),
                         _vm._l(dato.detail, function(detail) {
                           return _c(
-                            "h5",
+                            "h4",
                             {
                               key: detail.id,
                               staticClass: "pre-formatted text-left"
@@ -44811,20 +45006,11 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h1", {
-                      staticClass: "text-dp",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
                   _c("div", { staticClass: "container no-margin-bottom" }, [
                     _c("div", { staticClass: "row no-margin-bottom" }, [
-                      _c("div", { staticClass: "col-sm-6 no-margin-bottom" }, [
+                      _c("div", { staticClass: "col-sm-7 no-margin-bottom" }, [
                         _c("img", {
-                          staticClass: "image-conten fade no-margin-bottom",
+                          staticClass: "image-conten no-margin-bottom",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44834,55 +45020,244 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "col-sm-6 text-left no-margin-bottom" },
+                        { staticClass: "col-sm-5 text-left no-margin-bottom" },
                         [
-                          _c("h5", {
-                            domProps: {
-                              textContent: _vm._s(dato.item.description)
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("br"),
-                          _vm._v(" "),
-                          _vm._l(dato.detail, function(detail) {
-                            return _c(
-                              "h5",
-                              {
-                                key: detail.id,
-                                staticClass: "pre-formatted text-left"
-                              },
-                              [
-                                _c("span", {
-                                  domProps: {
-                                    textContent: _vm._s(detail.description)
-                                  }
-                                })
-                              ]
-                            )
-                          }),
-                          _vm._v(" "),
-                          _c("br"),
-                          _vm._v(" "),
                           _c("br"),
                           _vm._v(" "),
                           _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-link bottom-right text-dp",
-                              on: {
-                                click: function($event) {
-                                  return _vm.$emit("click", 3)
-                                }
-                              }
-                            },
+                            "div",
+                            { staticClass: "col-sm-12 text-left" },
                             [
-                              _vm._v("Work With Us "),
-                              _c("strong", [_vm._v(">>")])
-                            ]
+                              _c(
+                                "h2",
+                                _vm._l(
+                                  _vm.TitleBiColor(dato.item.title),
+                                  function(title, i) {
+                                    return _c("span", {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: title.class == "text-dp",
+                                          expression: "title.class == 'text-dp'"
+                                        }
+                                      ],
+                                      key: i,
+                                      class: title.class,
+                                      domProps: {
+                                        textContent: _vm._s(title.text + " ")
+                                      }
+                                    })
+                                  }
+                                ),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h2",
+                                _vm._l(
+                                  _vm.TitleBiColor(dato.item.title),
+                                  function(title, i) {
+                                    return _c("span", {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: title.class != "text-dp",
+                                          expression: "title.class != 'text-dp'"
+                                        }
+                                      ],
+                                      key: i,
+                                      class: title.class,
+                                      domProps: {
+                                        textContent: _vm._s(title.text + " ")
+                                      }
+                                    })
+                                  }
+                                ),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c("h4", {
+                                domProps: {
+                                  textContent: _vm._s(dato.item.description)
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("br"),
+                              _vm._v(" "),
+                              _vm._l(dato.detail, function(detail) {
+                                return _c(
+                                  "h4",
+                                  {
+                                    key: detail.id,
+                                    staticClass: "pre-formatted text-left"
+                                  },
+                                  [
+                                    _c("span", {
+                                      domProps: {
+                                        textContent: _vm._s(detail.description)
+                                      }
+                                    })
+                                  ]
+                                )
+                              }),
+                              _vm._v(" "),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-link text-dp",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.$emit("click", 3)
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v("Work With Us "),
+                                  _c("strong", [_vm._v(">>")])
+                                ]
+                              )
+                            ],
+                            2
                           )
-                        ],
-                        2
+                        ]
                       )
+                    ])
+                  ])
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          dato.item.element == "div-not-head-left"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-white no-margin-bottom",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "container no-margin-bottom" }, [
+                    _c("div", { staticClass: "row no-margin-bottom" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-sm-5 text-left no-margin-bottom" },
+                        [
+                          _c("br"),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-sm-12 text-left" },
+                            [
+                              _c(
+                                "h2",
+                                _vm._l(
+                                  _vm.TitleBiColor(dato.item.title),
+                                  function(title, i) {
+                                    return _c("span", {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: title.class == "text-dp",
+                                          expression: "title.class == 'text-dp'"
+                                        }
+                                      ],
+                                      key: i,
+                                      class: title.class,
+                                      domProps: {
+                                        textContent: _vm._s(title.text + " ")
+                                      }
+                                    })
+                                  }
+                                ),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "h2",
+                                _vm._l(
+                                  _vm.TitleBiColor(dato.item.title),
+                                  function(title, i) {
+                                    return _c("span", {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: title.class != "text-dp",
+                                          expression: "title.class != 'text-dp'"
+                                        }
+                                      ],
+                                      key: i,
+                                      class: title.class,
+                                      domProps: {
+                                        textContent: _vm._s(title.text + " ")
+                                      }
+                                    })
+                                  }
+                                ),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c("h4", {
+                                domProps: {
+                                  textContent: _vm._s(dato.item.description)
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("br"),
+                              _vm._v(" "),
+                              _vm._l(dato.detail, function(detail) {
+                                return _c(
+                                  "h4",
+                                  {
+                                    key: detail.id,
+                                    staticClass: "pre-formatted text-left"
+                                  },
+                                  [
+                                    _c("span", {
+                                      domProps: {
+                                        textContent: _vm._s(detail.description)
+                                      }
+                                    })
+                                  ]
+                                )
+                              }),
+                              _vm._v(" "),
+                              _c("br"),
+                              _vm._v(" "),
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn btn-link text-dp",
+                                  on: {
+                                    click: function($event) {
+                                      return _vm.$emit("click", 3)
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v("Work With Us "),
+                                  _c("strong", [_vm._v(">>")])
+                                ]
+                              )
+                            ],
+                            2
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-sm-7 no-margin-bottom" }, [
+                        _c("img", {
+                          staticClass: "image-conten no-margin-bottom",
+                          attrs: {
+                            src: dato.item.image,
+                            alt: "DedicatedPeople"
+                          }
+                        })
+                      ])
                     ])
                   ])
                 ]
@@ -44936,18 +45311,18 @@ var render = function() {
                         [
                           _c("img", {
                             staticStyle: { width: "100%", height: "100vh" },
-                            attrs: { src: detail.image, alt: "Los Angeles" }
+                            attrs: { src: detail.image, alt: "DP" }
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "slide-info-dp" }, [
                             _c("div", { staticClass: "container" }, [
-                              _c("h1", {
+                              _c("h2", {
                                 staticClass:
-                                  "slide-title-centered-dp text-warning fade",
+                                  "slide-title-centered-dp text-dp-yellow fade",
                                 domProps: { textContent: _vm._s(detail.name) }
                               }),
                               _vm._v(" "),
-                              _c("h5", {
+                              _c("h4", {
                                 staticClass:
                                   "slide-content-centered-dp text-light fade",
                                 domProps: {
@@ -45063,11 +45438,9 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-white",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
+                      domProps: { textContent: _vm._s(dato.item.title) }
                     })
                   ])
                 ]
@@ -45141,7 +45514,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "container text-center" }, [
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-white",
                       domProps: {
                         textContent: _vm._s(dato.item.title.toUpperCase())
@@ -45217,7 +45590,7 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-center",
                       domProps: {
                         textContent: _vm._s(dato.item.title.toUpperCase())
@@ -45249,7 +45622,7 @@ var render = function() {
                           ]),
                           _vm._v(" "),
                           _c("div", { staticClass: "col-sm fade" }, [
-                            _c("h1", {
+                            _c("h2", {
                               staticClass: "text-left",
                               domProps: {
                                 textContent: _vm._s(detail.description)
@@ -45273,7 +45646,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "col-sm-12" }, [
                     _c(
-                      "h1",
+                      "h2",
                       { staticClass: "text-center" },
                       _vm._l(
                         _vm.TitleBiColor(dato.item.title.toUpperCase(), 2),
@@ -45421,7 +45794,7 @@ var render = function() {
                         _c("div", { staticClass: "col-sm-6" }, [
                           _c("div", { staticClass: "container fade" }, [
                             _c(
-                              "h1",
+                              "h2",
                               { staticClass: "text-center" },
                               _vm._l(
                                 _vm.TitleBiColor(dato.item.description, 2),
@@ -45457,15 +45830,6 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h1", {
-                      staticClass: "text-dp",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6" }, [
@@ -45480,33 +45844,39 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "col-sm-6 text-left" }, [
                         _c(
-                          "h3",
+                          "h2",
                           { staticClass: "text-left" },
-                          _vm._l(
-                            _vm.TitleBiColor(dato.item.description, 2),
-                            function(title, i) {
-                              return _c("span", {
-                                key: i,
-                                class: title.class,
-                                domProps: {
-                                  textContent: _vm._s(title.text + " ")
-                                }
-                              })
-                            }
-                          ),
+                          _vm._l(_vm.TitleBiColor(dato.item.title, 2), function(
+                            title,
+                            i
+                          ) {
+                            return _c("span", {
+                              key: i,
+                              class: title.class,
+                              domProps: {
+                                textContent: _vm._s(title.text + " ")
+                              }
+                            })
+                          }),
                           0
                         ),
                         _vm._v(" "),
                         _c(
                           "ul",
                           _vm._l(dato.detail, function(detail) {
-                            return _c("li", { key: detail.id }, [
-                              _c("h5", {
-                                domProps: {
-                                  textContent: _vm._s(detail.description)
-                                }
-                              })
-                            ])
+                            return _c(
+                              "li",
+                              { key: detail.id, staticClass: "fade" },
+                              [
+                                _c("h5", {
+                                  domProps: {
+                                    textContent: _vm._s(detail.description)
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("br")
+                              ]
+                            )
                           }),
                           0
                         )
@@ -45525,33 +45895,24 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c("h1", {
-                      staticClass: "text-dp",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
                     _c("div", { staticClass: "row" }, [
                       _c("div", { staticClass: "col-sm-6 text-left" }, [
                         _c(
-                          "h3",
+                          "h2",
                           { staticClass: "text-left" },
-                          _vm._l(
-                            _vm.TitleBiColor(dato.item.description, 2),
-                            function(title, i) {
-                              return _c("span", {
-                                key: i,
-                                class: title.class,
-                                domProps: {
-                                  textContent: _vm._s(title.text + " ")
-                                }
-                              })
-                            }
-                          ),
+                          _vm._l(_vm.TitleBiColor(dato.item.title, 2), function(
+                            title,
+                            i
+                          ) {
+                            return _c("span", {
+                              key: i,
+                              class: title.class,
+                              domProps: {
+                                textContent: _vm._s(title.text + " ")
+                              }
+                            })
+                          }),
                           0
                         ),
                         _vm._v(" "),
@@ -45610,7 +45971,7 @@ var render = function() {
                   _c("div", { staticClass: "centered" }, [
                     _c("br"),
                     _vm._v(" "),
-                    _c("h1", {
+                    _c("h2", {
                       staticClass: "text-dp",
                       domProps: {
                         textContent: _vm._s(dato.item.title.toUpperCase())

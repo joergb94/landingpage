@@ -69,7 +69,8 @@
     @include('website.items.footer')
     <!-- end of footer -->  
     <!-- end of footer -->
-    </div>	
+    </div>
+    <input id="baseUrl" type="hidden" value="{{ \Request::root() }}">
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}" defer></script>
    <script src="{{ asset('js/all.js') }}" defer></script>

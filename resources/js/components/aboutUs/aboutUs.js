@@ -153,7 +153,7 @@ export default {
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si,'+btn+'!'
+                    confirmButtonText: 'Yes,'+btn+'!'
                 }).then((result) => {
                     if (result.value) {
                          axios.post('/items/deleteOrResotore',data).then(function (response) {

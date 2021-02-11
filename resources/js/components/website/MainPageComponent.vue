@@ -11,7 +11,7 @@
                 <div class="" v-for="(dato, index) in dataUser" :key="index">
                     <div v-if="dato.item.element == 'div'" v-bind:id="'section'+index" class="card-header head-dp text-center span3 wow swing center">
                         <div class="container text-center">
-                             <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
+                             <h2 class="text-white" v-text="dato.item.title"></h2>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div'" class="card-body bg-dp-white no-margin-bottom">
@@ -21,11 +21,11 @@
                                 <img class="image-conten" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                             <div class="col-sm-6 child-div">
-                                <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
+                                <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
                                 <br>
-                                <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
-                                </h5>
+                                </h4>
                                 <br> 
                                 
                                     <button class="btn btn-link bottom-right text-dp" @click="$emit('click',1)" >More About us <strong>>></strong></button>
@@ -37,23 +37,32 @@
                     </div>
                     <div v-if="dato.item.element == 'div-left'" v-bind:id="'section'+index" class="card-header head-dp text-center">
                         <div class="container text-center">
-                             <h1 class="text-white" v-text="dato.item.title.toUpperCase()"></h1>
+                             <h2 class="text-white" v-text="dato.item.title"></h2>
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div-left'"  class="card-body bg-dp-white">
                         <div class="container">
                              <div  class="row">
                                 <div class="col-sm-6 text-left">
-                                    <h3 class="text-left">
-                                        <span   v-for="(title, i) in TitleBiColor(dato.item.description)" :key="i" 
-                                                v-bind:class="title.class"
-                                                v-text="title.text+' '">
-                                        </span>
-                                    </h3>
+                                    <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.description)" :key="i" 
+                                                            v-bind:class="title.class"
+                                                            v-text="title.text+' '"
+                                                            v-show="title.class == 'text-dp'">
+                                            </span>
+                                        
+                                        </h2>
+                                        <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.description)" :key="i" 
+                                                            v-bind:class="title.class"
+                                                            v-text="title.text+' '"
+                                                            v-show="title.class != 'text-dp'">
+                                            </span>
+                                        </h2>
                                     <br>
-                                    <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                    <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
                                        <span v-text="detail.description"></span> 
-                                    </h5>
+                                    </h4>
                                     <br>
                                     <br>
                                     <button class="btn btn-link bottom-right text-dp" @click="$emit('click',2)" >More About Our Service <strong>>></strong></button>                     
@@ -65,25 +74,80 @@
                         </div>
                      </div>
                      <div v-if="dato.item.element == 'div-not-head'"  v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
-                        <div class="col-sm-12 text-center">
-                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
-                        </div>
                         <div class="container no-margin-bottom">
                             <div  class="row no-margin-bottom">
-                            <div class="col-sm-6 no-margin-bottom">
-                                <img class="image-conten fade no-margin-bottom" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                            <div class="col-sm-7 no-margin-bottom">
+                                <img class="image-conten no-margin-bottom" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
-                            <div class="col-sm-6 text-left no-margin-bottom">
-                                <h5 v-text="dato.item.description"></h5>
+                            <div class="col-sm-5 text-left no-margin-bottom">
                                 <br>
-                                <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
-                                       <span v-text="detail.description"></span> 
-                                </h5>
-                                <br>
-                                 <br>
-                                    <button class="btn btn-link bottom-right text-dp" @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
+                                 <div class="col-sm-12 text-left">
+                                        <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                            v-bind:class="title.class"
+                                                            v-text="title.text+' '"
+                                                            v-show="title.class == 'text-dp'">
+                                            </span>
+                                        
+                                        </h2>
+                                        <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                            v-bind:class="title.class"
+                                                            v-text="title.text+' '"
+                                                            v-show="title.class != 'text-dp'">
+                                            </span>
+                                        </h2>
+                                        <h4 v-text="dato.item.description"></h4>
+                                        <br>
+                                        <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                            <span v-text="detail.description"></span> 
+                                        </h4>
+                                        <br>
+                                            <button class="btn btn-link text-dp" @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
+                                </div>
+                               
 
                             </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                     <div v-if="dato.item.element == 'div-not-head-left'"  v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
+                        <div class="container no-margin-bottom">
+                            <div  class="row no-margin-bottom">
+
+                                <div class="col-sm-5 text-left no-margin-bottom">
+                                    <br>
+                                    <div class="col-sm-12 text-left">
+                                            <h2>
+                                                <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                                v-bind:class="title.class"
+                                                                v-text="title.text+' '"
+                                                                v-show="title.class == 'text-dp'">
+                                                </span>
+                                            
+                                            </h2>
+                                            <h2>
+                                                <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                                v-bind:class="title.class"
+                                                                v-text="title.text+' '"
+                                                                v-show="title.class != 'text-dp'">
+                                                </span>
+                                            </h2>
+                                            <h4 v-text="dato.item.description"></h4>
+                                            <br>
+                                            <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                                <span v-text="detail.description"></span> 
+                                            </h4>
+                                            <br>
+                                                <button class="btn btn-link text-dp" @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
+                                    </div>
+                               
+
+                                </div>
+                                <div class="col-sm-7 no-margin-bottom">
+                                    <img class="image-conten no-margin-bottom" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                </div>
                         </div>
                         
                         </div>
@@ -100,11 +164,11 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner bg-dp-white">
                             <div  v-for="(detail,index) in dato.detail" :key="index" v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
-                                <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="Los Angeles">
+                                <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="DP">
                                 <div class="slide-info-dp">
                                     <div class="container">
-                                        <h1 class="slide-title-centered-dp text-warning fade" v-text="detail.name"></h1>
-                                        <h5 class ="slide-content-centered-dp text-light fade" v-text="detail.description"></h5>
+                                        <h2 class="slide-title-centered-dp text-dp-yellow fade" v-text="detail.name"></h2>
+                                        <h4 class ="slide-content-centered-dp text-light fade" v-text="detail.description"></h4>
                                     </div>
                                 </div>
                             </div>
@@ -143,14 +207,11 @@
          TitleBiColor(data){
             var text = data.split(" ");
             var No = text.length;
-            console.log(No)
             var pos= parseInt(No/2);
-             console.log(pos)
             var arrayBiColor = [];
             for (var i = 0; i < No; i++) {
 
-                var dato = i < pos ? {text:text[i], class:'text-dp'} : {text:text[i], class:'text-dp-yellow'};
-                 console.log(dato)
+                var dato = i < pos ? {text:text[i], class:'text-dp', No:pos} : {text:text[i], class:'text-dp-yellow', No:false};
                  arrayBiColor.push(dato);
 
             }

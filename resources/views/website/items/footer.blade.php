@@ -1,6 +1,4 @@
-<div class="wow bounceInUp">
-                  Content to Reveal Here
-                  </div>
+
 <div class="footer bg-dark text-secondary">
         <div class="container">
             <div class="row">

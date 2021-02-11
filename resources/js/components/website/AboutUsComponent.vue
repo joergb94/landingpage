@@ -27,19 +27,27 @@
                     </div>
                     
                     <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
-                        <div class="col-sm-12 text-center">
-                            <h1 class="text-dp" v-text="dato.item.title.toUpperCase()"></h1>
-                            <h3 class="text-dp" v-text="dato.item.description"></h3>
-                        </div>
-                        <div class="container">
-                            <div  class="row">
-                                <div class="col-sm-6">
-                                    <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
+                        <div class="container no-margin-bottom">
+                            <div  class="row no-margin-bottom">
+                                <div class="col-sm-7 no-margin-bottom">
+                                    <img class="image-conten fade no-margin-bottom" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
-                                       <span v-text="detail.description"></span> 
-                                    </h5>
+                                <div class="col-sm-5">
+                                     <div class="col-sm-12 text-left">
+                                        <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                                                v-bind:class="title.class"
+                                                                                v-text="title.text+' '">
+                                            </span>
+                                                            
+                                        </h2>
+                                        <br>
+                                        <h4 class="text-dp" v-text="dato.item.description"></h4>
+
+                                         <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                            <span v-text="detail.description"></span> 
+                                        </h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -48,25 +56,17 @@
                     <div v-else-if="dato.item.element == 'div-group-img'"  v-bind:id="'section'+index" class="card-body bg-dp-white">
 
                         <div class="container">
-                            <h1 class="text-center">
-                                        <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
-                                                v-bind:class="title.class"
-                                                v-text="title.text.toUpperCase()+' '">
-                                        </span>
-                            </h1>
+                            <h1 class="text-center text-dp" v-text="dato.item.title"></h1>
                             <!--<h3 class="text-left" v-text="dato.item.description"></h3>-->
                         </div>
                         <br>
-                        <div class="container"  v-for="detail in dato.detail" :key="detail.id">
-                            <div class="row">
-                                <div class="col-sm fade" v-if="detail.image !== null">
-                                    <img class="img-fluid" v-bind:src="detail.image" alt="DedicatedPeople">
+                        <div class="container">
+                            <div class="row  text-center magin-image-div-group" v-for="detail in dato.detail" :key="detail.id">
+                                <div class="col-sm-7 fade text-left magin-image-div-group"  v-if="detail.image !== null">
+                                    <img class="img-div-group float-left" border="0" v-bind:src="detail.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm fade">
-                                    
-                                    <span class="badge badge-dark col-sm-12">
-                                        <h5 class="text-center text-dp-yellow"  v-text="detail.name"></h5>
-                                    </span>
+                                <div class="col-sm-5 fade magin-image-div-group">
+                                   <h3 class="text-center text-dp-yellow magin-title-div-group"  v-text="detail.name"></h3>
                                     <h5 class="text-left" v-text="detail.description"></h5>
                                 </div>
                             </div>
@@ -81,28 +81,31 @@
                             <br>
                         </div>
                         <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-4" v-for="detail in dato.detail" :key="detail.id">
-                                    <div class="card-dp-gray fade">
-                                        <div class="row">
-                                            <div class="col-sm-12 text-center" v-if="detail.image !== null">
-                                                <img class="img-fluid max-icon" v-bind:src="detail.image" alt="DedicatedPeople">
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="container">
-                                                    <h5 class="text-left" v-text="detail.description"></h5>
+                            <div class="col-sm-10 mx-auto d-block">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-4" v-for="detail in dato.detail" :key="detail.id">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-12 text-center">
+                                                        <div class="card-dp-gray"  v-if="detail.image !== null" @click="toggleItems(detail)">
+                                                            <img class="max-icon mx-auto d-block" v-bind:src="detail.image" alt="DedicatedPeople">
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div v-bind:id="'panel'+detail.id" class="col-sm-12 text-left" style="display:none">
+                                                        <div class="container">
+                                                            <br>
+                                                            <h5 class="text-left" v-text="detail.description"></h5>
+                                                        </div>
+                                                        <br>
+                                                    </div>
                                                 </div>
-                                                <br>
                                             </div>
-                                        </div>
+                                        <br>
                                     </div>
-                                    <br>
                                 </div>
                             </div>
                         </div>
-                       
-
-
                     </div>  
                     <div  v-if="dato.item.element == 'div-yellow'" v-bind:id="'section'+index" class="container-yellow col-sm-12">
                         <img class="img-yellow" v-bind:src="dato.item.image" alt="DedicatedPeople">
@@ -152,6 +155,9 @@
             
 
            return arrayBiColor;
+        },
+         toggleItems(data){
+            $('#panel'+data.id).slideToggle();
         },
         },
         mounted() {
