@@ -3763,7 +3763,7 @@ a:hover.back-to-top {
         content:"";
         margin: 0 auto; /* this centers the line to the full width specified */
         position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-        top: 85px; left: 0; right: 0; bottom: 0;
+        top: 25%; left: 0; right: 0; bottom: 0;
         width: 80%;
         z-index: -1;
     }
@@ -3791,6 +3791,10 @@ a:hover.back-to-top {
 			width: 80%;
 			z-index: -1;
 		}
+	  }
+
+	  .img-fluid-group-div {
+		  width: 60%;
 	  }
 
 

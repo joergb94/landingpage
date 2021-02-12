@@ -2215,6 +2215,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2243,10 +2251,10 @@ __webpack_require__.r(__webpack_exports__);
       for (var i = 0; i < No; i++) {
         var dato = i < pos ? {
           text: text[i],
-          "class": 'text-dp-yellow'
+          "class": 'text-dp'
         } : {
           text: text[i],
-          "class": 'text-dp'
+          "class": 'text-dp-yellow'
         };
         console.log(dato);
         arrayBiColor.push(dato);
@@ -44464,28 +44472,11 @@ var render = function() {
                   attrs: { id: "section" + index }
                 },
                 [
-                  _c("div", { staticClass: "col-sm-12 text-center" }, [
-                    _c(
-                      "h2",
-                      _vm._l(_vm.TitleBiColor(dato.item.title), function(
-                        title,
-                        i
-                      ) {
-                        return _c("span", {
-                          key: i,
-                          class: title.class,
-                          domProps: { textContent: _vm._s(title.text + " ") }
-                        })
-                      }),
-                      0
-                    )
-                  ]),
-                  _vm._v(" "),
                   _c("div", { staticClass: "container" }, [
                     _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-sm-6" }, [
+                      _c("div", { staticClass: "col-sm-7" }, [
                         _c("img", {
-                          staticClass: "image-conten fade ",
+                          staticClass: "image-conten no-margin-bottom fade ",
                           attrs: {
                             src: dato.item.image,
                             alt: "DedicatedPeople"
@@ -44493,40 +44484,94 @@ var render = function() {
                         })
                       ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-sm-6" },
-                        [
-                          _c("h5", {
-                            staticClass: "pre-formatted text-left",
-                            domProps: {
-                              textContent: _vm._s(dato.item.description)
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("br"),
-                          _vm._v(" "),
-                          _vm._l(dato.detail, function(detail) {
-                            return _c(
-                              "h5",
-                              {
-                                key: detail.id,
-                                staticClass: "pre-formatted text-left"
-                              },
-                              [
-                                _c("span", {
-                                  domProps: {
-                                    textContent: _vm._s(detail.description)
-                                  }
-                                })
-                              ]
-                            )
-                          }),
-                          _vm._v(" "),
-                          _c("br")
-                        ],
-                        2
-                      )
+                      _c("div", { staticClass: "col-sm-5" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm-12 text-left" },
+                          [
+                            _c("br"),
+                            _vm._v(" "),
+                            _c(
+                              "h2",
+                              _vm._l(
+                                _vm.TitleBiColor(dato.item.title),
+                                function(title, i) {
+                                  return _c("span", {
+                                    directives: [
+                                      {
+                                        name: "show",
+                                        rawName: "v-show",
+                                        value: title.class == "text-dp",
+                                        expression: "title.class == 'text-dp'"
+                                      }
+                                    ],
+                                    key: i,
+                                    class: title.class,
+                                    domProps: {
+                                      textContent: _vm._s(title.text + " ")
+                                    }
+                                  })
+                                }
+                              ),
+                              0
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "h2",
+                              _vm._l(
+                                _vm.TitleBiColor(dato.item.title),
+                                function(title, i) {
+                                  return _c("span", {
+                                    directives: [
+                                      {
+                                        name: "show",
+                                        rawName: "v-show",
+                                        value: title.class != "text-dp",
+                                        expression: "title.class != 'text-dp'"
+                                      }
+                                    ],
+                                    key: i,
+                                    class: title.class,
+                                    domProps: {
+                                      textContent: _vm._s(title.text + " ")
+                                    }
+                                  })
+                                }
+                              ),
+                              0
+                            ),
+                            _vm._v(" "),
+                            _c("h4", {
+                              staticClass: "pre-formatted text-left",
+                              domProps: {
+                                textContent: _vm._s(dato.item.description)
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("br"),
+                            _vm._v(" "),
+                            _vm._l(dato.detail, function(detail) {
+                              return _c(
+                                "h4",
+                                {
+                                  key: detail.id,
+                                  staticClass: "pre-formatted text-left"
+                                },
+                                [
+                                  _c("span", {
+                                    domProps: {
+                                      textContent: _vm._s(detail.description)
+                                    }
+                                  })
+                                ]
+                              )
+                            }),
+                            _vm._v(" "),
+                            _c("br")
+                          ],
+                          2
+                        )
+                      ])
                     ])
                   ])
                 ]
@@ -44618,7 +44663,8 @@ var render = function() {
                                     { staticClass: "col-sm-12 text-center" },
                                     [
                                       _c("img", {
-                                        staticClass: "img-fluid fade ",
+                                        staticClass:
+                                          "img-fluid-group-div fade ",
                                         attrs: {
                                           src: detail.image,
                                           alt: "DedicatedPeople"
@@ -45832,7 +45878,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "container" }, [
                     _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-sm-6" }, [
+                      _c("div", { staticClass: "col-sm-7" }, [
                         _c("img", {
                           staticClass: "image-conten fade",
                           attrs: {
@@ -45842,7 +45888,7 @@ var render = function() {
                         })
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-6 text-left" }, [
+                      _c("div", { staticClass: "col-sm-5 text-left" }, [
                         _c(
                           "h2",
                           { staticClass: "text-left" },
@@ -45897,7 +45943,7 @@ var render = function() {
                 [
                   _c("div", { staticClass: "container" }, [
                     _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col-sm-6 text-left" }, [
+                      _c("div", { staticClass: "col-sm-5 text-left" }, [
                         _c(
                           "h2",
                           { staticClass: "text-left" },
@@ -45940,7 +45986,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-6" }, [
+                      _c("div", { staticClass: "col-sm-7" }, [
                         _c("img", {
                           staticClass: "image-conten",
                           attrs: {

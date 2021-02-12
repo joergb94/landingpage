@@ -149,10 +149,10 @@
                     <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white">
                         <div class="container">
                               <div  class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-7">
                                     <img class="image-conten fade" v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm-6 text-left">
+                                <div class="col-sm-5 text-left">
                                      <h2 class="text-left">
                                         <span   v-for="(title, i) in TitleBiColor(dato.item.title,2)" :key="i" 
                                                 v-bind:class="title.class"
@@ -174,7 +174,7 @@
                     <div v-if="dato.item.element == 'div-not-head-left'" v-bind:id="'section'+index" class="card-body bg-dp-white">
                         <div class="container">
                             <div  class="row">
-                                <div class="col-sm-6 text-left">
+                                <div class="col-sm-5 text-left">
                                      <h2 class="text-left">
                                         <span   v-for="(title, i) in TitleBiColor(dato.item.title,2)" :key="i" 
                                                 v-bind:class="title.class"
@@ -189,7 +189,7 @@
                                         </li>
                                     </ul> 
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-7">
                                     <img class="image-conten" v-bind:src="dato.item.image" alt="DedicatedPeople">
                             </div>
                         </div>

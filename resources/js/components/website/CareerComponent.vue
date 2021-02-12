@@ -30,28 +30,36 @@
                         </div>
                     </div>
                     <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
-                        <div class="col-sm-12 text-center">
-                            <h2>
-                                                <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
-                                                                v-bind:class="title.class"
-                                                                v-text="title.text+' '"
-                                                               >
-                                                </span>
-                                            
-                            </h2>
-                        </div>
                         <div class="container">
                             <div  class="row">
-                                <div class="col-sm-6">
-                                    <img class="image-conten fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
+                                <div class="col-sm-7">
+                                    <img class="image-conten no-margin-bottom fade " v-bind:src="dato.item.image" alt="DedicatedPeople">
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 class="pre-formatted text-left" v-text="dato.item.description"></h5>
-                                    <br>
-                                    <h5 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
-                                        <span v-text="detail.description"></span> 
-                                    </h5>
-                                    <br> 
+                                <div class="col-sm-5">
+                                     <div class="col-sm-12 text-left">
+                                        <br>
+                                        <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                            v-bind:class="title.class"
+                                                            v-text="title.text+' '"
+                                                            v-show="title.class == 'text-dp'">
+                                            </span>
+                                        
+                                        </h2>
+                                        <h2>
+                                            <span   v-for="(title, i) in TitleBiColor(dato.item.title)" :key="i" 
+                                                            v-bind:class="title.class"
+                                                            v-text="title.text+' '"
+                                                            v-show="title.class != 'text-dp'">
+                                            </span>
+                                        </h2>
+                                        <h4 class="pre-formatted text-left" v-text="dato.item.description"></h4>
+                                        <br>
+                                        <h4 class="pre-formatted text-left" v-for="detail in dato.detail" :key="detail.id">
+                                            <span v-text="detail.description"></span> 
+                                        </h4>
+                                        <br> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,7 +94,7 @@
                                     <div class="col-sm-12">
                                         <div class="row">
                                             <div class="col-sm-12 text-center" >
-                                                <img class="img-fluid fade " v-bind:src="detail.image" alt="DedicatedPeople">
+                                                <img class="img-fluid-group-div fade " v-bind:src="detail.image" alt="DedicatedPeople">
                                                 <button class="btn btn-link text-white"><h3 class="text-dp pre-formatted text-left text-white"  @click="toggleItems(detail)" v-text="detail.name"></h3></button>
                                             </div>
                                             
@@ -136,7 +144,7 @@
             var arrayBiColor = [];
             for (var i = 0; i < No; i++) {
 
-                var dato = i < pos ? {text:text[i], class:'text-dp-yellow'} : {text:text[i], class:'text-dp'};
+                var dato = i < pos ? {text:text[i], class:'text-dp'} : {text:text[i], class:'text-dp-yellow'};
                  console.log(dato)
                  arrayBiColor.push(dato);
 
