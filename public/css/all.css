@@ -3924,7 +3924,7 @@ a:hover.back-to-top {
     z-index: 1;
    }
     .line-content::before {
-        border-top: 2px solid #000000;
+        border-top: 1px solid #012E49 ;
         content:"";
         margin: 0 auto; /* this centers the line to the full width specified */
         position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
