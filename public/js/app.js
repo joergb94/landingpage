@@ -2043,6 +2043,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2286,6 +2325,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main */ "./resources/js/components/main.js");
+//
 //
 //
 //
@@ -44165,7 +44205,7 @@ var render = function() {
                             [
                               _c("h3", {
                                 staticClass:
-                                  "text-center text-dp-yellow magin-title-div-group",
+                                  "text-left text-dp-yellow magin-title-div-group",
                                 domProps: { textContent: _vm._s(detail.name) }
                               }),
                               _vm._v(" "),
@@ -44251,9 +44291,18 @@ var render = function() {
                                               _c("br")
                                             ]
                                           )
-                                        : _vm._e()
+                                        : _vm._e(),
+                                      _vm._v(" "),
+                                      _c("br")
                                     ]
                                   ),
+                                  _vm._v(" "),
+                                  _c("h3", {
+                                    staticClass: "text-left text-dp",
+                                    domProps: {
+                                      textContent: _vm._s(detail.name)
+                                    }
+                                  }),
                                   _vm._v(" "),
                                   _c(
                                     "div",
@@ -44294,7 +44343,7 @@ var render = function() {
               )
             : _vm._e(),
           _vm._v(" "),
-          dato.item.element == "div-yellow"
+          dato.item.element == "div-yellow/2"
             ? _c(
                 "div",
                 {
@@ -44320,6 +44369,138 @@ var render = function() {
                     _c("h5", {
                       domProps: { textContent: _vm._s(dato.item.description) }
                     }),
+                    _vm._v(" "),
+                    _c("br")
+                  ])
+                ]
+              )
+            : dato.item.element == "div-yellow"
+            ? _c(
+                "div",
+                {
+                  staticClass: "card-body bg-dp-img",
+                  attrs: { id: "section" + index }
+                },
+                [
+                  _c("div", { staticClass: "col-sm-12 head-group-rounded" }, [
+                    _c("h1", {
+                      staticClass: "text-center text-dp-yellow",
+                      domProps: { textContent: _vm._s(dato.item.title) }
+                    }),
+                    _vm._v(" "),
+                    _c("br")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c(
+                        "div",
+                        { staticClass: "col-sm-9 text-center mx-auto d-block" },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "row" },
+                            _vm._l(dato.detail, function(detail, i) {
+                              return _c(
+                                "div",
+                                {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: i <= 2,
+                                      expression: "i <= 2"
+                                    }
+                                  ],
+                                  key: i,
+                                  staticClass: "col-sm-4"
+                                },
+                                [
+                                  detail.image !== null
+                                    ? _c("img", {
+                                        staticClass:
+                                          "img-fluid mx-auto d-block",
+                                        attrs: {
+                                          src: detail.image,
+                                          alt: "DedicatedPeople"
+                                        }
+                                      })
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _c("br"),
+                                  _vm._v(" "),
+                                  _c("h3", {
+                                    staticClass:
+                                      "text-center text-dp-bluewhite",
+                                    domProps: {
+                                      textContent: _vm._s(detail.name)
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("h4", {
+                                    staticClass: "text-center text-dp-yellow",
+                                    domProps: {
+                                      textContent: _vm._s(detail.description)
+                                    }
+                                  })
+                                ]
+                              )
+                            }),
+                            0
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-sm-12 text-center" }, [
+                        _c(
+                          "div",
+                          { staticClass: "row" },
+                          _vm._l(dato.detail, function(detail, j) {
+                            return _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: j > 2,
+                                    expression: "j > 2"
+                                  }
+                                ],
+                                key: j,
+                                staticClass: "col-sm-3"
+                              },
+                              [
+                                detail.image !== null
+                                  ? _c("img", {
+                                      staticClass: "img-fluid mx-auto d-block",
+                                      attrs: {
+                                        src: detail.image,
+                                        alt: "DedicatedPeople"
+                                      }
+                                    })
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c("br"),
+                                _vm._v(" "),
+                                _c("h3", {
+                                  staticClass: "text-center text-dp-bluewhite",
+                                  domProps: { textContent: _vm._s(detail.name) }
+                                }),
+                                _vm._v(" "),
+                                _c("h4", {
+                                  staticClass: "text-center text-dp-yellow",
+                                  domProps: {
+                                    textContent: _vm._s(detail.description)
+                                  }
+                                })
+                              ]
+                            )
+                          }),
+                          0
+                        )
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c("br")
                   ])
@@ -45151,21 +45332,39 @@ var render = function() {
                               _vm._v(" "),
                               _c("br"),
                               _vm._v(" "),
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn btn-link text-dp",
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.$emit("click", 3)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v("Work With Us "),
-                                  _c("strong", [_vm._v(">>")])
-                                ]
-                              )
+                              dato.item.id == 1
+                                ? _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-link text-dp",
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.$emit("click", 1)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v("More About us "),
+                                      _c("strong", [_vm._v(">>")])
+                                    ]
+                                  )
+                                : dato.item.id == 4
+                                ? _c(
+                                    "button",
+                                    {
+                                      staticClass: "btn btn-link text-dp",
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.$emit("click", 3)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v("Work With Us "),
+                                      _c("strong", [_vm._v(">>")])
+                                    ]
+                                  )
+                                : _vm._e()
                             ],
                             2
                           )
@@ -45280,12 +45479,12 @@ var render = function() {
                                   staticClass: "btn btn-link text-dp",
                                   on: {
                                     click: function($event) {
-                                      return _vm.$emit("click", 3)
+                                      return _vm.$emit("click", 2)
                                     }
                                   }
                                 },
                                 [
-                                  _vm._v("Work With Us "),
+                                  _vm._v("More About Our Service "),
                                   _c("strong", [_vm._v(">>")])
                                 ]
                               )
@@ -45356,7 +45555,7 @@ var render = function() {
                         },
                         [
                           _c("img", {
-                            staticStyle: { width: "100%", height: "100vh" },
+                            staticClass: "image-slide-dp",
                             attrs: { src: detail.image, alt: "DP" }
                           }),
                           _vm._v(" "),
@@ -45370,7 +45569,7 @@ var render = function() {
                               _vm._v(" "),
                               _c("h4", {
                                 staticClass:
-                                  "slide-content-centered-dp text-light fade",
+                                  "slide-content-centered-dp text-light",
                                 domProps: {
                                   textContent: _vm._s(detail.description)
                                 }

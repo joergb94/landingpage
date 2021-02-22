@@ -103,7 +103,8 @@
                                             <span v-text="detail.description"></span> 
                                         </h4>
                                         <br>
-                                            <button class="btn btn-link text-dp" @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
+                                            <button class="btn btn-link text-dp" v-if='dato.item.id == 1' @click="$emit('click',1)" >More About us <strong>>></strong></button>
+                                            <button class="btn btn-link text-dp" v-else-if='dato.item.id == 4' @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
                                 </div>
                                
 
@@ -140,7 +141,7 @@
                                                 <span v-text="detail.description"></span> 
                                             </h4>
                                             <br>
-                                                <button class="btn btn-link text-dp" @click="$emit('click',3)" >Work With Us <strong>>></strong></button>
+                                                <button class="btn btn-link text-dp" @click="$emit('click',2)" >More About Our Service <strong>>></strong></button>
                                     </div>
                                
 
@@ -164,11 +165,11 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner bg-dp-white">
                             <div  v-for="(detail,index) in dato.detail" :key="index" v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
-                                <img style="width:100%; height:100vh;" v-bind:src="detail.image" alt="DP">
+                                <img class='image-slide-dp' v-bind:src="detail.image" alt="DP">
                                 <div class="slide-info-dp">
                                     <div class="container">
                                         <h2 class="slide-title-centered-dp text-dp-yellow fade" v-text="detail.name"></h2>
-                                        <h4 class ="slide-content-centered-dp text-light fade" v-text="detail.description"></h4>
+                                        <h4 class ="slide-content-centered-dp text-light" v-text="detail.description"></h4>
                                     </div>
                                 </div>
                             </div>
