@@ -146,7 +146,7 @@
 
 
                     </div>
-                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-dp-white">
+                    <div v-if="dato.item.element == 'div-not-head'" v-bind:id="'section'+index" class="card-body bg-white">
                         <div class="container">
                               <div  class="row">
                                 <div class="col-sm-7">

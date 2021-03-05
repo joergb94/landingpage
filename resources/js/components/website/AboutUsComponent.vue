@@ -76,7 +76,7 @@
                    <div v-else-if="dato.item.element == 'div-group'" v-bind:id="'section'+index" class="card-body bg-dp-white">
 
                         <div class="col-sm-12">
-                            <h1 class="text-center text-dp" v-text='dato.item.title.toUpperCase()'></h1>
+                            <h1 class="text-center text-dp" v-text='dato.item.title'></h1>
                             <h3 class="text-left" v-text="dato.item.description"></h3>
                             <br>
                         </div>

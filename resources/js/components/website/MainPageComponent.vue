@@ -113,7 +113,7 @@
                         
                         </div>
                     </div>
-                     <div v-if="dato.item.element == 'div-not-head-left'"  v-bind:id="'section'+index" class="card-body bg-dp-white no-margin-bottom">
+                     <div v-if="dato.item.element == 'div-not-head-left'"  v-bind:id="'section'+index" class="card-body bg-white no-margin-bottom">
                         <div class="container no-margin-bottom">
                             <div  class="row no-margin-bottom">
 

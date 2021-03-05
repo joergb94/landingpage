@@ -44235,9 +44235,7 @@ var render = function() {
                   _c("div", { staticClass: "col-sm-12" }, [
                     _c("h1", {
                       staticClass: "text-center text-dp",
-                      domProps: {
-                        textContent: _vm._s(dato.item.title.toUpperCase())
-                      }
+                      domProps: { textContent: _vm._s(dato.item.title) }
                     }),
                     _vm._v(" "),
                     _c("h3", {
@@ -45380,7 +45378,7 @@ var render = function() {
             ? _c(
                 "div",
                 {
-                  staticClass: "card-body bg-dp-white no-margin-bottom",
+                  staticClass: "card-body bg-white no-margin-bottom",
                   attrs: { id: "section" + index }
                 },
                 [
@@ -46071,7 +46069,7 @@ var render = function() {
             ? _c(
                 "div",
                 {
-                  staticClass: "card-body bg-dp-white",
+                  staticClass: "card-body bg-white",
                   attrs: { id: "section" + index }
                 },
                 [
