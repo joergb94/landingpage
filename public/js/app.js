@@ -2515,12 +2515,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       dataUser: [],
-      url: '/site?page=1'
+      url: '/site?page=1',
+      screenCondition: false
     };
   },
   methods: {
@@ -2551,11 +2553,17 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return arrayBiColor;
+    },
+    TypeScreen: function TypeScreen() {
+      if (screen.width <= 320 && screen.height <= 600) {
+        this.screenCondition = true;
+      }
     }
   },
   mounted: function mounted() {
     console.log('Component mounted.');
     this.ListUsers();
+    this.TypeScreen();
   }
 });
 
@@ -44958,7 +44966,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "carousel" },
+    { staticClass: "carousel col-xs-12" },
     [
       _c("button", {
         staticClass: "btn btn-primary dropdown-toggle btn-sticky btn-round",
@@ -45565,13 +45573,21 @@ var render = function() {
                                 domProps: { textContent: _vm._s(detail.name) }
                               }),
                               _vm._v(" "),
-                              _c("h4", {
-                                staticClass:
-                                  "slide-content-centered-dp text-light",
-                                domProps: {
-                                  textContent: _vm._s(detail.description)
-                                }
-                              })
+                              _vm.screenCondition
+                                ? _c("h5", {
+                                    staticClass:
+                                      "slide-content-centered-dp text-light",
+                                    domProps: {
+                                      textContent: _vm._s(detail.description)
+                                    }
+                                  })
+                                : _c("h4", {
+                                    staticClass:
+                                      "slide-content-centered-dp text-light",
+                                    domProps: {
+                                      textContent: _vm._s(detail.description)
+                                    }
+                                  })
                             ])
                           ])
                         ]

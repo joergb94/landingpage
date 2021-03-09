@@ -1,5 +1,5 @@
 <template>
-            <div class="carousel">
+            <div class="carousel col-xs-12">
                  <button  type="button" class="btn btn-primary dropdown-toggle btn-sticky btn-round" data-toggle="dropdown">
                     </button>
                     <div  class="dropdown-menu col-sm-12 col-md-4 drop-div">
@@ -169,7 +169,8 @@
                                 <div class="slide-info-dp">
                                     <div class="container">
                                         <h2 class="slide-title-centered-dp text-dp-yellow fade" v-text="detail.name"></h2>
-                                        <h4 class ="slide-content-centered-dp text-light" v-text="detail.description"></h4>
+                                        <h5 class ="slide-content-centered-dp text-light" v-text="detail.description" v-if="screenCondition"></h5>
+                                        <h4 class ="slide-content-centered-dp text-light" v-text="detail.description" v-else></h4>
                                     </div>
                                 </div>
                             </div>
@@ -195,6 +196,7 @@
             return {
             dataUser:[],
             url:'/site?page=1',
+           screenCondition: false
             }
         },  
         methods : {
@@ -220,10 +222,17 @@
 
            return arrayBiColor;
         },
+        TypeScreen(){
+            if (screen.width <= 320 &&  screen.height <= 600 ) {
+              this.screenCondition = true;
+             
+            }
+        },
         },
         mounted() {
             console.log('Component mounted.')
              this.ListUsers();
+             this.TypeScreen();
         }    
     }
 </script>
