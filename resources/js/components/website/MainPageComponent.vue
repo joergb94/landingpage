@@ -169,7 +169,7 @@
                                 <div class="slide-info-dp">
                                     <div class="container">
                                         <h2 class="slide-title-centered-dp text-dp-yellow fade" v-text="detail.name"></h2>
-                                        <h5 class ="slide-content-centered-dp text-light" v-text="detail.description" v-if="screenCondition"></h5>
+                                        <h6 class ="slide-content-centered-dp text-light" v-text="detail.description" v-if="screenCondition"></h6>
                                         <h4 class ="slide-content-centered-dp text-light" v-text="detail.description" v-else></h4>
                                     </div>
                                 </div>

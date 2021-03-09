@@ -45574,7 +45574,7 @@ var render = function() {
                               }),
                               _vm._v(" "),
                               _vm.screenCondition
-                                ? _c("h5", {
+                                ? _c("h6", {
                                     staticClass:
                                       "slide-content-centered-dp text-light",
                                     domProps: {
