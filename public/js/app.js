@@ -2555,7 +2555,7 @@ __webpack_require__.r(__webpack_exports__);
       return arrayBiColor;
     },
     TypeScreen: function TypeScreen() {
-      if (screen.width <= 320 && screen.height <= 600) {
+      if (screen.width <= 480) {
         this.screenCondition = true;
       }
     }

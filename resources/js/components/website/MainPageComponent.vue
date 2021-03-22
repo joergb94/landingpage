@@ -223,7 +223,7 @@
            return arrayBiColor;
         },
         TypeScreen(){
-            if (screen.width <= 320 &&  screen.height <= 600 ) {
+            if (screen.width <= 480) {
               this.screenCondition = true;
              
             }
