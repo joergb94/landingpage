@@ -1,10 +1,10 @@
 
 <div id="contact" class="col-sm-12 bg-contact-white">
-    <div class="container">
+    <div class="container" v-if='menu != 3'>
         <div class="row text-center">  
              <div class="col-sm-5">
                  <br>
-                <iframe id="contact-frame" style="overflow-x: hidden;" src="https://docs.google.com/forms/d/e/1FAIpQLSc6_tYT1tn7j89uwI7e-xklprGM8F2bRCDXsOrt2bXzRQRm6g/viewform?embedded=true" width="100%" height="1350" frameborder="0" marginheight="0" marginwidth="0">loading…</iframe>
+                    <iframe id="contact-frame" style="overflow-x: hidden;" src="https://docs.google.com/forms/d/e/1FAIpQLSftVIehd2uKeYe5eYNAUGo5jGU3Y8OiTYN6xUP0_WUVtx_XKQ/viewform?embedded=true" width="100%" height="1350" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
              </div>
              <div class="col-sm-7">
             
@@ -12,5 +12,10 @@
              </div> 
             
          </div> <!-- end of col -->
+    </div>
+    <div class="col-sm-12" v-else >
+         
+            <iframe id="contact-frame" style="overflow-x: hidden;" src="https://forms.gle/qnE8mxyGCpzXqXiJ9" width="100%" height="1800" frameborder="0" marginheight="0" marginwidth="0">loading…</iframe>
+
     </div>
 </div>

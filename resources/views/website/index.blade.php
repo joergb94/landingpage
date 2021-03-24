@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="Dedicated People landingpage">
+    <meta name="author" content="Dedicated People">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -18,7 +18,7 @@
 	<meta property="og:type" content="article" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Website Title -->
-    <title>Dedicated People</title>
+    <title>Dedicated People - Answer Service</title>
     
    <!-- Styles -->
     <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
