@@ -2277,10 +2277,15 @@ a:hover.back-to-top {
   .slide-title-centered-dp{
 	  padding-top: 10vh;
   }
-
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 360px) {
 	.slide-title-centered-dp {
 		padding-top:0;
+	}
+  }
+
+  @media screen and (min-width: 361px) and (max-width: 480px) {
+	.slide-title-centered-dp {
+		padding-top:25vh;
 	}
   }
 
@@ -2331,8 +2336,8 @@ a:hover.back-to-top {
 
   @media screen and (max-width: 480px) {
 	.image-slide-dp{
-		width:100%; 
-		height:100vh;
+		width:auto; 
+		height:auto;
   	}
   }
 
@@ -2670,9 +2675,8 @@ a:hover.back-to-top {
 
 	padding-top: 35vh;
 	color:#fff;
-	font-size: 72px;
+	font-size: 80px;
 	font-weight: bold;
-
   }
 
   @media screen and (max-width: 480px) {

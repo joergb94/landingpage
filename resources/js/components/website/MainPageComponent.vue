@@ -164,7 +164,7 @@
 
                         <!-- The slideshow -->
                         <div class="carousel-inner bg-dp-white">
-                            <div  v-for="(detail,index) in dato.detail" :key="index" v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
+                            <div  v-for="(detail,index) in dato.detail" :key="index"  v-bind:class="[index > 0? 'carousel-item slide-content-dp' : 'carousel-item active slide-content-dp']">
                                 <img class='image-slide-dp' v-bind:src="detail.image" alt="DP">
                                 <div class="slide-info-dp">
                                     <div class="container">
