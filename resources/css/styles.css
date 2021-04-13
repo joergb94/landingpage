@@ -2496,7 +2496,7 @@ a:hover.back-to-top {
   @media screen and (max-width: 480px) {
 	.container-head-dp {
 		margin-top: 40%;
-		background-image: url("../../img/Cover.png");
+		background-image: url("../../img/CoverG.png");
 		position: relative;
 		text-align: center;
 		color: white;
@@ -2513,7 +2513,7 @@ a:hover.back-to-top {
   @media screen and (min-width: 481px) and (max-width:   768px) {
 	.container-head-dp {
 		margin-top: 15%;
-		background-image: url("../../img/Cover.png");
+		background-image: url("../../img/CoverG.png");
 		position: relative;
 		text-align: center;
 		color: white;
@@ -2534,7 +2534,7 @@ a:hover.back-to-top {
   and (-webkit-min-device-pixel-ratio: 1.5) {
 	.container-head-dp {
 		margin-top: 2%;
-		background-image: url("../../img/Cover.png");
+		background-image: url("../../img/CoverG.png");
 		position: relative;
 		text-align: center;
 		color: white;
@@ -2557,7 +2557,7 @@ a:hover.back-to-top {
   and (-webkit-min-device-pixel-ratio: 1.5) {
 	.container-head-dp {
 		margin-top: 2%;
-		background-image: url("../../img/Cover.png");
+		background-image: url("../../img/CoverG.png");
 		position: relative;
 		text-align: center;
 		color: white;
@@ -2581,7 +2581,7 @@ a:hover.back-to-top {
   and (-webkit-min-device-pixel-ratio: 1.5) {
 	.container-head-dp {
 		margin-top: 2%;
-		background-image: url("../../img/Cover.png");
+		background-image: url("../../img/CoverG.png");
 		position: relative;
 		text-align: center;
 		color: white;
