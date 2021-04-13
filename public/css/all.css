@@ -3179,7 +3179,7 @@ a:hover.back-to-top {
 		position: relative;
 		text-align: center;
 		color: white;
-		height: 85vh;
+		height: 95vh;
 	  }
   }
 
@@ -3250,7 +3250,7 @@ a:hover.back-to-top {
   }
   @media screen and (max-width: 360px) {
 	.slide-title-centered-dp {
-		padding-top:0;
+		padding-top:10vh;
 	}
   }
 
@@ -3865,7 +3865,7 @@ a:hover.back-to-top {
 		  }
 	.navimage{
 		width: 165.4px;
-		height: 59.1px;
+		height: 59px;
 	}
 	.navimage2{
 		width: 100% !important;
@@ -3874,8 +3874,8 @@ a:hover.back-to-top {
 
 	@media screen and (max-width: 480px) {
 		.navimage{
-			width: 272px;
-			height: 87.31px;
+			width: 165.4px;
+			height: 59px;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
@@ -3884,8 +3884,8 @@ a:hover.back-to-top {
 	
 	  @media screen and (min-width: 481px)  and (max-width: 768px)  {
 		.navimage{
-			width: 272px;
-			height: 87.31px;
+			width: 165.4px;
+			height: 59px;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;

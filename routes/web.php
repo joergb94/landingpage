@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('website.index');
 });
 
+Route::get('/contact', function () {
+    return view('website.contactPrincipal');
+});
+
 
 Route::get('/site', [WebSiteController::class, 'index']);
 
