@@ -3466,7 +3466,7 @@ a:hover.back-to-top {
 
   @media screen and (max-width: 480px) {
 	.container-head-dp {
-		margin-top: 40%;
+		margin-top: 31%;
 		background-image: url("../../img/CoverG.png");
 		position: relative;
 		text-align: center;
