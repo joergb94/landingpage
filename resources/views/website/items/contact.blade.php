@@ -16,7 +16,7 @@
     <div class="container" v-if="menu == 3" >
         <div class="row">
             <div class="col-sm-7 text-left">
-            <h2>Apply now and join out team!</h2>
+            <h2>Join our team!</h2>
             <br>       
                 <h4>This is an excellent opportunity for you, click now and complete the test!</h4>
                 <div class="col-sm-12 text-right">
