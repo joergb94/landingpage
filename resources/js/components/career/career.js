@@ -63,7 +63,7 @@ export default {
     methods : {
         ListCareer(page){
             let me = this;
-            var url = '/items/4?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
+            var url = '/dedicated/items/4?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
             axios.get(url)
             .then(function (response) {
                 var respuesta= response.data;
@@ -89,14 +89,14 @@ export default {
         updateOrCreateC(action){
             
              let me = this;
-             var myurl = '/items/add'
+             var myurl = '/dedicated/dedicated/items/add'
              var data = document.getElementById('formItemC')
              var form = new FormData(data)
                  form.append('section_id',this.Section)
                
             if (action == 2){
                 form.append('id', me.id)
-                myurl = '/items/update'    
+                myurl = '/dedicated/dedicated/items/update'    
             }
 
             axios.post(myurl,form).then(function (response) {
@@ -157,7 +157,7 @@ export default {
                     confirmButtonText: 'Yes,'+btn+'!'
                 }).then((result) => {
                     if (result.value) {
-                         axios.post('/items/deleteOrResotore',data).then(function (response) {
+                         axios.post('/dedicated/dedicated/items/deleteOrResotore',data).then(function (response) {
                                 me.ListCareer();
                                 $.notify({
                                             // options

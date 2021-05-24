@@ -3031,7 +3031,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     ListAbout: function ListAbout(page) {
       var me = this;
-      var url = '/items/2?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
+      var url = '/dedicated/items/2?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
       axios.get(url).then(function (response) {
         var respuesta = response.data;
         me.dataItems = respuesta.Items.data;
@@ -3053,14 +3053,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateOrCreateA: function updateOrCreateA(action) {
       var me = this;
-      var myurl = '/items/add';
+      var myurl = '/dedicated/items/add';
       var data = document.getElementById('formItemA');
       var form = new FormData(data);
       form.append('section_id', this.Section);
 
       if (action == 2) {
         form.append('id', me.id);
-        myurl = '/items/update';
+        myurl = '/dedicated/items/update';
       }
 
       axios.post(myurl, form).then(function (response) {
@@ -3115,7 +3115,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/items/deleteOrResotore', data).then(function (response) {
+          axios.post('/dedicated/items/deleteOrResotore', data).then(function (response) {
             me.ListAbout();
             $.notify({
               // options
@@ -3265,7 +3265,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     ListCareer: function ListCareer(page) {
       var me = this;
-      var url = '/items/4?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
+      var url = '/dedicated/items/4?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
       axios.get(url).then(function (response) {
         var respuesta = response.data;
         me.dataItems = respuesta.Items.data;
@@ -3287,14 +3287,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateOrCreateC: function updateOrCreateC(action) {
       var me = this;
-      var myurl = '/items/add';
+      var myurl = '/dedicated/dedicated/items/add';
       var data = document.getElementById('formItemC');
       var form = new FormData(data);
       form.append('section_id', this.Section);
 
       if (action == 2) {
         form.append('id', me.id);
-        myurl = '/items/update';
+        myurl = '/dedicated/dedicated/items/update';
       }
 
       axios.post(myurl, form).then(function (response) {
@@ -3349,7 +3349,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/items/deleteOrResotore', data).then(function (response) {
+          axios.post('/dedicated/dedicated/items/deleteOrResotore', data).then(function (response) {
             me.ListCareer();
             $.notify({
               // options
@@ -3523,14 +3523,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateOrCreateM: function updateOrCreateM(action) {
       var me = this;
-      var myurl = '/itemDetails/add';
+      var myurl = '/dedicated/itemDetails/add';
       var data = document.getElementById('formItemD');
       var form = new FormData(data);
       form.append('item_id', this.Item_id);
 
       if (action == 2) {
         form.append('id', me.id);
-        myurl = '/itemDetails/update';
+        myurl = '/dedicated/itemDetails/update';
       }
 
       axios.post(myurl, form).then(function (response) {
@@ -3585,7 +3585,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/itemDetails/deleteOrResotore', data).then(function (response) {
+          axios.post('/dedicated/itemDetails/deleteOrResotore', data).then(function (response) {
             me.ListMain();
             $.notify({
               // options
@@ -3728,7 +3728,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     ListMain: function ListMain(page) {
       var me = this;
-      var url = '/items/1?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
+      var url = '/dedicated/items/1?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
       axios.get(url).then(function (response) {
         var respuesta = response.data;
         me.dataItems = respuesta.Items.data;
@@ -3750,14 +3750,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateOrCreateM: function updateOrCreateM(action) {
       var me = this;
-      var myurl = '/items/add';
+      var myurl = '/dedicated/items/add';
       var data = document.getElementById('formItemM');
       var form = new FormData(data);
       form.append('section_id', this.Section);
 
       if (action == 2) {
         form.append('id', me.id);
-        myurl = '/items/update';
+        myurl = '/dedicated/items/update';
       }
 
       axios.post(myurl, form).then(function (response) {
@@ -3812,7 +3812,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/items/deleteOrResotore', data).then(function (response) {
+          axios.post('/dedicated/items/deleteOrResotore', data).then(function (response) {
             me.ListMain();
             $.notify({
               // options
@@ -3962,7 +3962,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     ListService: function ListService(page) {
       var me = this;
-      var url = '/items/3?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
+      var url = '/dedicated/items/3?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
       axios.get(url).then(function (response) {
         var respuesta = response.data;
         me.dataItems = respuesta.Items.data;
@@ -3984,14 +3984,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateOrCreateS: function updateOrCreateS(action) {
       var me = this;
-      var myurl = '/items/add';
+      var myurl = '/dedicated/items/add';
       var data = document.getElementById('formItemS');
       var form = new FormData(data);
       form.append('section_id', this.Section);
 
       if (action == 2) {
         form.append('id', me.id);
-        myurl = '/items/update';
+        myurl = '/dedicated/items/update';
       }
 
       axios.post(myurl, form).then(function (response) {
@@ -4046,7 +4046,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Yes,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/items/deleteOrResotore', data).then(function (response) {
+          axios.post('/dedicated/items/deleteOrResotore', data).then(function (response) {
             me.ListService();
             $.notify({
               // options
@@ -4191,7 +4191,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     ListUsers: function ListUsers(page) {
       var me = this;
-      var url = '/users?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
+      var url = '/dedicated/users?page=' + page + '&search=' + this.search + '&criterion=' + this.criterion + '&status=' + this.status;
       axios.get(url).then(function (response) {
         var respuesta = response.data;
         me.dataUsers = respuesta.Users.data;
@@ -4212,7 +4212,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     updateOrCreate: function updateOrCreate(action) {
       var me = this;
-      var url = '/users/add';
+      var url = '/dedicated/users/add';
       var data = {
         'name': this.name,
         'email': this.email,
@@ -4222,7 +4222,7 @@ __webpack_require__.r(__webpack_exports__);
       };
 
       if (action == 2) {
-        url = '/users/update';
+        url = '/dedicated/users/update';
         var data = {
           'id': this.id,
           'name': this.name,
@@ -4231,7 +4231,7 @@ __webpack_require__.r(__webpack_exports__);
           'type': this.type
         };
       } else if (action == 3) {
-        var url = '/users/password';
+        var url = '/dedicated/users/password';
         var data = {
           'id': this.id,
           'password': this.password,
@@ -4291,7 +4291,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Si,' + btn + '!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/users/deleteOrResotore', data).then(function (response) {
+          axios.post('/dedicated/users/deleteOrResotore', data).then(function (response) {
             me.ListUsers();
             $.notify({
               // options
@@ -4344,7 +4344,7 @@ __webpack_require__.r(__webpack_exports__);
         confirmButtonText: 'Si, eliminalo!'
       }).then(function (result) {
         if (result.value) {
-          axios.post('/users/change_status', data).then(function (response) {
+          axios.post('/dedicated/users/change_status', data).then(function (response) {
             me.ListUsers();
             $.notify({
               // options
@@ -40843,7 +40843,7 @@ var render = function() {
                               {
                                 staticClass: "btn btn-info btn-sm",
                                 attrs: {
-                                  href: "/itemDetails/" + item.id,
+                                  href: "/dedicated/itemDetails/" + item.id,
                                   "data-toggle": "tooltip",
                                   title: "Go to Detail"
                                 }
@@ -41361,7 +41361,7 @@ var render = function() {
                               {
                                 staticClass: "btn btn-info btn-sm",
                                 attrs: {
-                                  href: "/itemDetails/" + item.id,
+                                  href: "/dedicated/itemDetails/" + item.id,
                                   "data-toggle": "tooltip",
                                   title: "Go to Detail"
                                 }
@@ -41828,7 +41828,10 @@ var render = function() {
                 _c("h4", { staticClass: "card-title mb-0" }, [
                   _c(
                     "a",
-                    { staticClass: "btn btn-link", attrs: { href: "/items" } },
+                    {
+                      staticClass: "btn btn-link",
+                      attrs: { href: "'/dedicated/items" }
+                    },
                     [_vm._v(" Back ")]
                   ),
                   _vm._v(
@@ -42293,7 +42296,7 @@ var render = function() {
                               {
                                 staticClass: "btn btn-info btn-sm",
                                 attrs: {
-                                  href: "/itemDetails/" + item.id,
+                                  href: "/dedicated/itemDetails/" + item.id,
                                   "data-toggle": "tooltip",
                                   title: "Go to Detail"
                                 }
@@ -42811,7 +42814,7 @@ var render = function() {
                               {
                                 staticClass: "btn btn-info btn-sm",
                                 attrs: {
-                                  href: "/itemDetails/" + item.id,
+                                  href: "/dedicated/itemDetails/" + item.id,
                                   "data-toggle": "tooltip",
                                   title: "Go to Detail"
                                 }

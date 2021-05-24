@@ -93,14 +93,14 @@ export default {
         updateOrCreateM(action){
             
              let me = this;
-             var myurl = '/itemDetails/add'
+             var myurl = '/dedicated/itemDetails/add'
              var data = document.getElementById('formItemD')
              var form = new FormData(data)
                  form.append('item_id',this.Item_id)
                
             if (action == 2){
                 form.append('id', me.id)
-                myurl = '/itemDetails/update'    
+                myurl = '/dedicated/itemDetails/update'    
             }
 
             axios.post(myurl,form).then(function (response) {
@@ -161,7 +161,7 @@ export default {
                     confirmButtonText: 'Yes,'+btn+'!'
                 }).then((result) => {
                     if (result.value) {
-                         axios.post('/itemDetails/deleteOrResotore',data).then(function (response) {
+                         axios.post('/dedicated/itemDetails/deleteOrResotore',data).then(function (response) {
                                 me.ListMain();
                                 $.notify({
                                             // options

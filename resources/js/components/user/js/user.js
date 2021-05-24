@@ -59,7 +59,7 @@
         methods : {
             ListUsers(page){
                 let me = this;
-                var url = '/users?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
+                var url = '/dedicated/users?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
                  axios.get(url)
                 .then(function (response) {
                     var respuesta= response.data;
@@ -83,7 +83,7 @@
             },
             updateOrCreate(action){
                  let me = this;
-                 var url = '/users/add'
+                 var url = '/dedicated/users/add'
                  var data = {
                     'name': this.name,
                     'email':this.email,
@@ -93,7 +93,7 @@
                 };
 
                 if (action == 2){
-                    url = '/users/update'
+                    url = '/dedicated/users/update'
                     var data = {
                         'id': this.id,
                         'name': this.name,
@@ -102,7 +102,7 @@
                         'type':this.type
                     };
                 }else if(action == 3){
-                        var url = '/users/password'
+                        var url = '/dedicated/users/password'
                         var data = {
                             'id': this.id,
                             'password':this.password,
@@ -167,7 +167,7 @@
                         confirmButtonText: 'Si,'+btn+'!'
                     }).then((result) => {
                         if (result.value) {
-                             axios.post('/users/deleteOrResotore',data).then(function (response) {
+                             axios.post('/dedicated/users/deleteOrResotore',data).then(function (response) {
                                     me.ListUsers();
                                     $.notify({
                                                 // options
@@ -223,7 +223,7 @@
                         confirmButtonText: 'Si, eliminalo!'
                     }).then((result) => {
                         if (result.value) {
-                             axios.post('/users/change_status',data).then(function (response) {
+                             axios.post('/dedicated/users/change_status',data).then(function (response) {
                                     me.ListUsers();
                                     $.notify({
                                                 // options

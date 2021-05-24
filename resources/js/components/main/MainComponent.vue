@@ -44,7 +44,7 @@
                                     <td v-text="item.element"></td>
                                     <td>
                                          <div class="btn-group">
-                                            <a  class="btn btn-info btn-sm" v-bind:href="'/itemDetails/'+item.id"  data-toggle="tooltip" title="Go to Detail" ><i class="lni lni-agenda"></i></a>
+                                            <a  class="btn btn-info btn-sm" v-bind:href="'/dedicated/itemDetails/'+item.id"  data-toggle="tooltip" title="Go to Detail" ><i class="lni lni-agenda"></i></a>
                                             <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" title="Edit Item" v-if="item.deleted_at == null"  @click="openModalM('modal', 'update', item)" >
                                             <i class="lni lni-pencil"></i>
                                             </button>

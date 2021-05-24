@@ -7,7 +7,7 @@
                         <div class="row">
                             <div class="col-sm-5">
                                  <h4 class="card-title mb-0">
-                                    <a class="btn btn-link" href="/items"> Back </a> Detail Items for {{ItemTitle}} by {{SectionTitle}}
+                                    <a class="btn btn-link" href="'/dedicated/items"> Back </a> Detail Items for {{ItemTitle}} by {{SectionTitle}}
                                     <div class="btn-group">
                                         
                                     </div> 

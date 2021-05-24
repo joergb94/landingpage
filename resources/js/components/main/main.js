@@ -63,7 +63,7 @@ export default {
     methods : {
         ListMain(page){
             let me = this;
-            var url = '/items/1?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
+            var url = '/dedicated/items/1?page='+page+'&search='+this.search+'&criterion='+this.criterion+'&status='+this.status;
             axios.get(url)
             .then(function (response) {
                 var respuesta= response.data;
@@ -89,14 +89,14 @@ export default {
         updateOrCreateM(action){
             
              let me = this;
-             var myurl = '/items/add'
+             var myurl = '/dedicated/items/add'
              var data = document.getElementById('formItemM')
              var form = new FormData(data)
                  form.append('section_id',this.Section)
                
             if (action == 2){
                 form.append('id', me.id)
-                myurl = '/items/update'    
+                myurl = '/dedicated/items/update'    
             }
 
             axios.post(myurl,form).then(function (response) {
@@ -156,7 +156,7 @@ export default {
                     confirmButtonText: 'Yes,'+btn+'!'
                 }).then((result) => {
                     if (result.value) {
-                         axios.post('/items/deleteOrResotore',data).then(function (response) {
+                         axios.post('/dedicated/items/deleteOrResotore',data).then(function (response) {
                                 me.ListMain();
                                 $.notify({
                                             // options

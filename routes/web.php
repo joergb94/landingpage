@@ -28,13 +28,19 @@ Route::get('/contact', function () {
 
 Route::get('/site', [WebSiteController::class, 'index']);
 
-Auth::routes([
-    "register" => false,
-    "reset"=>false
-]);
+
+Route::prefix('dedicated')->group(function() {
+        Auth::routes([
+            "register" => false,
+            "reset"=>false
+        ]);
+  
+
+
+
 
 Route::group(['middleware'=>['auth']], function(){
-    Route::get('/home', [AdminSiteController::class, 'index'])->name('home');
+    Route::get('/home', [AdminSiteController::class, 'index']);
 
     //user
     Route::get('/users', [UserController::class, 'index']);
@@ -57,5 +63,7 @@ Route::group(['middleware'=>['auth']], function(){
      Route::post('/itemDetails/add', [AdminSiteDetailController::class, 'store']);
      Route::post('/itemDetails/update', [AdminSiteDetailController::class, 'update']);
      Route::post('/itemDetails/deleteOrResotore',[AdminSiteDetailController::class, 'deleteOrResotore']);
+
+});
 
 });
