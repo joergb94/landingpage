@@ -6,7 +6,7 @@
             <div class="col-sm-7 text-left">
             <h2>Find out how a partnership with us will benefit you today!</h2>
             <br>     
-            <h4>Please fill out the following simple questionnaire and one of our dedicated client services representatives will be in touch with you.</h4>
+            <h4>Please fill out the next form and one of our representatives will contact you.</h4>
             </div>
             <div class="col-sm-5">
                 <img class="image-conten no-margin-bottom" src="{{ asset('img/circles.png') }}" alt="Dedicated People"> 
