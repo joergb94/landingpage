@@ -130,8 +130,8 @@
                             <div class="row">
 
                                                     <div  class="col-sm-9 text-center mx-auto d-block" >
-                                                        <div class="row">
-                                                            <div class="col-sm-4" v-for="(detail, i) in dato.detail" :key="i" v-show='i <= 2'>
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="col-sm-4" v-for="(detail, i) in dato.detail" :key="i">
                                                                      <img v-if="detail.image !== null" class="img-fluid mx-auto d-block" v-bind:src="detail.image" alt="DedicatedPeople">
                                                                     <br>
                                                                     <h3 class="text-center text-dp-bluewhite" v-text="detail.name"></h3>
@@ -141,16 +141,6 @@
                                                     </div>
 
 
-                                                    <div class="col-sm-12 text-center" >    
-                                                        <div class="row">
-                                                            <div class="col-sm-3" v-for="(detail, j) in dato.detail" :key="j" v-show='j > 2'>
-                                                                     <img v-if="detail.image !== null" class="img-fluid mx-auto d-block" v-bind:src="detail.image" alt="DedicatedPeople">
-                                                                    <br>
-                                                                    <h3 class="text-center text-dp-bluewhite" v-text="detail.name"></h3>
-                                                                    <h4 class="text-center text-dp-yellow" v-text="detail.description"></h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
                             </div>
                         <br>
                         </div>

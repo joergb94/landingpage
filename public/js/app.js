@@ -2072,16 +2072,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -44408,22 +44398,13 @@ var render = function() {
                         [
                           _c(
                             "div",
-                            { staticClass: "row" },
+                            {
+                              staticClass: "row d-flex justify-content-center"
+                            },
                             _vm._l(dato.detail, function(detail, i) {
                               return _c(
                                 "div",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: i <= 2,
-                                      expression: "i <= 2"
-                                    }
-                                  ],
-                                  key: i,
-                                  staticClass: "col-sm-4"
-                                },
+                                { key: i, staticClass: "col-sm-4" },
                                 [
                                   detail.image !== null
                                     ? _c("img", {
@@ -44458,57 +44439,7 @@ var render = function() {
                             0
                           )
                         ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-12 text-center" }, [
-                        _c(
-                          "div",
-                          { staticClass: "row" },
-                          _vm._l(dato.detail, function(detail, j) {
-                            return _c(
-                              "div",
-                              {
-                                directives: [
-                                  {
-                                    name: "show",
-                                    rawName: "v-show",
-                                    value: j > 2,
-                                    expression: "j > 2"
-                                  }
-                                ],
-                                key: j,
-                                staticClass: "col-sm-3"
-                              },
-                              [
-                                detail.image !== null
-                                  ? _c("img", {
-                                      staticClass: "img-fluid mx-auto d-block",
-                                      attrs: {
-                                        src: detail.image,
-                                        alt: "DedicatedPeople"
-                                      }
-                                    })
-                                  : _vm._e(),
-                                _vm._v(" "),
-                                _c("br"),
-                                _vm._v(" "),
-                                _c("h3", {
-                                  staticClass: "text-center text-dp-bluewhite",
-                                  domProps: { textContent: _vm._s(detail.name) }
-                                }),
-                                _vm._v(" "),
-                                _c("h4", {
-                                  staticClass: "text-center text-dp-yellow",
-                                  domProps: {
-                                    textContent: _vm._s(detail.description)
-                                  }
-                                })
-                              ]
-                            )
-                          }),
-                          0
-                        )
-                      ])
+                      )
                     ]),
                     _vm._v(" "),
                     _c("br")
@@ -59962,8 +59893,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\landingpage\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\landingpage\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\espon\OneDrive\Documentos\GitHub\landingpage\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\espon\OneDrive\Documentos\GitHub\landingpage\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
