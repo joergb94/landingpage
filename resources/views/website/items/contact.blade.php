@@ -20,9 +20,9 @@
             <br>       
                 <h4>This is an excellent opportunity for you, click now and complete the test!</h4>
                 <div class="col-sm-12 text-right">
-                    <!--<a class="btn btn-link" href="https://forms.gle/1W5fTiUU46kDzFhh8" target="_blank" rel="noopener noreferrer"> <h6 class="text-dp">Go to test >></h6></a>-->
+                    
                 <br>
-                    <iframe id="contact-frame" style="overflow-x: hidden;" src="https://docs.google.com/forms/d/e/1FAIpQLSeyaqM8XDLoyPqFkQo0RUNyRhc9lDUEEocD8a1EMPl-A79bQw/viewform?embedded=true" width="100%" height="1350" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                    <a class="btn btn-link" href="https://www.jotform.com/form/212214981658864" target="_blank" rel="noopener noreferrer"> <h4 class="text-dp">Go to test >></h4></a>
 				</div>
             </div>
             <div class="col-sm-5">
