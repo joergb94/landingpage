@@ -2,18 +2,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Application – El morado</title>
+  <title>Dedicated People - Careers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="max-image-preview:large">
-  <title>Application – El morado</title>
+  <title>Dedicated People - Careers</title>
   <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
   <link rel="dns-prefetch" href="//s.w.org">
-  <link rel="alternate" type="application/rss+xml" title="El morado » Feed"
-    href="https://elmercadomorado.com/?feed=rss2">
-  <link rel="alternate" type="application/rss+xml" title="El morado » Feed de los comentarios"
-    href="https://elmercadomorado.com/?feed=comments-rss2">
-  <link rel="alternate" type="application/rss+xml" title="El morado » Comentario Application del feed"
-    href="https://elmercadomorado.com/?feed=rss2&amp;p=53">
   <script type="text/javascript" id="www-widgetapi-script"
     src="https://www.youtube.com/s/player/9c7ce883/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
   <script src="https://www.youtube.com/iframe_api"></script>
@@ -766,7 +760,6 @@
     font-style: normal;
     font-stretch: normal;
     font-display: swap;
-    src: url('http://elmercadomorado.com/wp-content/themes/twentytwentytwo/assets/fonts/SourceSerif4Variable-Roman.ttf.woff2') format('woff2');
   }
 
   @font-face {
@@ -775,16 +768,12 @@
     font-style: italic;
     font-stretch: normal;
     font-display: swap;
-    src: url('http://elmercadomorado.com/wp-content/themes/twentytwentytwo/assets/fonts/SourceSerif4Variable-Italic.ttf.woff2') format('woff2');
+   
   }
   </style>
-  <link rel="stylesheet" id="elementor-icons-css"
-    href="http://elmercadomorado.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.15.0"
-    media="all">
   <style id="elementor-icons-inline-css">
   .elementor-add-new-section .elementor-add-templately-promo-button {
     background-color: #5d4fff;
-    background-image: url(http://elmercadomorado.com/wp-content/plugins/essential-addons-for-elementor-lite/assets/admin/images/templately/logo-icon.svg);
     background-repeat: no-repeat;
     background-position: center center;
     margin-left: 5px;
