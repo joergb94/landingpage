@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="max-image-preview:large">
   <title>Application – El morado</title>
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
   <link rel="dns-prefetch" href="//s.w.org">
   <link rel="alternate" type="application/rss+xml" title="El morado » Feed"
     href="https://elmercadomorado.com/?feed=rss2">
@@ -2132,7 +2133,7 @@
                     <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-6bc2d04"
                       href="https://www.facebook.com/DedicatedPeopleLA" target="_blank">
                       <span class="elementor-screen-only">Facebook</span>
-                      <i class="fab fa-facebook"></i> </a>
+                      <i class="lni lni-facebook-original"></i> </a>
                   </span>
                 </div>
               </div>
