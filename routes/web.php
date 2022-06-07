@@ -28,6 +28,12 @@ Route::get('/contact', function () {
 Route::get('/careers', function () {
     return view('website.careers');
 });
+Route::get('/careers/mx', function () {
+    return view('website.careers.mx');
+});
+Route::get('/careers/bz', function () {
+    return view('website.careers.bz');
+});
 
 
 Route::get('/site', [WebSiteController::class, 'index']);

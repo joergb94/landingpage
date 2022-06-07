@@ -2,10 +2,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Application – El morado</title>
+  <title>Dedicated People - Mexico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="max-image-preview:large">
-  <title>Application – El morado</title>
+  <title>Dedicated People - Mexico</title>
   <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
   <link rel="dns-prefetch" href="//s.w.org">
   <link rel="alternate" type="application/rss+xml" title="El morado » Feed"

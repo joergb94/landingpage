@@ -2,10 +2,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Application – El morado</title>
+  <title>Dedicated People - Belize</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="max-image-preview:large">
-  <title>Application – El morado</title>
+  <title>Dedicated People - Belize</title>
   <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
   <link rel="dns-prefetch" href="//s.w.org">
   <link rel="alternate" type="application/rss+xml" title="El morado » Feed"
@@ -1203,9 +1203,9 @@
               data-id="42619be6" data-element_type="widget" data-widget_type="text-editor.default">
               <div class="elementor-widget-container">
                   <p>Hospitals, Plumbing companies, Real Estate, Apartment complexes, Dr.'s offices, Gas monitoring, and Attorneys; are just some of the lines of businesses we serve.</p>
-                <p>Every day thousands of customers and patients call these businesses either to schedule an appointment, discuss billing or handle any other urgent (or not so urgent) matter. <strong>So what happens to these calls when their offices aren't available (lunch time, closing hours, meetings)?</strong> 
-                Well we take care of them! As an answering service representative, you will receive these calls and either take a message or assist the callers by following specific procedures and prompts that you will learn during training.
-                </p>
+                <p>Every day thousands of customers and patients call these businesses either to schedule an appointment, discuss billing or handle any other urgent (or not so urgent) matter. So what happens to these calls when their offices aren't available (lunch time, closing hours, meetings)?
+                    Well we take care of them! As an answering service representative, you will receive these calls and either take a message or assist the callers by following specific procedures and prompts that you will learn during training.</p>
+                <p>NO SALES, NO CAMPAIGNS!</p>
                 <p>You can find more information about the job below!</p>
               </div>
             </div>
@@ -1445,13 +1445,10 @@
                           <p>We are looking for people who are comfortable with multitasking and have an understanding of phone etiquette.</p>
                         </li>
                         <li dir="ltr" role="presentation">
-                          <p>High intermediate to advanced verbal and written communication skills in English.</p>
+                          <p>High intermediate to advanced verbal and written communication skills in English. (Native English is a plus!).</p>
                         </li>
                         <li dir="ltr" role="presentation">
-                          <p>Fluent Spanish is a plus!</p>
-                        </li>
-                        <li dir="ltr" role="presentation">
-                          <p>Familiarized with technology!</p>
+                          <p>Familiarized with technology and software user</p>
                         </li>
                         <li dir="ltr" role="presentation">
                           <p>Punctuality is key!</p>
@@ -1478,20 +1475,19 @@
                           <p>Work is from home for the following locations:</p>
                           
                             <ul style="list-style-type:circle;">
-                                <li>Cancún</li>
-                                <li>Ciudad de Campeche</li>
-                                <li>Zapopan</li>
-                                <li>Playa del Carmen</li>
+                                <li>Orange walk town</li>
+                                <li>Corozal Town</li>
+                                <li>San Ignacio, Cayo </li>
                             </ul>  
                         </li>
                         <li aria-level="1">
-                          <p>If you're in Merida, the job is in office.</p>
+                          <p>If you're in Belize city, the job is in office.</p>
                         </li>
                         <li aria-level="1">
-                          <p>IWe provide all the equipment.</p>
+                          <p>We provide all the equipment</p>
                         </li>
                         <li aria-level="1">
-                          <p>If you're applying for an at home position, you must meet the following internet requirements: 50 mbps for download, 6 mbps for upload.</p>
+                          <p>If you're applying for an at home position, you must meet the following internet requirements: - 50 mbps for download, 6 mbps for upload </p>
                         </li>
                       </ul>
                     </div>
@@ -1503,19 +1499,22 @@
                       aria-labelledby="elementor-tab-title-1843" tabindex="0" style="display: block;">
                       <ul>
                         <li aria-level="1">
-                          <p>Salary: $13,000 MXN a month.</p>
+                          <p>Salary: 8 BZD an hour!.</p>
                         </li>
                         <li aria-level="1">
-                          <p>Monthly Bonuses.</p>
+                          <p>We pay biweekly!</p>
                         </li>
                         <li aria-level="1">
-                          <p>Continuous and Paid training.</p>
+                          <p>Monthly Bonuses</p>
+                        </li>
+                        <li aria-level="1">
+                          <p>Referral bonuses</p>
+                        </li>
+                        <li aria-level="1">
+                          <p>Continuous and Paid training</p>
                         </li>
                         <li aria-level="1">
                           <p>Career plans and professional growth with Dedicated People.</p>
-                        </li>
-                        <li aria-level="1">
-                          <p>Free consults with our psychologists.</p>
                         </li>
                       </ul>
                     </div>
