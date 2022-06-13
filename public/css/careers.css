@@ -11,6 +11,15 @@ body  {
    background-repeat: no-repeat;
    background-size: cover;
 }
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-family: Sans-serif;
+  font-size: 1.125rem;
+}
 #app  {
     margin: 0;
     margin-top:50px;
