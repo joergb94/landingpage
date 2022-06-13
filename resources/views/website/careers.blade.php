@@ -48,7 +48,7 @@
     <br>
     <div class="col-sm-3 mx-auto d-block">
       <a style="background-color:#101010 ; text-decoration: none; font-size:large;" href="/careers/mx"
-        class="btn btn-dark btn-block" rel="noopener noreferrer">Mexico</a>
+        class="btn btn-dark btn-block" rel="noopener noreferrer">México</a>
       <a style="background-color:#101010 ; text-decoration: none; font-size:large;" href="/careers/bz"
         class="btn btn-dark btn-block" rel="noopener noreferrer">Belize</a>
     </div>
