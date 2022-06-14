@@ -1470,7 +1470,6 @@
                           <ul style="list-style-type:circle;">
                             <li>Cancún</li>
                             <li>Ciudad de Campeche</li>
-                            <li>Zapopan</li>
                             <li>Playa del Carmen</li>
                           </ul>
                         </li>

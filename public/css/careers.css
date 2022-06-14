@@ -22,12 +22,12 @@ p {
 }
 #app  {
     margin: 0;
-    margin-top:50px;
+    padding-top:130px !important;
 }
 
 .image-white{
-    height: 100px;
-    width: 250px;
+    height: 107px;
+    width: 300px;
 }
 
 .col-sm-6 {
