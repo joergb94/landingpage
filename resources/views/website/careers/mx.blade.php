@@ -1492,7 +1492,7 @@
                       aria-labelledby="elementor-tab-title-1843" tabindex="0" style="display: block;">
                       <ul>
                         <li aria-level="1">
-                          <p>Salary: $13,000 MXN a month.</p>
+                          <p>Salary: $16,000 MXN a month.</p>
                         </li>
                         <li aria-level="1">
                           <p>Monthly Bonuses.</p>
