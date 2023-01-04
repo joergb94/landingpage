@@ -32,7 +32,7 @@
     </div>
     <div class="container" v-else>
         <div class="row text-center">  
-             <div class="col-sm-5">
+             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                  <br>
                     <iframe id="contact-frame" style="overflow-x: hidden;" src="https://docs.google.com/forms/d/e/1FAIpQLSftVIehd2uKeYe5eYNAUGo5jGU3Y8OiTYN6xUP0_WUVtx_XKQ/viewform?embedded=true" width="100%" height="1350" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
              </div>

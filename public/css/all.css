@@ -3179,7 +3179,7 @@ a:hover.back-to-top {
 		position: relative;
 		text-align: center;
 		color: white;
-		height: 95vh;
+		height: 100%;
 	  }
   }
 
@@ -3188,7 +3188,15 @@ a:hover.back-to-top {
 		position: relative;
 		text-align: center;
 		color: white;
-		height: 50vh;
+		height: 100%;
+	  }
+  }
+  @media screen and (min-width: 769px) and (max-width:   1023px) {
+	.slide-content-dp {
+		position: relative;
+		text-align: center;
+		color: white;
+		height: 100%;
 	  }
   }
 
