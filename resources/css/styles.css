@@ -2952,10 +2952,41 @@ a:hover.back-to-top {
 			margin-top: 2px;
 		}
 	}
+
+	.content-contact-map{
+		overflow: hidden !important;
+		min-height: 1050px !important;
+		max-height: 1350px !important;
+	}
+
+	@media screen and (max-width: 480px) {
+			.content-contact-map{
+				overflow: hidden !important;
+				min-height: 1050px !important;
+				max-height: 1350px !important;
+			}
+	  }
+	
+	  @media screen and (min-width: 481px)  and (max-width: 768px)  {
+		.content-contact-map{
+			overflow: hidden !important;
+			min-height: 1050px !important;
+			max-height: 1350px !important;
+		}
+	}
    .map-frame{
-	   padding-top:30%;
+	   border-radius: 25px !important;
+	   margin-top:30px !important;
+	   width: 100% !important;
+	   height: 1150px !important;
    }
    
+   #contact-frame{
+		overflow: hidden !important;
+		width: 100% !important;
+		height: 1350px !important;
+   }
+
    .text-ligth-gray{
 	color:#bfbfbf;
    }
