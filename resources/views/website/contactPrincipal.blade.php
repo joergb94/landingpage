@@ -20,7 +20,7 @@
     <!-- Website Title -->
     <title>Dedicated People - Contact Us</title>
     
-   <!-- Styles -->
+ <!-- Styles -->
     <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
@@ -32,9 +32,10 @@
 <body data-spy="scroll" data-target=".fixed-top">
 
     <!-- Preloader -->
-	<div class="spinner-wrapper">
+	 <!-- Preloader -->
+     <div class="spinner-wrapper">
             <div class="col-sm-12 text-center" style="padding-top:20vh;">
-                <img class="text-center"style="width:120px; height:120px;" src="{{ asset('img/logo.png') }}" alt="alternative">
+                <img class="text-center" style="width:120px; height:120px;" src="{{ asset('img/logo.png') }}" alt="alternative">
                 <h3>Dedicated People</h3>
             </div>
         <div class="spinner">
