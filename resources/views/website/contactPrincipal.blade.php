@@ -87,6 +87,12 @@
         <br><br><br>
     </header> 
      <!--contact-->
+        @if(isset($msg))
+                  <div class="alert alert-success alert-dismissible">
+                              <button type="button" class="close" data-dismiss="alert">&times;</button>
+                              <strong>Success!</strong> Send Message!.
+                  </div>      
+            @endif
      @include('website.items.contact')
     <!--end of contact-->
     <!-- Footer -->

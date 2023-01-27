@@ -60,6 +60,7 @@
     @include('website.items.header')
     <!-- end of header -->
     <!-- content -->
+ 
     @include('website.items.sitecontent')
     <!-- end of content -->
      <!--contact-->
@@ -74,9 +75,12 @@
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}" defer></script>
    <script src="{{ asset('js/all.js') }}" defer></script>
+   <script src="{{ asset('js/sweetalert2.js') }}" defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
    <script> new WOW().init(); </script>
-
+   <script>
+        
+    </script>
 </body>
 </html>

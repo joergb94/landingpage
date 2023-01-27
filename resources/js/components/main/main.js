@@ -68,6 +68,7 @@ export default {
             .then(function (response) {
                 var respuesta= response.data;
                 me.dataItems = respuesta.Items.data;
+                
                 me.dataSections = respuesta.Section;
                 me.pagination= respuesta.pagination;
                 me.dataElements = respuesta.Elements;

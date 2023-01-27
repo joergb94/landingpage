@@ -37,6 +37,7 @@ Route::get('/careers/bz', function () {
 
 
 Route::get('/site', [WebSiteController::class, 'index']);
+Route::post('/send', [WebSiteController::class, 'send_mail']);
 
 
 Route::prefix('dedicated')->group(function() {
